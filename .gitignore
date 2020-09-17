@@ -1,0 +1,17 @@
+*.log
+.htaccess
+composer.lock
+.DS_Store
+
+public/wp
+vendor
+!public/wp-content/plugins
+public/wp-config.php
+public/wp-content/uploads
+
+#gitignore for theme folder
+!/public/wp-content/themes/
+/public/wp-content/themes/*/node_modules
+/public/wp-content/themes/*/*.map
+/public/wp-content/themes/*/.sass-cache
+

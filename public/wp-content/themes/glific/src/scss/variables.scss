@@ -1,0 +1,70 @@
+$theme-primary: #073F24;
+$theme-secondary: #119656;
+
+$theme-colors: (
+    'theme-primary': $theme-primary,
+    'theme-secondary': $theme-secondary,
+);
+
+$spacer: 4px;
+$spacers: (
+    0: 0,
+    1: ($spacer * 0.25), // 1px
+    2: ($spacer * 0.5), // 2px
+    3: ($spacer * 1), // 4px
+    3\.5: ($spacer * 1.5), // 6px
+    4: ($spacer * 2), // 8px
+    4\.5: ($spacer * 2.5), // 10px
+    5: ($spacer * 3), //12px
+    5\.5: ($spacer * 3.5), //14px
+    6: ($spacer * 4), //16px
+    6\.5: ($spacer * 4.5), // 18px
+    7: ($spacer * 5), // 20px
+    7\.5: ($spacer * 5.5), // 22px
+    8: ($spacer * 6), // 24px
+    8\.5: ($spacer * 6.5), // 26px
+    9: ($spacer * 7), // 28px
+    9\.5: ($spacer * 7.5), // 30px
+    10: ($spacer * 8), // 32px
+    10\.5: ($spacer * 8.5), // 34px
+    11: ($spacer * 9), // 36px
+    11\.5: ($spacer * 9.5), // 38px
+    12: ($spacer * 10), // 40px
+);
+
+$sizes: (
+    '25': 25px,
+    '50': 50px,
+    '75': 75px,
+    '100': 100px,
+    '25p' : 25%,
+    'half' : 50%,
+    '75p' : 75%,
+    'full' : 100%,
+);
+
+$font-sizes: (
+    '14': 14px,
+    '16': 16px,
+    '18': 18px,
+    '20': 20px,
+    '22': 22px,
+    '24': 24px,
+    '30': 30px,
+    '36': 36px,
+);
+
+$line-heights: (
+    '20': 20px,
+    '24': 24px,
+    '30': 30px,
+);
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1280px,
+    hd: 1440px
+);

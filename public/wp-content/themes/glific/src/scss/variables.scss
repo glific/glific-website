@@ -1,11 +1,13 @@
 $theme-primary: #073F24;
 $theme-secondary: #119656;
 $theme-dark-green: #05400A;
+$theme-pewter: #93A29B;
 
 $theme-colors: (
     'theme-primary': $theme-primary,
     'theme-secondary': $theme-secondary,
     'theme-dark-green': $theme-dark-green,
+    'theme-pewter': $theme-pewter,
 );
 
 $spacer: 4px;
@@ -32,15 +34,30 @@ $spacers: (
     11: ($spacer * 9), // 36px
     11\.5: ($spacer * 9.5), // 38px
     12: ($spacer * 10), // 40px
+    15: ($spacer * 13), // 52px
+    15\.5: ($spacer * 13.5), // 54px
+    16\.5: ($spacer * 14.5), // 58px
+    22: ($spacer * 20), // 80px
+    33: ($spacer * 31), // 124px
 );
 
 $sizes: (
     '25': 25px,
     '44': 44px,
     '50': 50px,
+    '58': 58px,
     '75': 75px,
     '80': 80px,
+    '98': 98px,
     '100': 100px,
+    '170': 170px,
+    '126': 126px,
+    '138': 138px,
+    '190': 190px,
+    '226': 226px,
+    '252': 252px,
+    '536': 536px,
+    '750': 750px,
     '25p' : 25%,
     'half' : 50%,
     '75p' : 75%,
@@ -48,6 +65,7 @@ $sizes: (
 );
 
 $font-sizes: (
+    '12': 12px,
     '14': 14px,
     '16': 16px,
     '18': 18px,
@@ -59,6 +77,8 @@ $font-sizes: (
 );
 
 $line-heights: (
+    '16': 16px,
+    '18': 18px,
     '20': 20px,
     '24': 24px,
     '27': 27px,

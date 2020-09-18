@@ -6,7 +6,7 @@
  */
 
 ?>
-	<footer class="d-flex flex-column flex-md-row justify-content-center  fixed-bottom align-items-center py-10 bg-theme-primary py-xl-22">
+	<footer class="d-flex flex-column flex-md-row justify-content-center align-items-center py-10 bg-theme-primary py-xl-22">
 		<div class="d-flex flex-column mr-xl-33">
 			<div  class="d-flex flex-row w-190 mx-auto mx-md-0">
 				<div class="h-58">

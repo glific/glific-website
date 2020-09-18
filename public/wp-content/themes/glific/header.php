@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
 </head>
 <header>
-	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top <?php echo $header_bg_color ; ?>">
+	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white">
 		<a class="navbar-brand py-0 mr-0 d-inline-flex" href="<?php echo esc_url(home_url('/')); ?>">
 		<?php
 			$custom_logo_id = get_theme_mod( 'custom_logo' );

@@ -48,6 +48,9 @@ Text Domain: coloredcow
 		}
 	}
 }
+body{
+	@extend .mt-18, .mt-xl-27;
+}
 
 @import 'utilities';
 @import 'media/sm';

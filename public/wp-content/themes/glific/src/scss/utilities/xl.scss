@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
 	@each $size, $length in $sizes {
 		.w-xl-#{$size} {
 			width: $length !important;

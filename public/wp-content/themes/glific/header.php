@@ -39,7 +39,7 @@
 				'echo' => true,
 			));
 		?>
-		<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoratin-none ml-11 glific-button-border d-none d-xl-block" href="#">Book a demo</a>
+		<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-none d-xl-block" href="#">Book a demo</a>
 
 		</div>
 	</nav>

@@ -79,6 +79,9 @@
 		left: $value * -1;
 	}
 }
+.glific-button-border{
+	border-radius: 15px 15px 0 15px;
+}
 @import 'utilities/sm';
 @import 'utilities/md';
 @import 'utilities/lg';

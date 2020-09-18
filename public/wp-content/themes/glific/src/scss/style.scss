@@ -1,10 +1,10 @@
 /*!
-Theme Name: Coloredcow
+Theme Name: Glific
 Author: ColoredCow
 Author URI: http://coloredcow.com
-Description: Official theme ColoredCow
+Description: Official theme Glific
 Version: 1.0.0
-Tags: coloredcow
+Tags: coloredcow, glific
 Text Domain: coloredcow
 */
 
@@ -33,6 +33,19 @@ Text Domain: coloredcow
 	margin-right: auto;
 	&img{
 		display: block;
+	}
+}
+
+.footer-menu {
+	li{
+		@extend .mx-0;
+	}
+	.menu-item {
+		@extend .pb-2, .pb-xl-3, .px-0, .pl-md-0;
+		a {
+			@extend .nav-link, .text-white, .fz-16, .leading-24, .text-theme-pewter;
+			@extend .p-0, .d-inline-block;
+		}
 	}
 }
 

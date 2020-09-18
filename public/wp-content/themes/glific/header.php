@@ -53,13 +53,13 @@
 		));
 	?>
 	<?php
-			wp_nav_menu(array(
-				'theme_location' => 'secondary_header_nav',
-				'container' => 'ul',
-				'menu_class' => 'list-unstyled my-0 mobile-primary-menu w-100p',
-				'echo' => true,
-			));
-		?>
+		wp_nav_menu(array(
+			'theme_location' => 'secondary_header_nav',
+			'container' => 'ul',
+			'menu_class' => 'list-unstyled my-0 mobile-primary-menu w-100p',
+			'echo' => true,
+		));
+	?>
 	</div>
 </header>
 

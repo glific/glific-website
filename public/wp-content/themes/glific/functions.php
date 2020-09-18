@@ -29,8 +29,11 @@ function glific_theme_add_supports() {
 if ( ! function_exists( 'glific_theme_setup' ) ) {
 	function glific_theme_setup(){
 		register_nav_menu( 'header_nav', 'Header Navigation' );
-		register_nav_menu('footer', 'Footer Menu');
+		register_nav_menu('footer_primary', 'Footer Menu Primary');
+		register_nav_menu('footer_secondary', 'Footer Menu Secondary');
+		register_nav_menu('footer_tertiary', 'Footer Menu Tertiary');
 		register_nav_menu('secondary_header_nav', 'Secondary Header Navigation');
+		register_nav_menu('social', 'Social Links Menu');
 	}
 	add_action('init','glific_theme_setup');
 }

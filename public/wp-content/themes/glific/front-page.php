@@ -62,7 +62,7 @@
 						<img src="<?php echo $section['image'] ; ?>" class="h-md-90 <?php echo $img_class ; ?>">
 					</div>
 					<div class="d-flex flex-column mt-4 mt-xl-0 w-xl-288">
-						<div class="border border-theme-primary border-5 py-4 px-5 d-flex flex-row position-relative <?php echo $border_class ; ?>">
+						<div class="border border-theme-primary border-5 py-4 px-5 d-flex flex-row position-relative bg-theme-gin <?php echo $border_class ; ?>">
 							<h5 class="font-heebo-medium fz-21 leading-31 fz-xl-24 leading-xl-35 text-theme-mine-shaft"><?php echo $section['text'] ; ?></h5>
 							<img src="<?php echo $section['sub_image'] ; ?>" class="mt-auto position-absolute right-0 bottom-0 mr-7 mb-5">
 						</div>
@@ -72,6 +72,43 @@
 			<?php endforeach; ?>
 			</div>
 		</div>
+	<?php endif; ?>
+
+	<?php $key_features = get_field('key_features');
+		if (!empty($key_features)) : ?>
+	<div class="key-features bg-theme-gin pt-10 pt-md-16 pt-xl-18 pb-xl-4 pb-md-14 pb-10">
+		<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0 text-center mb-6 mb-md-14 mb-xl-18"><?php echo $key_features['heading']; ?></h3>
+
+		<div class="d-flex flex-column w-328 mx-auto w-md-737 w-xl-1044">
+			<?php foreach ($key_features['sections'] as $key => $section) :
+				switch ($key) {
+					case '0':
+						$class = 'rounded-top-30 rounded-bottom-right-30 pr-xl-20';
+						break;
+					case '1':
+						$class = 'rounded-bottom-30 rounded-top-left-30 pl-xl-16 pr-xl-12';
+						$img_class = 'w-80';
+						break;
+					case '2':
+						$class = 'rounded-top-30 rounded-bottom-right-30 pr-xl-24';
+						break;
+					case '3':
+						$class = 'rounded-bottom-30 rounded-top-left-30 pr-xl-12';
+						break;
+				}
+				?>
+			<div class="d-flex flex-column bg-white align-items-center px-7 mb-10 mb-xl-18 py-9 justify-content-md-between w-xl-936 <?php echo $class; ?> <?php echo $key % 2 == 0 ? 'flex-md-row-reverse' : 'flex-md-row ml-xl-auto' ;?>">
+				<div class="h-138 w-md-238 w-xl-320">
+					<img src="<?php echo $section['image'] ; ?>" class="h-full w-md-full">
+				</div>
+				<div class="d-flex flex-column w-md-384 w-xl-427 mt-6 mt-md-0">
+					<h5 class="font-heebo-medium fz-24 leading-35"><?php echo $section['heading'] ; ?></h5>
+					<p class="font-heebo-regular fz-18 leading-27 mb-0 mt-6"><?php echo $section['content'] ; ?></p>
+				</div>
+			</div>
+			<?php endforeach ; ?>
+		</div>
+	</div>
 	<?php endif; ?>
 </div>
 <?php

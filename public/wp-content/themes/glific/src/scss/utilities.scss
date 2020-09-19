@@ -105,6 +105,38 @@
 		border-bottom-left-radius: $value;
 	}
 }
+@each $name, $value in $sizes {
+	.border-#{$name} {
+		border-width: $value !important;
+	}
+}
+
+@each $name, $value in $spacers{
+	.top-#{$name} {
+		top: $value;
+	}
+	.top-n#{$name} {
+		top: $value * -1 !important;
+	}
+	.bottom-#{$name} {
+		bottom: $value;
+	}
+	.bottom-n#{$name} {
+		bottom: $value * -1;
+	}
+	.right-#{$name} {
+		right: $value;
+	}
+	.right-n#{$name} {
+		right: $value * -1;
+	}
+	.left-#{$name} {
+		left: $value;
+	}
+	.left-n#{$name} {
+		left: $value * -1;
+	}
+}
 
 
 .glific-button-border{

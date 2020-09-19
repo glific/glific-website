@@ -24,7 +24,7 @@
 	</div>
 	<?php $demo_section = get_field('demo_section');
 		if (!empty($demo_section)) : ?>
-	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-330 w-660 w-xl-880 mx-auto py-26">
+	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-330 w-md-660 w-xl-880 mx-auto py-26">
 		<div class="d-flex flex-column w-md-298">
 			<h3 class="text-theme-primary font-heebo-regular fz-28 fz-md-36 leading-40 mb-0"><?php echo $demo_section['heading']; ?></h3>
 			<p class="fz-18 leading-27 mb-0 font-heebo-regular text-theme-pewter mt-6"><?php echo $demo_section['sub_heading']; ?></p>
@@ -35,7 +35,44 @@
 	</div>
 	<?php endif ; ?>
 
+	<?php $glific_section = get_field('why_glific');
+		if (!empty($glific_section )) : ?>
+		<div class="why-glific pb-18 pb-md-23 pb-xl-26">
+			<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0 text-center mb-6 mb-md-14 mb-xl-18"><?php echo $glific_section['heading']; ?></h3>
+			<div class="w-288 w-md-664 w-xl-878 mx-auto d-flex flex-column flex-md-row flex-md-wrap justify-content-md-between">
+			<?php foreach ($glific_section['sections'] as $key => $section) :
+				switch ($key) {
+					case '0':
+						$border_class = 'rounded-top-20 rounded-bottom-left-20';
+						break;
+					case '1':
+						$border_class = 'rounded-top-20 rounded-bottom-right-20';
+						$img_class = 'w-80';
+						break;
+					case '2':
+						$border_class = 'rounded-bottom-20 rounded-top-left-20';
+						break;
+					case '3':
+						$border_class = 'rounded-bottom-20 rounded-top-right-20';
+						break;
+				}
+				?>
+				<div class="d-flex flex-column flex-xl-row w-full w-md-310 w-xl-407 mb-10 justify-content-xl-between">
+					<div>
+						<img src="<?php echo $section['image'] ; ?>" class="h-md-90 <?php echo $img_class ; ?>">
+					</div>
+					<div class="d-flex flex-column mt-4 mt-xl-0 w-xl-288">
+						<div class="border border-theme-primary border-5 py-4 px-5 d-flex flex-row position-relative <?php echo $border_class ; ?>">
+							<h5 class="font-heebo-medium fz-21 leading-31 fz-xl-24 leading-xl-35 text-theme-mine-shaft"><?php echo $section['text'] ; ?></h5>
+							<img src="<?php echo $section['sub_image'] ; ?>" class="mt-auto position-absolute right-0 bottom-0 mr-7 mb-5">
+						</div>
+						<div class="mt-4 mt-6 fz-18 leading-27 font-heebo-regular text-theme-mine-shaft pl-xl-6 text-theme-mine-shaft"><?php echo $section['content'] ; ?></div>
+					</div>
+				</div>
+			<?php endforeach; ?>
+			</div>
+		</div>
+	<?php endif; ?>
 </div>
-
 <?php
 	get_footer();

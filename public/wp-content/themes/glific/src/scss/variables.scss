@@ -2,12 +2,16 @@ $theme-primary: #073F24;
 $theme-secondary: #119656;
 $theme-dark-green: #05400A;
 $theme-pewter: #93A29B;
+$theme-mine-shaft: #3B3B3B;
+$theme-gin: #E6F1E7;
 
 $theme-colors: (
     'theme-primary': $theme-primary,
     'theme-secondary': $theme-secondary,
     'theme-dark-green': $theme-dark-green,
     'theme-pewter': $theme-pewter,
+    'theme-mine-shaft': $theme-mine-shaft,
+    'theme-gin': $theme-gin,
 );
 
 $spacer: 4px;
@@ -38,20 +42,28 @@ $spacers: (
     13\.5: ($spacer * 11.5), // 46px
     15: ($spacer * 13), // 52px
     15\.5: ($spacer * 13.5), // 54px
+    16: ($spacer * 14), // 56px
     16\.5: ($spacer * 14.5), // 58px
     18: ($spacer * 16), // 64px
+    20: ($spacer * 18), // 72px
     22: ($spacer * 20), // 80px
+    23: ($spacer * 21), // 84px
+    24: ($spacer * 22), // 88px
+    26: ($spacer * 24), // 96px
     27: ($spacer * 25), // 100px
     33: ($spacer * 31), // 124px
+    36: ($spacer * 34), // 134px
 );
 
 $sizes: (
+    '5': 5px,
     '25': 25px,
     '44': 44px,
     '50': 50px,
     '58': 58px,
     '75': 75px,
     '80': 80px,
+    '90': 90px,
     '98': 98px,
     '100': 100px,
     '126': 126px,
@@ -59,13 +71,33 @@ $sizes: (
     '170': 170px,
     '190': 190px,
     '226': 226px,
+    '238': 238px,
+    '240': 240px,
     '252': 252px,
+    '288': 288px,
+    '298': 298px,
+    '310': 310px,
+    '320': 320px,
     '328': 328px,
+    '330': 330px,
+    '336': 336px,
+    '360': 360px,
+    '362': 362px,
+    '384': 384px,
+    '407': 407px,
     '427': 427px,
+    '502': 502px,
     '536': 536px,
     '534': 534px,
     '625': 625px,
+    '660': 660px,
+    '664': 664px,
+    '737': 737px,
     '750': 750px,
+    '878': 878px,
+    '936': 936px,
+    '1044': 1044px,
+    '880': 880px,
     '25p' : 25%,
     'half' : 50%,
     '75p' : 75%,
@@ -78,6 +110,7 @@ $font-sizes: (
     '16': 16px,
     '18': 18px,
     '20': 20px,
+    '21': 21px,
     '22': 22px,
     '24': 24px,
     '28': 28px,
@@ -93,8 +126,28 @@ $line-heights: (
     '24': 24px,
     '27': 27px,
     '30': 30px,
+    '31': 31px,
+    '35': 35px,
     '36': 36px,
+    '40': 40px,
     '43': 43px,
+);
+
+$rounded: (
+    '0': 0,
+    '2': 2px,
+    '6': 6px,
+    6\.5: 6.5px,
+    '8': 8px,
+    '10': 10px,
+    '12': 12px,
+    '15': 15px,
+    '18': 18px,
+    '20': 20px,
+    '24': 24px,
+    '29': 29px,
+    '30': 30px,
+    '58': 58px,
 );
 
 $grid-breakpoints: (

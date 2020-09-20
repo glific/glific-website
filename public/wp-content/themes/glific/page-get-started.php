@@ -12,7 +12,7 @@ get_header();
     <div class="justify-content-between w-235 w-md-310 mx-auto pt-18 pt-md-18 pb-md-13.5 pb-11.5">
         <h1 class="font-heebo-bold fz-28 leading-40 fz-md-36 text-theme-primary"><?php echo get_field('main_heading'); ?></h1>
     </div>
-    <div class="subsection-container d-flex flex-column ml-6 ml-xl-26 w-xl-936 w-md-712">
+    <div class="subsection-container d-flex flex-column ml-6 ml-xl-33 w-xl-936 w-md-712">
         <?php $section_one_data = get_field('section_one');
             if (!empty($section_one_data)) :
                 foreach ($section_one_data as $key => $data) : ?>
@@ -24,7 +24,7 @@ get_header();
                         <div class="bg-white p-6 pt-md-6 pb-md-4.5 rounded-20 pl-md-8.5">
                             <h2 class="fz-24 font-heebo-regular text-theme-mine-shaft mb-0"><?php echo $data['title']; ?></h2>
                         </div>
-                        <div class="d-flex flex-column bg-theme-gin rounded-bottom-30 font-heebo-regular fz-18 leading-28 text-theme-mine-shaft pt-8 pb-4 pl-5 pb-md-6 pl-md-8">
+                        <div class="d-flex flex-column bg-theme-gin rounded-bottom-30 font-heebo-regular fz-18 leading-28 text-theme-mine-shaft pt-8 pb-6 pl-5 pb-md-6 pl-md-8">
                         <?php if (!empty($data['content'])) : 
                             foreach ($data['content'] as $index => $content) : ?>
                             <div class="d-flex flex-row">
@@ -36,13 +36,30 @@ get_header();
                         <?php endforeach;
                         endif;
                         if ($key === 2) : ?>
-                        <a href="<?php $section_one_data['contact_us_url']; ?>" class="d-block w-154 text-decoration-none bg-theme-primary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">Contact Us</a>
+                            <a href="<?php $section_one_data['contact_us_url']; ?>" class="d-block w-154 text-decoration-none bg-theme-primary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">Contact Us</a>
                         <?php endif; ?>
                         </div>
                     </div>
                 </div>
             <?php endforeach;
             endif; ?>
+    </div>
+    <?php $section_two_data = get_field('section_two');
+    if (!empty($section_two_data)) : ?>
+    <div class="d-none d-md-flex flex-row w-xl-868 w-md-750 ml-xl-64 justify-content-between mb-md-26 mx-auto">
+    <?php foreach ($section_two_data as $key => $data) : ?>
+        <div class="d-flex flex-column w-xl-426 w-md-360 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
+            <h2 class="fz-md-24 w-xl-345 w-md-310"><?php echo $data['title']; ?></h2>
+            <?php if (!empty($data['button_url']) && !empty($data['button_text'])) :?>
+            <div class="d-flex flex-row justify-content-center mt-xl-7 mt-md-8">
+                <a href="<?php $data['button_url']; ?>" class="d-block w-232 text-decoration-none bg-theme-secondary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15"><?php echo $data['button_text']; ?></a>
+            </div>
+            <?php endif; ?>
+        </div>
+    <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
+    <div>
     </div>
 </div>
 

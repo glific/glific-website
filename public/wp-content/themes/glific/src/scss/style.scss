@@ -55,6 +55,31 @@ body{
 	border: 3px solid $theme-pewter;
 }
 
+.carousel-control-next-icon{
+	width: 16px;
+	height: 30px;
+	background-image: url('dist/images/next-icon.svg') !important;
+}
+.carousel-control-prev-icon{
+	width: 16px;
+	height: 30px;
+	background-image: url('dist/images/prev-icon.svg') !important;
+}
+.carousel-control-prev {
+	opacity: 1;
+	top: 62px !important;
+	width: 3%;
+}
+.carousel-control-next {
+	opacity: 1;
+	top: 62px !important;
+	width: 3%;
+}
+.user-bg{
+	background-image: url('dist/images/colon.svg') !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
 @import 'utilities';
 @import 'media/sm';
 @import 'media/md';

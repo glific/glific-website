@@ -27,7 +27,7 @@ $main_heading = get_field('main_heading');
                         <div class="bg-white p-6 pt-md-6 pb-md-4.5 rounded-20 pl-md-8.5">
                             <h2 class="fz-24 font-heebo-regular text-theme-mine-shaft mb-0"><?php echo $data['title']; ?></h2>
                         </div>
-                        <div class="d-flex flex-column bg-theme-gin rounded-bottom-30 font-heebo-regular fz-18 leading-28 text-theme-mine-shaft pt-8 pb-4 pl-5 pb-md-6 pl-md-8">
+                        <div class="d-flex flex-column bg-theme-gin rounded-bottom-30 font-heebo-regular fz-18 leading-28 text-theme-mine-shaft pt-8 pb-6 pl-5 pb-md-6 pl-md-8">
                             <?php if (!empty($data['content'])) :
                                 foreach ($data['content'] as $content) : ?>
                                     <div class="d-flex flex-row">

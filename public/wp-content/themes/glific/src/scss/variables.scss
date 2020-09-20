@@ -4,6 +4,7 @@ $theme-dark-green: #05400A;
 $theme-pewter: #93A29B;
 $theme-mine-shaft: #3B3B3B;
 $theme-gin: #E6F1E7;
+$theme-white-smoke: #f7f7f7;
 
 $theme-colors: (
     'theme-primary': $theme-primary,
@@ -12,6 +13,7 @@ $theme-colors: (
     'theme-pewter': $theme-pewter,
     'theme-mine-shaft': $theme-mine-shaft,
     'theme-gin': $theme-gin,
+    "theme-white-smoke": $theme-white-smoke,
 );
 
 $spacer: 4px;
@@ -51,13 +53,17 @@ $spacers: (
     24: ($spacer * 22), // 88px
     26: ($spacer * 24), // 96px
     27: ($spacer * 25), // 100px
+    31: ($spacer * 29), // 116px
     33: ($spacer * 31), // 124px
     36: ($spacer * 34), // 134px
 );
 
 $sizes: (
     '5': 5px,
+    '14': 14px,
+    '20': 20px,
     '25': 25px,
+    '35': 35px,
     '44': 44px,
     '50': 50px,
     '58': 58px,

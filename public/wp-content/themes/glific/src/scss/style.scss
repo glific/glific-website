@@ -55,6 +55,34 @@ body{
 	border: 3px solid $theme-pewter;
 }
 
+.get-started-content-box {
+    box-shadow: 6px 6px 9px -2px rgba($color: #000000, $alpha: 0.1);
+}
+
+
+.card-header .btn[aria-expanded=true] {
+	color: white !important;
+	background-color: $theme-primary;
+	.icon-dropdown {
+		transform: rotate(0deg);
+	}
+}
+
+.icon-dropdown {
+	transform: rotate(180deg);
+}
+
+.card-shadow {
+    box-shadow: 6px 6px 9px -2px rgba($color: #000000, $alpha: 0.1);
+}
+
+.card {
+	border: none;
+	.btn:focus {
+		box-shadow: none !important;
+	}
+}
+
 @import 'utilities';
 @import 'media/sm';
 @import 'media/md';

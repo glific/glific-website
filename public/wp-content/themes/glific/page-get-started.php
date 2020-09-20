@@ -44,23 +44,21 @@ get_header();
             <?php endforeach;
             endif; ?>
     </div>
-    <?php $section_two_data = get_field('section_two');
-    if (!empty($section_two_data)) : ?>
-    <div class="d-none d-md-flex flex-row w-xl-868 w-md-750 ml-xl-64 justify-content-between mb-md-26 mx-auto">
-    <?php foreach ($section_two_data as $key => $data) : ?>
-        <div class="d-flex flex-column w-xl-426 w-md-360 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
-            <h2 class="fz-md-24 w-xl-345 w-md-310"><?php echo $data['title']; ?></h2>
-            <?php if (!empty($data['button_url']) && !empty($data['button_text'])) :?>
-            <div class="d-flex flex-row justify-content-center mt-xl-7 mt-md-8">
-                <a href="<?php $data['button_url']; ?>" class="d-block w-232 text-decoration-none bg-theme-secondary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15"><?php echo $data['button_text']; ?></a>
+    <?php $secondary_section_data = get_field('secondary_section');
+    if (!empty($secondary_section_data)) : ?>
+        <div class="d-none d-md-flex flex-row w-xl-868 w-md-750 ml-xl-64 justify-content-between mb-md-26 mx-auto">
+        <?php foreach ($secondary_section_data as $data) : ?>
+            <div class="d-flex flex-column w-xl-426 w-md-360 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
+                <h2 class="fz-md-24 w-xl-345 w-md-310"><?php echo $data['title']; ?></h2>
+                <?php if (!empty($data['button_url']) && !empty($data['button_text'])) :?>
+                    <div class="d-flex flex-row justify-content-center mt-xl-7 mt-md-8">
+                        <a href="<?php $data['button_url']; ?>" class="d-block w-232 text-decoration-none bg-theme-secondary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15"><?php echo $data['button_text']; ?></a>
+                    </div>
+                <?php endif; ?>
             </div>
-            <?php endif; ?>
+        <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
-    </div>
     <?php endif; ?>
-    <div>
-    </div>
 </div>
 
 <?php 

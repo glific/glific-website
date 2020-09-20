@@ -1,0 +1,12 @@
+.get-started-description p {
+    @extend .mb-0;
+}
+
+.get-started-description a {
+    @extend .text-decoration-none, .text-theme-secondary;
+    word-wrap: break-word;
+}
+
+.get-started-content-box {
+    box-shadow: 6px 6px 9px -2px rgba($color: #000000, $alpha: 0.1);
+}

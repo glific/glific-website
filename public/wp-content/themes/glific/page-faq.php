@@ -21,7 +21,9 @@ $page_title = get_field('faq_page_title');
     </div>
 
     <div class="pb-26 px-6 px-xl-31">
-        <?php foreach ($faqs as $key => $faq) { ?>
+        <?php foreach ($faqs as $key => $faq) { 
+            $faq_count = $key + 1;
+        ?>
         <div class="accordion py-4" id="accordionExample">
             <div class="card rounded-20 card-shadow">
                 <div class="card-header bg-white rounded-20 p-0 card-shadow" id="headingOne">
@@ -29,7 +31,7 @@ $page_title = get_field('faq_page_title');
                     <div class="d-flex flex-column flex-md-row">
                         <div class="d-flex flex-row justify-content-between">
                             <div class="fz-36 font-heebo-light my-auto pr-md-6 pr-xl-16">
-                                <?php echo strlen((string)$key) < 10 ? '0' . ($key + 1) : ($key + 1);?>
+                                <?php echo $faq_count < 10 ? '0' . $faq_count : $faq_count;?>
                             </div>
                             <div class="icon-dropdown d-md-none w-20 h-35 mt-4"> 
                                 <?php echo file_get_contents(get_template_directory(). '/dist/images/icon-arrow.svg') ?>

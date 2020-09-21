@@ -37,3 +37,14 @@ if ( ! function_exists( 'glific_theme_setup' ) ) {
 	}
 	add_action('init','glific_theme_setup');
 }
+
+add_action('widgets_init', 'glific_widget_forms');
+function glific_widget_forms()
+{
+    register_sidebar(array(
+        'name' => 'Contact',
+        'id' => 'glific_form_contact',
+        'before_title' => '<span class="d-none">',
+        'after_title' => '</span>',
+    ));
+}

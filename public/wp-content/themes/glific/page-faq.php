@@ -33,14 +33,14 @@ $page_title = get_field('faq_page_title');
                                 <div class="fz-36 font-heebo-light my-auto pr-md-6 pr-xl-16">
                                     <?php echo $faq_count < 10 ? '0' . $faq_count : $faq_count;?>
                                 </div>
-                                <div class="icon-dropdown d-md-none w-20 h-35 mt-4"> 
+                                <div class="icon-dropdown d-md-none w-22 h-30 mt-4"> 
                                     <?php echo file_get_contents(get_template_directory(). '/dist/images/icon-arrow.svg') ?>
                                 </div>
                             </div>
-                            <div class="my-auto py-6">
+                            <div class="my-auto py-6 w-md-85p">
                                 <?php echo $faq['title']; ?>
                             </div>
-                            <div class="icon-dropdown d-none d-md-block w-20 h-35 mt-4 ml-auto"> 
+                            <div class="icon-dropdown d-none d-md-block w-22 h-30 mt-6 ml-auto"> 
                                 <?php echo file_get_contents(get_template_directory(). '/dist/images/icon-arrow.svg') ?>
                             </div>
                         </div>

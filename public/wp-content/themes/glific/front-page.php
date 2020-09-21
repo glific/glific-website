@@ -165,7 +165,6 @@
 		</div>
 	<?php endif ; ?>
 
-
 	<?php $know_more = get_field('know_more');
 		if (!empty($know_more)) : ?>
 		<div class="d-flex flex-column w-full mx-auto bg-theme-gray pb-26">

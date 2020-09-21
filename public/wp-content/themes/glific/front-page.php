@@ -110,6 +110,103 @@
 		</div>
 	</div>
 	<?php endif; ?>
+
+	<?php $early_adopters = get_field('early_adopters');
+		if (!empty($early_adopters )) : ?>
+		<div class="bg-theme-white-smoke d-flex flex-column py-26">
+			<div class="w-326 w-md-641 w-xl-840 mx-auto">
+				<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0 mb-6 mb-md-14 mb-xl-18"><?php echo $early_adopters['heading']; ?></h3>
+				<p class="mb-0 font-heebo-regular fz-18 leading-27"><?php echo $early_adopters['sub_heading']; ?></p>
+				<a class="glific-button-border px-9.5 bg-theme-secondary py-4 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-6 d-block w-233"
+					href="<?php echo $early_adopters['case_study_link']['link']; ?>">
+					<?php echo $early_adopters['case_study_link']['button_text']; ?>
+				</a>
+			</div>
+			<?php if (!empty($early_adopters ['npo_logos'])) : ?>
+			<div class="d-flex flex-row w-326 w-md-641 w-xl-840 mx-auto justify-content-center mt-10">
+				<?php foreach ($early_adopters ['npo_logos'] as $key => $logo) :?>
+					<div class="w-54 w-md-108 mx-4 mx-md-6">
+						<img src="<?php echo $logo['image'] ; ?>" class="w-full">
+					</div>
+				<?php endforeach;  ?>
+			</div>
+			<?php endif; ?>
+			<?php if (!empty($early_adopters ['users_saying'])) : ?>
+				<div id="user_satying" class="carousel slide w-326 w-md-641 w-xl-840 mx-auto mt-12" data-ride="carousel">
+					<h5 class="font-heebo-bold fz-24 leading-35">What users are saying</h5>
+					<div class="carousel-inner">
+						<?php foreach ($early_adopters ['users_saying'] as $key => $saying) : ?>
+							<div class="carousel-item <?php echo $key ==0 ? 'active' : ''; ?>">
+								<div class="d-md-flex flex-md-row justify-content-md-between">
+									<div>
+										<p class="mb-0 fz-18 leading-28 text-theme-pewter font-heebo-bold"><?php echo $saying['person_name']; ?></p>
+								 		<p class="font-heebo-regular fz-18 leading-27 mb-0"><?php echo $saying['name']; ?></p>
+								 	</div>
+								 	<div class="w-257 w-md-384 w-xl-536 mt-6 d-none d-md-block fz-18 leading-27 font-heebo-regular">
+								 		<div class="user-bg w-60 h-52 position-absolute top-n4"></div>
+										<?php echo $saying['content']; ?>
+									</div>
+								</div>
+								<div class="w-257 mx-auto mt-6 d-md-none fz-18 leading-27 font-heebo-regular">
+									<div class="user-bg w-60 h-52 position-absolute top-13"></div>
+										<?php echo $saying['content']; ?>
+								</div>
+							</div>
+						<?php endforeach; ?>
+					</div>
+					<a class="carousel-control-prev" href="#user_satying" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#user_satying" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php endif ; ?>
+
+	<?php $know_more = get_field('know_more');
+		if (!empty($know_more)) : ?>
+		<div class="d-flex flex-column w-full mx-auto bg-theme-white-smoke pb-26">
+			<div class="d-flex flex-row bg-white box-shadow-dark-10 mt-10 w-344 w-md-full p-6 ml-auto mr-md-0 justify-content-center align-items-md-center align-items-start d-xl-none rounded-top-left-30 rounded-bottom-left-30 rounded-md-0 rounded-xl-top-right-30">
+				<h5 class="w-150 w-md-auto mr-md-21 font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['whatsapp']['text'] ; ?></h5>
+				<a class="glific-button-border bg-theme-secondary w-156 py-4 w-md-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0"
+					href="<?php echo $know_more['whatsapp']['button']['url'] ; ?>">
+					<?php echo $know_more['whatsapp']['button']['link'] ; ?></a>
+			</div>
+			<div class="d-flex flex-column flex-md-row mt-md-10">
+				<div class="w-md-half mr-md-6 d-xl-flex flex-xl-column">
+					<div class="d-xl-flex flex-column bg-white box-shadow-dark-10 mt-10 w-344 w-md-full p-6 mr-auto mr-md-0 justify-content-center align-items-center d-none w-xl-full ml-xl-auto mt-xl-0 p-xl-10 rounded-xl-top-right-30">
+						<div class="w-xl-432 ml-xl-auto">
+							<h5 class="w-150 w-md-auto font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['whatsapp']['text'] ; ?></h5>
+							<a class="glific-button-border bg-theme-secondary w-156 py-4 w-md-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0 d-block"
+								href="<?php echo $know_more['whatsapp']['button']['url'] ; ?>">
+								<?php echo $know_more['whatsapp']['button']['link'] ; ?></a>
+						</div>
+					</div>
+					<div class="bg-white d-flex flex-column box-shadow-dark-10 mt-10 mt-md-0 w-344 w-md-full p-6 mr-auto ml-md-0 h-md-full w-xl-full ml-xl-auto mt-xl-10 p-xl-10 rounded-top-right-30 rounded-bottom-right-30">
+						<div class="w-xl-432 ml-xl-auto">
+							<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['open_source']['text'] ; ?></h5>
+							<p class="mb-0 font-heebo-regular fz-18 leading-27 mb-6"><?php echo $know_more['open_source']['content'] ; ?></p>
+							<a class="glific-button-border bg-theme-primary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0 d-block"
+								href="<?php echo $know_more['open_source']['button']['url'] ; ?>">
+								<?php echo $know_more['open_source']['button']['link'] ; ?></a>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex flex-column bg-white box-shadow-dark-10 mt-10 mt-md-0 w-344 p-6 ml-auto mr-md-0 w-md-half ml-md-6 p-xl-10 rounded-top-left-30 rounded-bottom-left-30">
+					<div class="w-xl-432 mr-xl-auto h-full d-flex flex-column">
+						<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['managed_solutions']['heading'] ; ?></h5>
+						<p class="fz-18 leading-27 font-heebo-regular mb-0"><?php echo $know_more['managed_solutions']['sub_heading'] ; ?></p>
+						<img src="<?php echo $know_more['managed_solutions']['image'] ; ?>" class="mt-6 w-170">
+						<div class="mt-auto fz-18 leading-27 font-heebo-regular"><?php echo $know_more['managed_solutions']['content'] ; ?></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
 </div>
 <?php
 	get_footer();

@@ -29,4 +29,29 @@
 			font-size: $value !important;
 		}
 	}
+	@each $name, $value in $rounded {
+		.rounded-md-#{$name} {
+			border-radius: $value;
+		}
+		.rounded-md-top-#{$name} {
+			border-top-left-radius: $value;
+			border-top-right-radius: $value;
+		}
+		.rounded-md-bottom-#{$name} {
+			border-bottom-left-radius: $value;
+			border-bottom-right-radius: $value;
+		}
+		.rounded-md-top-left-#{$name} {
+			border-top-left-radius: $value;
+		}
+		.rounded-md-top-right-#{$name} {
+			border-top-right-radius: $value;
+		}
+		.rounded-md-bottom-right-#{$name} {
+			border-bottom-right-radius: $value;
+		}
+		.rounded-md-bottom-left-#{$name} {
+			border-bottom-left-radius: $value;
+		}
+	}
 }

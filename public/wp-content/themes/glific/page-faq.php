@@ -27,7 +27,13 @@ $page_title = get_field('faq_page_title');
             <div class="accordion py-4" id="accordionFaq">
                 <div class="card rounded-20 card-shadow">
                     <div class="card-header bg-white rounded-20 p-0 card-shadow" id="heading<?php echo $faq_count; ?>">
-                        <button class="btn btn-link btn-block text-left rounded-20 px-6 text-decoration-none fz-24 font-heebo-regular text-theme-mine-shaft" type="button" data-toggle="collapse" data-target="#collapse<?php echo $faq_count;?>" aria-expanded="false" aria-controls="collapse<?php echo $faq_count;?>">
+                        <button class="btn btn-link btn-block text-left rounded-20 px-6 text-decoration-none fz-24 font-heebo-regular text-theme-mine-shaft"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#collapse<?php echo $faq_count;?>"
+                            aria-expanded="false"
+                            aria-controls="collapse<?php echo $faq_count;?>"
+                        >
                         <div class="d-flex flex-column flex-md-row">
                             <div class="d-flex flex-row justify-content-between">
                                 <div class="fz-36 font-heebo-light my-auto pr-md-6 pr-xl-16">

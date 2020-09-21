@@ -9,4 +9,9 @@ jQuery(document).ready(function() {
 		}
 		jQuery(this).toggleClass('navbar-toggle-cross');
 	});
+	jQuery('.scrollable-video-container iframe').on('click', function() {
+		var iframe = jQuery(this).contents();
+		console.log(iframe);
+		jQuery('.selected-video-container').text(iframe);
+	});
 });

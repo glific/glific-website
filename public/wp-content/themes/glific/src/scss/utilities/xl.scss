@@ -29,4 +29,30 @@
 			font-size: $value !important;
 		}
 	}
+
+	@each $name, $value in $rounded {
+		.rounded-xl-#{$name} {
+			border-radius: $value;
+		}
+		.rounded-xl-top-#{$name} {
+			border-top-left-radius: $value;
+			border-top-right-radius: $value;
+		}
+		.rounded-xl-bottom-#{$name} {
+			border-bottom-left-radius: $value;
+			border-bottom-right-radius: $value;
+		}
+		.rounded-xl-top-left-#{$name} {
+			border-top-left-radius: $value;
+		}
+		.rounded-xl-top-right-#{$name} {
+			border-top-right-radius: $value;
+		}
+		.rounded-xl-bottom-right-#{$name} {
+			border-bottom-right-radius: $value;
+		}
+		.rounded-xl-bottom-left-#{$name} {
+			border-bottom-left-radius: $value;
+		}
+	}
 }

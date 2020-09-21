@@ -172,7 +172,9 @@
 		<div class="d-flex flex-column w-full mx-auto bg-theme-white-smoke pb-26">
 			<div class="d-flex flex-row bg-white box-shadow-dark-10 mt-10 w-344 w-md-full p-6 ml-auto mr-md-0 justify-content-center align-items-md-center align-items-start d-xl-none rounded-top-left-30 rounded-bottom-left-30 rounded-md-0 rounded-xl-top-right-30">
 				<h5 class="w-150 w-md-auto mr-md-21 font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['whatsapp']['text'] ; ?></h5>
-				<a class="glific-button-border bg-theme-secondary w-156 py-4 w-md-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0" href="<?php echo $know_more['whatsapp']['button']['url'] ; ?>"><?php echo $know_more['whatsapp']['button']['link'] ; ?></a>
+				<a class="glific-button-border bg-theme-secondary w-156 py-4 w-md-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0"
+					href="<?php echo $know_more['whatsapp']['button']['url'] ; ?>">
+					<?php echo $know_more['whatsapp']['button']['link'] ; ?></a>
 			</div>
 			<div class="d-flex flex-column flex-md-row mt-md-10">
 				<div class="w-md-half mr-md-6 d-xl-flex flex-xl-column">

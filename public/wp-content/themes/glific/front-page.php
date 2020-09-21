@@ -1,8 +1,8 @@
 <?php
 /**
- * File functions.php for theme coloredcow
+ * File functions.php for theme glific
  *
- * @package coloredcow
+ * @package glific
  */
 
 	get_header();

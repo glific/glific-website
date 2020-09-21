@@ -1,0 +1,22 @@
+.page-faq .card-header .btn[aria-expanded=true] {
+	color: white !important;
+	background-color: $theme-primary;
+	.icon-dropdown {
+		transform: rotate(0deg);
+	}
+}
+
+.page-faq .icon-dropdown {
+	transform: rotate(180deg);
+}
+
+.page-faq .card-shadow {
+    box-shadow: 6px 6px 9px -2px rgba($color: #000000, $alpha: 0.1);
+}
+
+.page-faq .card {
+	border: none;
+	.btn:focus {
+		box-shadow: none !important;
+	}
+}

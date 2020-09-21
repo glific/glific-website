@@ -41,8 +41,8 @@ $main_heading = get_field('main_heading');
                                     </div>
                                 <?php endforeach;
                             endif;
-                            if ($key === 2) : ?>
-                                <a href="<?php $primary_section_data['contact_us_url']; ?>" class="d-block w-154 text-decoration-none bg-theme-primary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">Contact Us</a>
+                            if (!empty($data['button_url']) && !empty($data['button_label'])) : ?>
+                                <a href="<?php echo $data['button_url']; ?>" class="d-block w-154 text-decoration-none bg-theme-primary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15"><?php echo $data['button_label']; ?></a>
                             <?php endif; ?>
                         </div>
                     </div>

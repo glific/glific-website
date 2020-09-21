@@ -188,7 +188,9 @@
 						<div class="w-xl-432 ml-xl-auto">
 							<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['open_source']['text'] ; ?></h5>
 							<p class="mb-0 font-heebo-regular fz-18 leading-27 mb-6"><?php echo $know_more['open_source']['content'] ; ?></p>
-							<a class="glific-button-border bg-theme-primary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0 d-block" href="<?php echo $know_more['open_source']['button']['url'] ; ?>"><?php echo $know_more['open_source']['button']['link'] ; ?></a>
+							<a class="glific-button-border bg-theme-primary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0 d-block"
+								href="<?php echo $know_more['open_source']['button']['url'] ; ?>">
+								<?php echo $know_more['open_source']['button']['link'] ; ?></a>
 						</div>
 					</div>
 				</div>

@@ -46,7 +46,11 @@ $webinar_container = get_field('webinar_container');
                             $video_title = get_youtube_video_title($video_id);
                             $video_duration = get_youtube_video_duration($video_id); ?>
                             <div class="single-video-container w-124 d-flex flex-column mx-4 mx-md-0 w-xl-214 <?php echo empty($video_title) && empty($video_duration) ? 'mb-md-6 mb-xl-13' : ''  ?>" data-target="<?php echo $video_id; ?>">
-                                <img class="w-124 w-xl-full h-82 h-xl-136 rounded-xl-30 rounded-15 c-pointer" src="https://img.youtube.com/vi/<?php echo $video_id ?>/0.jpg">
+                                <div class="w-124 w-xl-full h-82 h-xl-136 rounded-xl-30 rounded-15 c-pointer bg-size-contain align-items-center d-flex flex-column flex-md-row justify-content-center" style="background-image: url(https://img.youtube.com/vi/<?php echo $video_id ?>/0.jpg" )>
+                                    <div class="w-20 w-xl-35">
+                                        <?php echo file_get_contents(get_template_directory() . '/dist/images/play-button.svg') ?>
+                                    </div>
+                                </div>
                                 <?php if (!empty($video_title) && !empty($video_duration)) : ?>
                                     <div class="d-flex flex-column d-md-none">
                                         <h2 class="font-heebo-bold fz-12 fz-xl-14 text-theme-nero video-title mb-0 mt-4"><?php echo $video_title; ?></h2>

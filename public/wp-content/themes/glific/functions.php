@@ -66,6 +66,17 @@ function get_youtube_video_duration($youtube_video_id) {
 	}
 }
 
+add_action('widgets_init', 'glific_widget_forms');
+function glific_widget_forms()
+{
+    register_sidebar(array(
+        'name' => 'Contact',
+        'id' => 'glific_form_contact',
+        'before_title' => '<span class="d-none">',
+        'after_title' => '</span>',
+    ));
+}
+
 function get_thumbnail_from_youtube_video($url) {
 	$shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_]+)\??/i';
 	$longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))(\w+)/i';

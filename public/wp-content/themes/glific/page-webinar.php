@@ -40,7 +40,8 @@ $webinar_container = get_field('webinar_container');
                     endforeach; ?>
                 </div>
                 <?php if (!empty($webinar_container['video_container'])) : ?>
-                    <div class="scrollable-video-container d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto scrollbar-hidden mx-auto mx-md-0 mt-15 py-10 align-items-md-center pt-md-6 mt-md-0 ml-md-auto">
+                    <div class="scrollable-video-container d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto scrollbar-hidden
+                        mx-auto mx-md-0 mt-15 py-10 align-items-md-center pt-md-6 mt-md-0 ml-md-auto">
                         <?php foreach ($webinar_container['video_container'] as $key => $video) :
                             $video_id = get_youtube_video_id($video['video_url']);
                             $video_title = get_youtube_video_title($video_id);
@@ -70,7 +71,6 @@ $webinar_container = get_field('webinar_container');
                 <?php endif; ?>
             </div>
         </div>
-
     </div>
 </div>
 

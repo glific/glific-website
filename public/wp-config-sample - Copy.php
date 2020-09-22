@@ -77,6 +77,7 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . WP_ROOT . '/wp-co
 define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . WP_ROOT . '/wp');
 define('WP_HOME', 'http://' . $_SERVER['SERVER_NAME'] . WP_ROOT);
 define('WP_YOUTUBE_API_KEY', '');
+define('WP_GOOGLE_API_URL', '');
 
 /**
  * WordPress Database Table prefix.

@@ -46,8 +46,9 @@ function get_youtube_video_id($youtube_url) {
 
 function get_youtube_video_title($youtube_video_id) {
 	$apikey = WP_YOUTUBE_API_KEY;
-	if (!empty($apikey)) {
-		$json_data = file_get_contents('https://www.googleapis.com/youtube/v3/videos?id='.$youtube_video_id.'&key='.$apikey.'&part=snippet');
+	$googleApiUrl = WP_GOOGLE_API_URL;
+	if (!empty($apikey) && !empty($googleApiUrl)) {
+		$json_data = file_get_contents($googleApiUrl.'?id='.$youtube_video_id.'&key='.$apikey.'&part=snippet');
 		$youtube_data = json_decode($json_data);
 		return $youtube_data->items[0]->snippet->title;
 	}
@@ -55,12 +56,13 @@ function get_youtube_video_title($youtube_video_id) {
 
 function get_youtube_video_duration($youtube_video_id) {
 	$apikey = WP_YOUTUBE_API_KEY;
-	if (!empty($apikey)) {
-		$json_data = file_get_contents('https://www.googleapis.com/youtube/v3/videos?id='.$youtube_video_id.'&key='.$apikey.'&part=contentDetails');
+	$googleApiUrl = WP_GOOGLE_API_URL;
+	if (!empty($apikey) && !empty($googleApiUrl)) {
+		$json_data = file_get_contents($googleApiUrl.'?id='.$youtube_video_id.'&key='.$apikey.'&part=contentDetails');
 		$youtube_data = json_decode($json_data);
 		$duration = $youtube_data->items[0]->contentDetails->duration;
 		$interval = new \DateInterval($duration);
-		return gmdate("i:s", $interval->d * 24 * 60 * 60+($interval->h * 60 * 60) + ($interval->i * 60) + $interval->s);
+		return gmdate("i:s", $interval->d * 24 * 60 * 60 + ($interval->h * 60 * 60) + ($interval->i * 60) + $interval->s);
 	}
 }
 

@@ -76,7 +76,7 @@
 
 	<?php $key_features = get_field('key_features');
 		if (!empty($key_features)) : ?>
-	<div class="key-features bg-theme-gin pt-10 pt-md-16 pt-xl-18 pb-xl-4 pb-md-14 pb-10">
+	<div class="key-features bg-theme-gin pt-10 pt-md-16 pt-xl-18 pb-xl-4 pb-md-14 pb-10 box-shadow-dark-20">
 		<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0 text-center mb-6 mb-md-14 mb-xl-18"><?php echo $key_features['heading']; ?></h3>
 
 		<div class="d-flex flex-column w-328 mx-auto w-md-737 w-xl-1044">

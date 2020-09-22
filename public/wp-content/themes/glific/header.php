@@ -8,8 +8,18 @@
     <title><?php echo bloginfo('name'); ?></title>
     <?php wp_head(); ?>
 </head>
+
 <header>
-	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white">
+	<?php
+	$banner_content = get_field('banner_section', 'option');
+	if (!empty($banner_content)) : ?>
+	<nav class="bg-theme-pewter d-flex flex-row justify-content-center navbar fixed-top banner-header py-3.5">
+		<p class="font-heebo-bold fz-14 leading-21 text-white mb-0"><?php echo $banner_content['details']; ?></p>
+		<a class="fz-14 leading-21 text-theme-primary font-heebo-bold text-decoration-none ml-10" href="<?php echo $banner_content['link']; ?>">Sign up</a>
+	</nav>
+	<?php endif; ?>
+
+	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white mt-8 <?php echo !empty($banner_content) ? 'mt-10' : '' ; ?>">
 		<a class="navbar-brand py-0 mr-0 d-inline-flex" href="<?php echo esc_url(home_url('/')); ?>">
 		<?php
 			$custom_logo_id = get_theme_mod( 'custom_logo' );

@@ -1,6 +1,6 @@
 <?php
 /**
- * File functions.php for theme coloredcow
+ * Features page for the theme glific
  *
  * @package coloredcow
  */
@@ -17,9 +17,6 @@
 				<?php foreach ($demo_videos['videos'] as $key => $video) :
 				?>
 				<div class="d-flex flex-column">
-					<!-- <?php if($key == 0) :?>
-						<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular">Latest demo video</h3>
-					<?php endif; ?> -->
 					<div class="h-200 w-md-432 h-md-264 w-xl-747 h-xl-456 video-content-block flex-column position-relative <?php echo $key > 0 ? 'd-none' : 'd-flex'; ?>" id="<?php echo "video-$key" ;?>">
 						<?php if($key == 0) :?>
 							<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>

@@ -38,6 +38,45 @@ if ( ! function_exists( 'glific_theme_setup' ) ) {
 	add_action('init','glific_theme_setup');
 }
 
+function get_youtube_video_id($youtube_url) {
+	parse_str( parse_url($youtube_url, PHP_URL_QUERY), $url);
+	$youtube_video_id = $url['v'];
+	return $youtube_video_id;
+}
+
+function get_youtube_video_title($youtube_video_id) {
+	$apikey = WP_YOUTUBE_API_KEY;
+	$googleApiUrl = WP_GOOGLE_API_URL;
+	if (!empty($apikey) && !empty($googleApiUrl)) {
+		$json_data = file_get_contents($googleApiUrl.'?id='.$youtube_video_id.'&key='.$apikey.'&part=snippet');
+		$youtube_data = json_decode($json_data);
+		return $youtube_data->items[0]->snippet->title;
+	}
+}
+
+function get_youtube_video_duration($youtube_video_id) {
+	$apikey = WP_YOUTUBE_API_KEY;
+	$googleApiUrl = WP_GOOGLE_API_URL;
+	if (!empty($apikey) && !empty($googleApiUrl)) {
+		$json_data = file_get_contents($googleApiUrl.'?id='.$youtube_video_id.'&key='.$apikey.'&part=contentDetails');
+		$youtube_data = json_decode($json_data);
+		$duration = $youtube_data->items[0]->contentDetails->duration;
+		$interval = new \DateInterval($duration);
+		return gmdate("i:s", $interval->d * 24 * 60 * 60 + ($interval->h * 60 * 60) + ($interval->i * 60) + $interval->s);
+	}
+}
+
+add_action('widgets_init', 'glific_widget_forms');
+function glific_widget_forms()
+{
+    register_sidebar(array(
+        'name' => 'Contact',
+        'id' => 'glific_form_contact',
+        'before_title' => '<span class="d-none">',
+        'after_title' => '</span>',
+    ));
+}
+
 function get_thumbnail_from_youtube_video($url) {
 	$shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_]+)\??/i';
 	$longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))(\w+)/i';

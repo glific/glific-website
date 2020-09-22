@@ -8,6 +8,7 @@ vendor
 !public/wp-content/plugins
 public/wp-config.php
 public/wp-content/uploads
+public/wp-content/wflogs
 
 #gitignore for theme folder
 !/public/wp-content/themes/

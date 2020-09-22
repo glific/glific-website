@@ -19,4 +19,11 @@ jQuery(document).ready(function() {
 		var url = 'https://www.youtube.com/embed/'+target;
 		jQuery('.single-video-block iframe').attr('src', url);
 	});
+
+	jQuery('.single-video').on('click', function(){
+		var target = jQuery(this).data('target');
+		jQuery('.video-content-block').removeClass('d-flex').addClass('d-none');
+		jQuery(target).addClass('d-flex').removeClass('d-none');
+	});
+
 });

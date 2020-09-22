@@ -99,7 +99,7 @@
 
 @each $name, $value in $rounded {
 	.rounded-#{$name} {
-		border-radius: $value;
+		border-radius: $value !important;
 	}
 	.rounded-top-#{$name} {
 		border-top-left-radius: $value;

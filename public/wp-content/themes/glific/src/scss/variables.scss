@@ -4,7 +4,7 @@ $theme-dark-green: #05400A;
 $theme-pewter: #93A29B;
 $theme-mine-shaft: #3B3B3B;
 $theme-gin: #E6F1E7;
-$theme-alabaster: #F7F7F7;
+$theme-white-smoke: #F7F7F7;
 
 $theme-colors: (
     'theme-primary': $theme-primary,
@@ -13,7 +13,7 @@ $theme-colors: (
     'theme-pewter': $theme-pewter,
     'theme-mine-shaft': $theme-mine-shaft,
     'theme-gin': $theme-gin,
-    'theme-alabaster': $theme-alabaster,
+    'theme-white-smoke': $theme-white-smoke,
 );
 
 $spacer: 4px;
@@ -55,14 +55,19 @@ $spacers: (
     27: ($spacer * 25), // 100px
     33: ($spacer * 31), // 124px
     36: ($spacer * 34), // 134px
+    64: ($spacer * 62), // 248px
+
 );
 
 $sizes: (
     '5': 5px,
+    '8': 8px,
+    '15': 15px,
     '25': 25px,
     '44': 44px,
     '50': 50px,
     '58': 58px,
+    '67': 67px,
     '75': 75px,
     '80': 80px,
     '90': 90px,
@@ -70,13 +75,19 @@ $sizes: (
     '100': 100px,
     '126': 126px,
     '138': 138px,
+    '146': 146px,
+    '154': 154px,
     '170': 170px,
     '190': 190px,
     '226': 226px,
+    '232': 232px,
+    '235': 235px,
     '238': 238px,
     '240': 240px,
     '252': 252px,
     '258': 258px,
+    '280': 280px,
+    '285': 285px,
     '288': 288px,
     '298': 298px,
     '310': 310px,
@@ -84,23 +95,35 @@ $sizes: (
     '328': 328px,
     '330': 330px,
     '336': 336px,
+    '345': 345px,
     '358': 358px,
     '360': 360px,
     '362': 362px,
     '374': 374px,
     '384': 384px,
     '407': 407px,
+    '426': 426px,
     '427': 427px,
     '502': 502px,
-    '536': 536px,
     '534': 534px,
+    '536': 536px,
+    '540': 540px,
+    '613': 613px,
     '625': 625px,
+    '633': 633px,
     '660': 660px,
     '664': 664px,
+    '678': 678px,
+    '712': 712px,
+    '717': 717px,
     '737': 737px,
+    '738': 738px,
     '750': 750px,
+    '770': 770px,
     '805': 805px,
+    '868': 868px,
     '878': 878px,
+    '900': 900px,
     '936': 936px,
     '1044': 1044px,
     '1106': 1106px,
@@ -108,6 +131,7 @@ $sizes: (
     '25p' : 25%,
     'half' : 50%,
     '75p' : 75%,
+    '90p' : 90%,
     'full' : 100%,
 );
 
@@ -124,6 +148,7 @@ $font-sizes: (
     '30': 30px,
     '36': 36px,
     '43': 43px,
+    '60': 60px,
 );
 
 $line-heights: (
@@ -143,6 +168,7 @@ $line-heights: (
 $rounded: (
     '0': 0,
     '2': 2px,
+    '5': 5px,
     '6': 6px,
     6\.5: 6.5px,
     '8': 8px,

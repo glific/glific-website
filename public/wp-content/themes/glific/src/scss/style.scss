@@ -14,6 +14,10 @@ Text Domain: coloredcow
 
 @import 'assets/bootstrap/bootstrap';
 
+body{
+	@extend .mt-18, .mt-xl-27;
+}
+
 // sass code for image alignment with content
 .alignright{
 	float: right;
@@ -48,9 +52,7 @@ Text Domain: coloredcow
 		}
 	}
 }
-body{
-	@extend .mt-18, .mt-xl-27;
-}
+
 .border-3-pewter{
 	border: 3px solid $theme-pewter;
 }
@@ -62,3 +64,5 @@ body{
 @import 'media/xl';
 @import 'media/hd';
 @import 'header/style';
+@import 'page/get-started.scss';
+@import 'page-contact/style';

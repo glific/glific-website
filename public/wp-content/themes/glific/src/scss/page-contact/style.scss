@@ -1,32 +1,33 @@
-.page-contact{
-	.contact-form{
-		input[type="text"], 
-		input[type="email"], { 
-			@extend .h-44, .w-full, .w-md-90p;
-		}
-		textarea{
-			@extend .pt-6, .pl-7;
-		}
-		input[type="text"], 
-		input[type="email"], 
-		textarea{
-			@extend .rounded-30, .bg-theme-gin, .border-0;
-			box-shadow: none;
-		}
-		input:focus, textarea:focus{
-			box-shadow: none;
-		}
-		label{
-			@extend .font-heebo-regular, .fz-16, .text-theme-pewter, .pl-7;
-			span{
-				@extend .text-theme-pewter;
-			}
-		}
-	}
-	.caldera-grid .alert{
-		@extend .rounded-30;
-	}
-	.alert{
-		@extend .bg-theme-gin, .border-0, .fz-16, .leading-27, .text-center, .font-heebo-regular;
-	}
+.page-contact {
+    .contact-form {
+        input[type="text"],
+        input[type="email"] {
+            @extend .h-44, .w-full, .w-md-90p;
+        }
+        textarea {
+            @extend .pt-6, .pl-7;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            @extend .rounded-30, .bg-theme-gin, .border-0;
+            box-shadow: none;
+        }
+        input:focus,
+        textarea:focus {
+            box-shadow: none;
+        }
+        label {
+            @extend .font-heebo-regular, .fz-16, .text-theme-pewter, .pl-7;
+            span {
+                @extend .text-theme-pewter;
+            }
+        }
+    }
+    .caldera-grid .alert {
+        @extend .rounded-30;
+    }
+    .alert {
+        @extend .bg-theme-gin, .border-0, .fz-16, .leading-27, .text-center, .font-heebo-regular;
+    }
 }

@@ -25,10 +25,8 @@
 	}
 	.caldera-grid .alert{
 		@extend .rounded-30;
-	}	
-
+	}
 	.alert{
 		@extend .bg-theme-gin, .border-0, .fz-16, .leading-27, .text-center, .font-heebo-regular;
 	}
-
 }

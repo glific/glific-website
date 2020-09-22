@@ -15,13 +15,13 @@ $main_heading = get_field('main_heading');
             <h1 class="font-heebo-bold fz-28 leading-40 fz-md-36 text-theme-primary"><?php echo $main_heading; ?></h1>
         </div>
     <?php endif; ?>
-    <div class="subsection-container d-flex flex-column ml-6 ml-xl-26 w-xl-936 w-md-712">
+    <div class="subsection-container d-flex flex-column w-xl-770 w-md-613 mx-auto">
         <?php $primary_section_data = get_field('primary_section');
         if (!empty($primary_section_data)) :
             foreach ($primary_section_data as $key => $data) :
                 $primary_count_index = $key >= 9 ? '' : 0; ?>
-                <div class="flex-column flex-md-row d-flex justify-content-between mb-13.5 mb-xl-18 mb-md-20 w-full">
-                    <div class="d-flex flex-row w-xl-67">
+                <div class="flex-column flex-md-row d-flex justify-content-between mb-13.5 mb-xl-18 mb-md-20 w-280 mx-auto w-md-full">
+                    <div class="d-flex flex-row position-relative right-md-20 mr-md-n18 right-xl-36 mr-xl-n20">
                         <h2 class="font-heebo-light fz-60 text-theme-mine-shaft"><?php echo $primary_count_index; ?><?php echo $key + 1; ?></h2>
                     </div>
                     <div class="d-flex flex-column w-280 w-xl-770 w-md-613 rounded-30 bg-theme-gin get-started-content-box">
@@ -42,7 +42,10 @@ $main_heading = get_field('main_heading');
                                 <?php endforeach;
                             endif;
                             if (!empty($data['button_url']) && !empty($data['button_label'])) : ?>
-                                <a href="<?php echo $data['button_url']; ?>" class="d-block w-154 text-decoration-none bg-theme-primary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15"><?php echo $data['button_label']; ?></a>
+                                <a href="<?php echo $data['button_url']; ?>" 
+                                    class="d-block w-154 text-decoration-none bg-theme-primary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">
+                                    <?php echo $data['button_label']; ?>
+                                </a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -52,13 +55,16 @@ $main_heading = get_field('main_heading');
     </div>
     <?php $secondary_section_data = get_field('secondary_section');
     if (!empty($secondary_section_data)) : ?>
-        <div class="d-none d-md-flex flex-row w-xl-868 w-md-750 ml-xl-64 justify-content-between mb-md-26 mx-auto">
+        <div class="d-flex flex-column flex-md-row w-280 w-xl-868 w-md-750 justify-content-between mb-md-26 mx-auto">
             <?php foreach ($secondary_section_data as $data) : ?>
-                <div class="d-flex flex-column w-xl-426 w-md-360 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
-                    <h2 class="fz-md-24 w-xl-345 w-md-310"><?php echo $data['title']; ?></h2>
+                <div class="d-flex flex-column w-xl-426 w-md-360 p-8 mb-10 mb-md-0 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
+                    <h2 class="fz-18 fz-md-24 w-xl-345 w-md-310"><?php echo $data['title']; ?></h2>
                     <?php if (!empty($data['button_url']) && !empty($data['button_text'])) : ?>
-                        <div class="d-flex flex-row justify-content-center mt-xl-7 mt-md-8">
-                            <a href="<?php $data['button_url']; ?>" class="d-block w-232 text-decoration-none bg-theme-secondary text-white font-heebo-regular fz-18 px-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15"><?php echo $data['button_text']; ?></a>
+                        <div class="d-flex flex-row justify-content-center mt-5 mt-xl-7 mt-md-8">
+                            <a href="<?php $data['button_url']; ?>" 
+                                class="d-block w-full w-md-232 text-decoration-none bg-theme-secondary text-white font-heebo-regular fz-18 px-8 px-md-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">
+                                <?php echo $data['button_text']; ?>
+                            </a>
                         </div>
                     <?php endif; ?>
                 </div>

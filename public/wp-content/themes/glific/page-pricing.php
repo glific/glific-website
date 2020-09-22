@@ -28,3 +28,5 @@ $cover_content = get_field('cover_content');
 	</div>
 	<?php endif; ?>
 </div>
+<?php
+	get_footer();

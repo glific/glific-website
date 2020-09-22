@@ -55,4 +55,30 @@
 			border-bottom-left-radius: $value;
 		}
 	}
+	@each $name, $value in $spacers{
+		.top-xl-#{$name} {
+			top: $value;
+		}
+		.top-xl-n#{$name} {
+			top: $value * -1 !important;
+		}
+		.bottom-xl-#{$name} {
+			bottom: $value;
+		}
+		.bottom-xl-n#{$name} {
+			bottom: $value * -1;
+		}
+		.right-xl-#{$name} {
+			right: $value;
+		}
+		.right-xl-n#{$name} {
+			right: $value * -1;
+		}
+		.left-xl-#{$name} {
+			left: $value;
+		}
+		.left-xl-n#{$name} {
+			left: $value * -1;
+		}
+	}
 }

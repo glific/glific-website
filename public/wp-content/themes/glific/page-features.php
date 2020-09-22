@@ -6,11 +6,52 @@
  */
 
 	get_header();
+	$demo_videos = get_field('demo_videos');
 ?>
+<div class="features-page">
+	<?php if (!empty($demo_videos)) : ?>
+	<div class="demo-videos pt-18">
+		<h3 class="text-theme-primary fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold text-center mb-10 mb-xl-14 mb-xl-19"><?php echo $demo_videos['heading']; ?></h3>
+		<div class="demo-section bg-theme-pewter pt-26 pb-18">
+			<div class="d-flex flex-column flex-md-row w-328 w-md-641 w-xl-1108 mx-auto justify-content-md-between">
+				<?php foreach ($demo_videos['videos'] as $key => $video) :
+				?>
+				<div class="d-flex flex-column">
+					<!-- <?php if($key == 0) :?>
+						<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular">Latest demo video</h3>
+					<?php endif; ?> -->
+					<div class="h-200 w-md-432 h-md-264 w-xl-747 h-xl-456 video-content-block flex-column position-relative <?php echo $key > 0 ? 'd-none' : 'd-flex'; ?>" id="<?php echo "video-$key" ;?>">
+						<?php if($key == 0) :?>
+							<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
+						<?php endif; ?>
+						<iframe class="embed-responsive-item w-full rounded-30 h-full border-0" src="<?php echo $video['video']; ?>" allowfullscreen></iframe>
+						<p class="font-heebo-regular fz-16 leading-24 mb-0 text-right mr-xl-10 mt-6 mt-xl-7 position-absolute right-0 bottom-n9 bottom-xl-n12"><?php echo $video['time']; ?></p>
+					</div>
 
-<?php $features_section = get_field('features');
+				</div>
+				<?php endforeach; ?>
+				<div class="d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto mx-auto mx-md-0 mt-15 box-shadow-dark-inset-10 py-10 box-shadow-dark-inset-10 align-items-md-center pt-md-6 mt-md-0">
+					<?php foreach ($demo_videos['videos'] as $key => $video) :
+						$video_thumbnail = get_thumbnail_from_youtube_video($video['video']);
+					?>
+					<div class="d-flex flex-column mx-4 mx-md-0 w-124 w-xl-214 mb-md-6 mb-xl-13 single-video c-pointer position-relative" data-target="<?php echo "#video-$key" ; ?>">
+						<img src="<?php echo $video_thumbnail ; ?>" class="w-124 h-80 h-xl-136 w-xl-full border-0 rounded-15">
+						<h5 class="font-heebo-bold fz-12 leading-18 mt-4 mb-0"><?php echo $video['name']; ?></h5>
+						<p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left"><?php echo $video['time']; ?></p>
+						<div class="w-20 w-xl-35 position-absolute mt-9 mt-xl-15.5 ml-15 ml-xl-24">
+							<?php echo file_get_contents(get_template_directory(). '/dist/images/play-button.svg') ?>
+						</div>
+					</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+
+	<?php $features_section = get_field('features');
 	if (!empty($features_section)) : ?>
-	<div class="features-section">
+	<div class="features-section pt-18 py-md-26">
 		<h3 class="text-theme-primary fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold text-center mb-26"><?php echo $features_section['heading']; ?></h3>
 		<div class="w-328 w-md-752 w-xl-1054 mx-auto">
 			<?php foreach( $features_section['sections'] as $key => $section ) :
@@ -35,5 +76,6 @@
 		</div>
 	</div>
 	<?php endif; ?>
-<?php
+</div>
+	<?php
 	get_footer();

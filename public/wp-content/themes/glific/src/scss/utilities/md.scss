@@ -54,4 +54,30 @@
 			border-bottom-left-radius: $value;
 		}
 	}
+	@each $name, $value in $spacers{
+		.top-md-#{$name} {
+			top: $value;
+		}
+		.top-md-n#{$name} {
+			top: $value * -1 !important;
+		}
+		.bottom-md-#{$name} {
+			bottom: $value;
+		}
+		.bottom-md-n#{$name} {
+			bottom: $value * -1;
+		}
+		.right-md-#{$name} {
+			right: $value;
+		}
+		.right-md-n#{$name} {
+			right: $value * -1;
+		}
+		.left-md-#{$name} {
+			left: $value;
+		}
+		.left-md-n#{$name} {
+			left: $value * -1;
+		}
+	}
 }

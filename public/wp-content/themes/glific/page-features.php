@@ -18,16 +18,18 @@
 				?>
 				<div class="d-flex flex-column">
 					<div class="h-200 w-md-432 h-md-264 w-xl-747 h-xl-456 video-content-block flex-column position-relative <?php echo $key > 0 ? 'd-none' : 'd-flex'; ?>" id="<?php echo "video-$key" ;?>">
-						<?php if($key == 0) :?>
+						<?php
+						$embeded_video_url = get_youtube_embed_url($video['video']);
+						if($key == 0) :?>
 							<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
 						<?php endif; ?>
-						<iframe class="embed-responsive-item w-full rounded-30 h-full border-0" src="<?php echo $video['video']; ?>" allowfullscreen></iframe>
+						<iframe class="embed-responsive-item w-full rounded-30 h-full border-0" src="<?php echo $embeded_video_url; ?>" allowfullscreen></iframe>
 						<p class="font-heebo-regular fz-16 leading-24 mb-0 text-right mr-xl-10 mt-6 mt-xl-7 position-absolute right-0 bottom-n9 bottom-xl-n12"><?php echo $video['time']; ?></p>
 					</div>
 
 				</div>
 				<?php endforeach; ?>
-				<div class="d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto mx-auto mx-md-0 mt-15 box-shadow-dark-inset-10 py-10 box-shadow-dark-inset-10 align-items-md-center pt-md-6 mt-md-0">
+				<div class="d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto mx-auto mx-md-0 mt-15 box-shadow-dark-inset-10 py-10 box-shadow-dark-inset-10 align-items-md-center pt-md-6 mt-md-0 ml-md-auto">
 					<?php foreach ($demo_videos['videos'] as $key => $video) :
 						$video_thumbnail = get_thumbnail_from_youtube_video($video['video']);
 					?>

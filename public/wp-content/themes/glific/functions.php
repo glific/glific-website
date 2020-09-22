@@ -38,15 +38,27 @@ if ( ! function_exists( 'glific_theme_setup' ) ) {
 	add_action('init','glific_theme_setup');
 }
 
-function get_thumbnail_from_youtube_video($embedded_url) {
+function get_thumbnail_from_youtube_video($url) {
 	$shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_]+)\??/i';
 	$longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))(\w+)/i';
-	if (preg_match($longUrlRegex, $embedded_url, $matches)) {
+	if (preg_match($longUrlRegex, $url, $matches)) {
 		$youtube_id = $matches[count($matches) - 1];
 	}
-	if (preg_match($shortUrlRegex, $embedded_url, $matches)) {
+	if (preg_match($shortUrlRegex, $url, $matches)) {
 		$youtube_id = $matches[count($matches) - 1];
 	}
 
-	return 'https://img.youtube.com/vi/'.$youtube_id.'/sddefault.jpg';
+	return 'https://img.youtube.com/vi/'.$youtube_id.'/0.jpg';
+}
+
+function get_youtube_embed_url($url){
+	$shortUrlRegex = '/youtu.be\/([a-zA-Z0-9_-]+)\??/i';
+	$longUrlRegex = '/youtube.com\/((?:embed)|(?:watch))((?:\?v\=)|(?:\/))([a-zA-Z0-9_-]+)/i';
+	if (preg_match($longUrlRegex, $url, $matches)) {
+		$youtube_id = $matches[count($matches) - 1];
+	}
+	if (preg_match($shortUrlRegex, $url, $matches)) {
+		$youtube_id = $matches[count($matches) - 1];
+	}
+	return 'https://www.youtube.com/embed/' . $youtube_id. '?rel=0' ;
 }

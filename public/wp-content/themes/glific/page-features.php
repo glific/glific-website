@@ -21,15 +21,14 @@
 						<?php
 						$embeded_video_url = get_youtube_embed_url($video['video']);
 						if($key == 0) :?>
-							<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
+						<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
 						<?php endif; ?>
 						<iframe class="embed-responsive-item w-full rounded-30 h-full border-0" src="<?php echo $embeded_video_url; ?>" allowfullscreen></iframe>
 						<p class="font-heebo-regular fz-16 leading-24 mb-0 text-right mr-xl-10 mt-6 mt-xl-7 position-absolute right-0 bottom-n9 bottom-xl-n12"><?php echo $video['time']; ?></p>
 					</div>
-
 				</div>
 				<?php endforeach; ?>
-				<div class="d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto mx-auto mx-md-0 mt-15 box-shadow-dark-inset-10 py-10 box-shadow-dark-inset-10 align-items-md-center pt-md-6 mt-md-0 ml-md-auto">
+				<div class="d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto mx-auto mx-md-0 mt-15 box-shadow-dark-inset-10 py-10 align-items-md-center pt-md-6 mt-md-0 ml-md-auto">
 					<?php foreach ($demo_videos['videos'] as $key => $video) :
 						$video_thumbnail = get_thumbnail_from_youtube_video($video['video']);
 					?>
@@ -53,15 +52,15 @@
 	<div class="features-section pt-18 py-md-26">
 		<h3 class="text-theme-primary fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold text-center mb-26"><?php echo $features_section['heading']; ?></h3>
 		<div class="w-328 w-md-752 w-xl-1054 mx-auto">
-			<?php foreach( $features_section['sections'] as $key => $section ) :
-				if ( $key%2 == 0 ) {
-					$border_class = 'rounded-bottom-left-30';
-					$class ="flex-xl-row";
-				}else{
-					$border_class = 'rounded-bottom-right-30';
-					$class ="flex-xl-row-reverse";
-				}
-			?>
+		<?php foreach( $features_section['sections'] as $key => $section ) :
+			if ( $key%2 == 0 ) {
+				$border_class = 'rounded-bottom-left-30';
+				$class ="flex-xl-row";
+			} else {
+				$border_class = 'rounded-bottom-right-30';
+				$class ="flex-xl-row-reverse";
+			}
+		?>
 			<div class="d-flex flex-column mb-18 justify-content-xl-between <?php echo $class ; ?>">
 				<div class="rounded-30">
 					<img src="<?php echo $section['image'] ; ?>" class="w-full w-md-510">
@@ -76,5 +75,5 @@
 	</div>
 	<?php endif; ?>
 </div>
-	<?php
+<?php
 	get_footer();

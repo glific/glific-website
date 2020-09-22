@@ -17,11 +17,11 @@ $webinar_container = get_field('webinar_container');
         </div>
     <?php endif; ?>
     <div class="webinar-container bg-theme-pewter">
-        <div class="d-flex flex-column ml-xl-36 pt-xl-20 pb-xl-18">
+        <div class="d-flex flex-column pt-xl-20 pb-xl-18 w-xl-1092 w-md-641 mx-auto">
             <?php if (!empty($webinar_container['heading'])) : ?>
                 <h2 class="font-heebo-semibold fz-xl-24 text-theme-mine-shaft mb-0"><?php echo $webinar_container['heading']; ?></h2>
             <?php endif; ?>
-            <div class="video-container mt-xl-14 d-flex flex-row justify-content-between w-xl-1092 h-xl-456">
+            <div class="video-container mt-xl-14 d-flex flex-row justify-content-between h-xl-456">
                 <div class="selected-video-container w-xl-722 rounded-30">
                     
                 </div>

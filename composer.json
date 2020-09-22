@@ -20,7 +20,8 @@
         "johnpbloch/wordpress": "*",
         "wpackagist-plugin/wordfence": "*",
         "wpackagist-plugin/wp-smushit": "*",
-        "wpackagist-plugin/custom-post-type-ui": "*"
+        "wpackagist-plugin/custom-post-type-ui": "*",
+        "wpackagist-plugin/caldera-forms": "*"
     },
     "extra": {
         "wordpress-install-dir": "public/wp",

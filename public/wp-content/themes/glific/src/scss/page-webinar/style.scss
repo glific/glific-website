@@ -4,6 +4,9 @@
     outline-offset: -3px;
 }
 
-.scrollable-video-container iframe {
-    @extend .w-xl-214, .h-xl-136, .rounded-xl-30, .w-md-124, .h-md-82, .rounded-md-15;
+.scrollable-video-container .single-video-container {
+    @extend .w-xl-214, .h-xl-136, .w-md-124, .h-md-82;
+}
+.selected-video-container iframe {
+    @extend .w-xl-722, .h-xl-456, .rounded-xl-30, .w-md-432, .h-md-270, .rounded-15, .w-328, .h-200;
 }

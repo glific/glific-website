@@ -47,7 +47,7 @@ Smush has been benchmarked and tested number one for speed and quality and is th
 
 Some image compression tools destroy images with as much as a 30% loss in quality. Our servers strip hidden bulky information from your images and reduce file size without affecting the appearance.
 
-[youtube https://www.youtube.com/watch?v=BDtgVJZEajg&feature=youtu.be]
+[youtube https://www.youtube.com/watch?v=Z1kTcyLFE2g&feature=youtu.be]
 
 Smush meticulously scans every image you upload – or have already added to your site – cuts all the unnecessary data and scales it for you before adding it to your media library.
 

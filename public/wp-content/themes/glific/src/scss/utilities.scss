@@ -144,6 +144,15 @@
 .glific-button-border{
 	border-radius: 15px 15px 0 15px;
 }
+.scrollbar-hidden::-webkit-scrollbar {
+	display: none;
+}
+.scrollbar-hidden {
+	-ms-overflow-style: none;
+}
+.c-pointer {
+	cursor: pointer;
+}
 @import 'utilities/sm';
 @import 'utilities/md';
 @import 'utilities/lg';

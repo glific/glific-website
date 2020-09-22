@@ -5,6 +5,7 @@ $theme-pewter: #93A29B;
 $theme-mine-shaft: #3B3B3B;
 $theme-gin: #E6F1E7;
 $theme-white-smoke: #F7F7F7;
+$theme-nero: #222222;
 
 $theme-colors: (
     'theme-primary': $theme-primary,
@@ -14,6 +15,7 @@ $theme-colors: (
     'theme-mine-shaft': $theme-mine-shaft,
     'theme-gin': $theme-gin,
     'theme-white-smoke': $theme-white-smoke,
+    'theme-nero' : $theme-nero,
 );
 
 $spacer: 4px;
@@ -81,10 +83,12 @@ $sizes: (
     '67': 67px,
     '75': 75px,
     '80': 80px,
+    '82': 82px,
     '90': 90px,
     '98': 98px,
     '100': 100px,
     '108': 108px,
+    '124': 124px,
     '126': 126px,
     '136': 136px,
     '138': 138px,
@@ -93,7 +97,9 @@ $sizes: (
     '154': 154px,
     '156': 156px,
     '170': 170px,
+    '182': 182px,
     '190': 190px,
+    '200': 200px,
     '214': 214px,
     '226': 226px,
     '232': 232px,
@@ -103,9 +109,11 @@ $sizes: (
     '240': 240px,
     '252': 252px,
     '257': 257px,
+    '270': 270px,
     '280': 280px,
     '288': 288px,
     '298': 298px,
+    '305': 305px,
     '310': 310px,
     '315': 315px,
     '320': 320px,
@@ -123,6 +131,7 @@ $sizes: (
     '427': 427px,
     '432': 432px,
     '456': 456px,
+    '486': 486px,
     '502': 502px,
     '534': 534px,
     '536': 536px,

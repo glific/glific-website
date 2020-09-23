@@ -200,7 +200,7 @@
 					<div class="w-xl-432 mr-xl-auto h-full d-flex flex-column">
 						<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['managed_solutions']['heading'] ; ?></h5>
 						<p class="fz-18 leading-27 font-heebo-regular mb-0"><?php echo $know_more['managed_solutions']['sub_heading'] ; ?></p>
-						<a href="<?php echo TIDES_URL ; ?>" target="_blank">
+						<a href="<?php echo $know_more['managed_solutions']['tides_link'] ; ?>" target="_blank">
 							<img src="<?php echo $know_more['managed_solutions']['image'] ; ?>" class="mt-6 w-170">
 						</a>
 						<div class="mt-auto fz-18 leading-27 font-heebo-regular"><?php echo $know_more['managed_solutions']['content'] ; ?></div>

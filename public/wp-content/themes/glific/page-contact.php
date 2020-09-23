@@ -38,8 +38,12 @@ get_header();
 						<?php echo $get_help_section['development_and_design_title']; ?>
 					</h5>
 					<div class="position-absolute bottom-8 d-flex flex-column bottom-1">
-						<a class="glific-button-border bg-theme-primary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-5 mb-5" target="_blank" href="<?php echo $get_help_section['discord_link']; ?>"><?php echo $get_help_section['discord_title']; ?></a>
-						<a class="glific-button-border bg-theme-secondary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none" target="_blank" href="<?php echo $get_help_section['book_a_demo_link']; ?>"><?php echo $get_help_section['book_a_demo_title']; ?></a>
+						<a class="glific-button-border bg-theme-primary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-5 mb-5" target="_blank" href="<?php echo $get_help_section['discord_link']; ?>">
+							<?php echo $get_help_section['discord_title']; ?>
+						</a>
+						<a class="glific-button-border bg-theme-secondary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none" target="_blank" href="<?php echo $get_help_section['book_a_demo_link']; ?>">
+							<?php echo $get_help_section['book_a_demo_title']; ?>
+						</a>
 					</div>
 				</div>
 				<div class="my-6 w-90p w-md-235 h-285 w-xl-358 h-xl-258 bg-white rounded-30 p-6 p-xl-10 box-shadow-dark-10 position-relative">
@@ -49,7 +53,9 @@ get_header();
 					<p class="font-heebo-regular fz-18 leading-27 mt-6">
 						<?php echo $get_help_section['for_ngos_tagline']; ?>
 					</p>
-					<a class="position-absolute bottom-8 glific-button-border bg-theme-secondary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-3" target="_blank" href="<?php echo $get_help_section['linkedin_link']; ?>"><?php echo $get_help_section['linkedin_title']; ?></a>
+					<a class="position-absolute bottom-8 glific-button-border bg-theme-secondary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-3" target="_blank" href="<?php echo $get_help_section['linkedin_link']; ?>">
+						<?php echo $get_help_section['linkedin_title']; ?>
+					</a>
 				</div>
 				<div class="my-md-0 w-90p w-md-235 h-285 w-xl-358 h-xl-258 bg-white rounded-30 p-6 p-xl-10 box-shadow-dark-10 position-relative">
 					<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
@@ -58,7 +64,9 @@ get_header();
 					<p class="font-heebo-regular fz-18 leading-27 mt-6">
 						<?php echo $get_help_section['connect_with_us_tagline']; ?>
 					</p>
-					<a class="position-absolute bottom-8 glific-button-border bg-theme-secondary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-3" target="_blank" href="<?php echo $get_help_section['whatsapp_us_link']; ?>"><?php echo $get_help_section['whatsapp_title']; ?></a>
+					<a class="position-absolute bottom-8 glific-button-border bg-theme-secondary py-4.5 px-9 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-3" target="_blank" href="<?php echo $get_help_section['whatsapp_us_link']; ?>">
+						<?php echo $get_help_section['whatsapp_title']; ?>
+					</a>
 				</div>
 			</div>
 		</div>

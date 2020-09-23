@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Page contact for theme glific
+ * Page About us for theme glific
  *
  * @package glific
  */

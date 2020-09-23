@@ -2,15 +2,15 @@
     .contact-form {
         input[type="text"],
         input[type="email"] {
-            @extend .h-44, .w-full, .w-md-90p;
+            @extend .h-44, .w-full, .w-md-90p, .rounded-15;
         }
         textarea {
-            @extend .pt-6, .pl-7;
+            @extend .pt-6, .pl-7, .rounded-20;
         }
         input[type="text"],
         input[type="email"],
         textarea {
-            @extend .rounded-30, .bg-theme-gin, .border-0;
+            @extend .bg-theme-gin, .border-0;
             box-shadow: none;
         }
         input:focus,
@@ -18,7 +18,7 @@
             box-shadow: none;
         }
         label {
-            @extend .font-heebo-regular, .fz-16, .text-theme-pewter, .pl-7;
+            @extend .font-heebo-regular, .fz-16, .text-theme-pewter, .pl-5;
             span {
                 @extend .text-theme-pewter;
             }

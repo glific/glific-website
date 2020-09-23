@@ -61,7 +61,7 @@ $main_heading = get_field('main_heading');
                     <h2 class="fz-18 fz-md-24 w-xl-345 w-md-310"><?php echo $data['title']; ?></h2>
                     <?php if (!empty($data['button_url']) && !empty($data['button_text'])) : ?>
                         <div class="d-flex flex-row justify-content-center mt-5 mt-xl-7 mt-md-8">
-                            <a href="<?php $data['button_url']; ?>" class="d-block w-full w-md-232 text-center text-decoration-none bg-theme-secondary text-white font-heebo-regular 
+                            <a href="<?php $data['button_url']; ?>" class="d-block w-200 w-md-232 text-center text-decoration-none bg-theme-secondary text-white font-heebo-regular 
                                     fz-18 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">
                                 <?php echo $data['button_text']; ?>
                             </a>

@@ -19,7 +19,7 @@
 	</nav>
 	<?php endif; ?>
 
-	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white mt-8 <?php echo !empty($banner_content) ? 'mt-10' : '' ; ?>">
+	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white mt-8 box-shadow-dark-10 <?php echo !empty($banner_content) ? 'mt-10' : '' ; ?>">
 		<a class="navbar-brand py-0 mr-0 d-inline-flex" href="<?php echo esc_url(home_url('/')); ?>">
 		<?php
 			$custom_logo_id = get_theme_mod( 'custom_logo' );

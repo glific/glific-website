@@ -92,6 +92,8 @@ define('WP_GOOGLE_API_URL', '');
 
 define('WP_DEFAULT_THEME', 'ColoredCow');
 
+define('TIDES_URL', '');
+
 $table_prefix  = 'put_your_table_prefix_here_';
 
 /**

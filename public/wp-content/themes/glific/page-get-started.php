@@ -26,16 +26,16 @@ $main_heading = get_field('main_heading');
                     </div>
                     <div class="d-flex flex-column w-280 w-xl-770 w-md-613 rounded-30 bg-theme-gin get-started-content-box">
                         <?php if (!empty($data['title'])) : ?>
-                            <div class="bg-white p-6 pt-md-6 pb-md-4.5 rounded-20 pl-md-8.5">
-                                <h2 class="fz-24 font-heebo-regular text-theme-mine-shaft mb-0"><?php echo $data['title']; ?></h2>
+                            <div class="bg-white p-6 pt-md-6 pb-md-4.5 rounded-20 pl-md-8.5 box-shadow-dark-10">
+                                <h2 class="fz-24 font-heebo-semibold text-theme-mine-shaft mb-0"><?php echo $data['title']; ?></h2>
                             </div>
                         <?php endif; ?>
-                        <div class="d-flex flex-column bg-theme-gin rounded-bottom-30 font-heebo-regular fz-18 leading-28 text-theme-mine-shaft pt-8 pb-6 pl-5 pb-md-6 pl-md-8">
+                        <div class="d-flex flex-column bg-theme-gin rounded-bottom-30 font-heebo-regular fz-18 leading-28 text-theme-mine-shaft pt-8 pb-6 pl-5 pb-md-8.5 pb-xl-9.5 pl-md-8">
                             <?php if (!empty($data['content'])) :
                                 foreach ($data['content'] as $content) : ?>
                                     <div class="d-flex flex-row">
                                         <div class="w-8 h-8 w-md-15 h-md-15 rounded-5 bg-theme-pewter mt-4 mt-md-3.5"></div>
-                                        <div class="get-started-description ml-3 ml-xl-9.5 mb-md-6 mb-4 w-xl-633 w-md-540 ml-md-8 w-240">
+                                        <div class="get-started-description ml-3 ml-xl-9.5 mb-md-6 mb-4 w-xl-660 w-md-540 ml-md-8 w-240">
                                             <?php echo $content['description']; ?>
                                         </div>
                                     </div>
@@ -61,8 +61,8 @@ $main_heading = get_field('main_heading');
                     <h2 class="fz-18 fz-md-24 w-xl-345 w-md-310"><?php echo $data['title']; ?></h2>
                     <?php if (!empty($data['button_url']) && !empty($data['button_text'])) : ?>
                         <div class="d-flex flex-row justify-content-center mt-5 mt-xl-7 mt-md-8">
-                            <a href="<?php $data['button_url']; ?>" 
-                                class="d-block w-full w-md-232 text-decoration-none bg-theme-secondary text-white font-heebo-regular fz-18 px-8 px-md-10 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">
+                            <a href="<?php $data['button_url']; ?>" class="d-block w-200 w-md-232 text-center text-decoration-none bg-theme-secondary text-white font-heebo-regular 
+                                    fz-18 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">
                                 <?php echo $data['button_text']; ?>
                             </a>
                         </div>

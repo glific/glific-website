@@ -101,3 +101,7 @@ function get_youtube_embed_url($url){
 	}
 	return 'https://www.youtube.com/embed/' . $youtube_id. '?rel=0' ;
 }
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}

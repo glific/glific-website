@@ -11,13 +11,10 @@ get_header();
 <div class="page-about-us">
 	<div class="pb-26 pt-14 pt-md-18 bg-theme-white-smoke">
 		<h1 class="text-center fz-28 leading-40 fz-xl-36 leading-40 font-heebo-bold text-theme-primary mb-10 mb-md-14 mb-xl-18"><?php echo get_the_title(); ?></h1>
-		<?php
-		$cover_content = get_field('cover_content');
-		if (!empty($cover_content)) : ?>
-		<div class="font-heebo-regular fz-18 leading-27 w-328 mx-auto w-md-674 w-xl-830">
-			<?php echo $cover_content ; ?>
-		</div>
-		<?php endif; ?>
+		<?php $cover_content = get_field('cover_content');
+			if (!empty($cover_content)) : ?>
+		<div class="font-heebo-regular fz-18 leading-27 w-328 mx-auto w-md-674 w-xl-830"><?php echo $cover_content ; ?> </div>
+			<?php endif; ?>
 	</div>
 	<?php
 	$team_section = get_field('team_section');

@@ -200,8 +200,8 @@
 					<div class="w-xl-432 mr-xl-auto h-full d-flex flex-column">
 						<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['managed_solutions']['heading'] ; ?></h5>
 						<p class="fz-18 leading-27 font-heebo-regular mb-0"><?php echo $know_more['managed_solutions']['sub_heading'] ; ?></p>
-						<a href="<?php echo $know_more['managed_solutions']['tides_link'] ; ?>" target="_blank">
-							<img src="<?php echo $know_more['managed_solutions']['image'] ; ?>" class="mt-6 w-170">
+						<a href="<?php echo $know_more['managed_solutions']['tides_link'] ; ?>" target="_blank" class="mt-xl-9 w-100 w-md-150 w-xl-170 my-9">
+							<img src="<?php echo $know_more['managed_solutions']['image'] ; ?>" class="w-full">
 						</a>
 						<div class="mt-auto fz-18 leading-27 font-heebo-regular"><?php echo $know_more['managed_solutions']['content'] ; ?></div>
 					</div>

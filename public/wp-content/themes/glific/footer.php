@@ -16,9 +16,9 @@
 			</div>
 			<div class="d-flex flex-md-wrap font-heebo-regular fz-14 leading-18 mt-6 mt-xl-11 w-md-190">
 				<span class="text-theme-pewter">A </span>
-				<span class="text-white mx-3"><a href="https://chintugudiya.org/" target="_blank" class="text-decoration-none text-white">Tech4Dev</a></span>
+				<span class="text-white mx-3"><a href="https://chintugudiya.org/tech4dev/" target="_blank" class="text-decoration-none text-white">Tech4Dev</a></span>
 				<span class="text-theme-pewter">initiative by </span>
-				<span class="text-white ml-3"><a href="https://chintugudiya.org/tech4dev/" target="_blank" class="text-decoration-none text-white">Chintu Gudiya Foundation</a></span>
+				<span class="text-white ml-3"><a href="https://chintugudiya.org/" target="_blank" class="text-decoration-none text-white">Chintu Gudiya Foundation</a></span>
 			</div>
 		</div>
 		<div class="d-flex flex-wrap w-252 w-md-536 w-xl-750 pl-md-8 justify-content-xl-between">
@@ -73,7 +73,7 @@
 
 				<div class="fz-14 leading-21 w-98 w-xl-full text-theme-pewter mt-auto">
 					<span class="theme-pewter">Crafted by</span>
-					<a class="ml-2 text-decoration-none fz-14 leading-21 fz-xl-16 leading-xl-24 text-theme-pewter" href="https://coloredcow.com/" target="_blank">
+					<a class="ml-2 text-decoration-none fz-14 leading-21 fz-xl-16 leading-xl-24 text-theme-pewter" href="https://coloredcow.com/?utm_source=website&utm_medium=glific" target="_blank">
 						ColoredCow
 					</a>
 				</div>

@@ -81,6 +81,10 @@ body {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
+.team-bg-image {
+	background-image: url('dist/images/bg-team.svg') !important;
+}
 @import 'utilities';
 @import 'media/sm';
 @import 'media/md';

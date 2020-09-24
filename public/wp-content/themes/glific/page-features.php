@@ -12,7 +12,7 @@
 	<?php if (!empty($demo_videos)) : ?>
 	<div class="demo-videos pt-18">
 		<h3 class="text-theme-primary fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold text-center mb-10 mb-xl-14 mb-xl-19"><?php echo $demo_videos['heading']; ?></h3>
-		<div class="demo-section bg-theme-pewter pt-26 pb-18">
+		<div class="demo-section bg-theme-pewter pt-26 pb-18 pb-md-28">
 			<div class="d-flex flex-column flex-md-row w-328 w-md-641 w-xl-1108 mx-auto justify-content-md-between">
 				<?php foreach ($demo_videos['videos'] as $key => $video) :
 				?>
@@ -24,7 +24,8 @@
 						<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
 						<?php endif; ?>
 						<iframe class="embed-responsive-item w-full rounded-30 h-full border-0" src="<?php echo $embeded_video_url; ?>" allowfullscreen></iframe>
-						<p class="font-heebo-regular fz-16 leading-24 mb-0 text-right mr-xl-10 mt-6 mt-xl-7 position-absolute right-0 bottom-n9 bottom-xl-n12"><?php echo $video['time']; ?></p>
+						<h5 class="font-heebo-bold fz-16 leading-24 fz-md-18 leading-md-27 mt-4 mb-0  position-absolute left-0 bottom-n9 bottom-md-n11 bottom-xl-n12 ml-5"><?php echo $video['name']; ?></h5>
+						<p class="font-heebo-regular fz-16 leading-24 fz-md-18 leading-md-27 mb-0 text-right mr-xl-10 mt-6 mt-xl-7 position-absolute right-0 bottom-n9 bottom-md-n11 mr-5 bottom-xl-n12"><?php echo $video['time']; ?></p>
 					</div>
 				</div>
 				<?php endforeach; ?>
@@ -65,7 +66,7 @@
 				<div class="rounded-30">
 					<img src="<?php echo $section['image'] ; ?>" class="w-full w-md-510">
 				</div>
-				<div class="mt-6 mt-xl-0 rounded-top-30 bg-theme-secondary border-5 border-theme-primary border p-6 w-md-512 ml-md-auto ml-xl-0 h-md-242 <?php echo $border_class ; ?>">
+				<div class="mt-6 mt-xl-0 rounded-top-30 bg-theme-secondary border-7 border-theme-primary border p-7.5 p-md-10 w-md-512 ml-md-auto ml-xl-0 h-md-242 <?php echo $border_class ; ?>">
 					<h5 class="font-heebo-medium fz-24 leading-35 text-white mb-0"><?php echo $section['content']['heading'] ;?></h5>
 					<p class="font-heebo-regular fz-18 leading-27 text-white mb-0 mt-6"><?php echo $section['content']['content'] ;?></p>
 				</div>

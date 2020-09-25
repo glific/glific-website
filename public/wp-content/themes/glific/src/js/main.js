@@ -36,7 +36,7 @@ function show_more_blogs(event) {
 	show_more_link.addClass('link-not-active');
 	show_more_link.text('Loading...');
 	jQuery.ajax({
-		url: ajax_object.ajaxurl,
+		url: PARAMS.ajaxurl,
 		method: 'POST',
 		data: {
 			'offset' : blog_offset,

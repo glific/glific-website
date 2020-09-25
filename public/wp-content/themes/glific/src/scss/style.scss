@@ -14,8 +14,8 @@ Text Domain: coloredcow
 
 @import 'assets/bootstrap/bootstrap';
 
-body{
-	@extend .mt-18, .mt-xl-27;
+body {
+	@extend .mt-26, .mt-xl-35;
 }
 
 // sass code for image alignment with content
@@ -52,7 +52,6 @@ body{
 		}
 	}
 }
-
 .border-3-pewter{
 	border: 3px solid $theme-pewter;
 }
@@ -81,6 +80,10 @@ body{
 	background-image: url('dist/images/colon.svg') !important;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+.team-bg-image {
+	background-image: url('dist/images/bg-team.svg') !important;
 }
 @import 'utilities';
 @import 'media/sm';

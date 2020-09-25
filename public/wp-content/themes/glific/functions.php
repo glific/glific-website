@@ -144,3 +144,7 @@ function show_more_blogs() {
 }
 add_action( 'wp_ajax_show_more_blogs', 'show_more_blogs' );
 add_action( 'wp_ajax_nopriv_show_more_blogs', 'show_more_blogs' );
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}

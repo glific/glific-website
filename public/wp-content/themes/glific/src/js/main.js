@@ -26,4 +26,19 @@ jQuery(document).ready(function() {
 		jQuery(target).addClass('d-flex').removeClass('d-none');
 	});
 
+	jQuery('.desktop-menu .menu-item-has-children').hover(function() {
+		jQuery(this).find('.sub-menu').show();
+		jQuery(this).find('a').addClass('open');
+	}, function() {
+		jQuery(this).find('.sub-menu').hide();
+		jQuery(this).find('a').removeClass('open');
+	});
+
+	jQuery('.mobile-primary-menu .menu-item-has-children').hover(function() {
+		jQuery(this).find('.sub-menu').show();
+		jQuery(this).find('a').addClass('open');
+	}, function() {
+		jQuery(this).find('.sub-menu').hide();
+		jQuery(this).find('a').removeClass('open');
+	});
 });

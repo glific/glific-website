@@ -68,7 +68,7 @@
 }
 
 .desktop-menu {
-	li{
+	li {
 		@extend .position-relative;
 	}
 	li a {
@@ -79,13 +79,13 @@
 		display: none;
 		li {
 			@extend .border-bottom, .border-theme-pewter;
-			a{
+			a {
 				@extend .w-full, .py-4, .pl-11, .d-block, .fz-14;
 				:hover {
 					@extend .text-theme-dark-green, .bg-theme-pewter;
 				}
 			}
-			a:hover{
+			a:hover {
 				@extend .text-theme-dark-green, .bg-theme-gin;
 			}
 		}
@@ -107,7 +107,7 @@
 }
 
 .mobile-primary-menu {
-	li{
+	li {
 		@extend .position-relative;
 	}
 	.sub-menu {
@@ -115,13 +115,13 @@
 		display: none;
 		li {
 			@extend .border-bottom, .border-theme-pewter, .mb-0, .px-2;
-			a{
+			a {
 				@extend .w-full, .py-4, .pl-11, .d-block, .fz-14, .pr-5;
 				:hover {
 					@extend .text-white, .bg-theme-pewter;
 				}
 			}
-			a:hover{
+			a:hover {
 				@extend .text-theme-dark-green, .bg-theme-gin;
 			}
 		}

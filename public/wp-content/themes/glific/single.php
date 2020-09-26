@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div class="single-blog">
 	<div class="blog-banner w-full h-354 h-md-517 h-xl-585 py-26 px-24 mb-10 bg-theme-bottle-green"></div>
-	<div class="w-90p mt-md-n500 mt-n350 mx-auto max-w-360 max-w-xl-1010 max-w-md-765">
+	<div class="w-90p mt-md-n125 mt-n89 mx-auto max-w-360 max-w-xl-1010 max-w-md-765">
 		<div class="text-white pl-9">
 			<p class="font-heebo-regular fz-18 leading-27 mb-4.5">
 				<?php echo strtoupper(get_the_date('F d, Y')); ?>

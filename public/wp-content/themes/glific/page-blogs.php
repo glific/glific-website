@@ -30,10 +30,10 @@ get_header();
 					<?php $featured_image_url = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/dist/images/blog-delaut-image.svg'; ?>
 					<div class="w-full h-169 bg-position-center bg-size-cover rounded-30" style="background-image: url('<?php echo $featured_image_url; ?>');">
 					</div>
-					<a href="<?php echo get_the_permalink(); ?>">
-					<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6">
-						<?php echo get_the_title(); ?>
-					</h5>
+					<a href="<?php echo get_the_permalink(); ?>" class="text-decoration-none text-theme-mine-shaft">
+						<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6">
+							<?php echo get_the_title(); ?>
+						</h5>
 					</a>
 					<p class="font-heebo-regular fz-18 leading-27 mt-6">
 						<?php echo wp_trim_words(get_the_content(), 13, '...'); ?>

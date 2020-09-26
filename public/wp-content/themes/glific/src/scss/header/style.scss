@@ -110,18 +110,15 @@
 	li{
 		@extend .position-relative;
 	}
-	// li a {
-	// 	@extend .font-heebo-regular, .fz-md-16, .leading-md-20, .text-theme-dark-green, .text-decoration-none, .w-full;
-	// }
 	.sub-menu {
-		@extend .bg-white, .position-absolute, .px-md-3, .w-220, .py-3, .left-n12\.5, .rounded-11;
+		@extend .bg-theme-secondary, .position-absolute, .px-md-3, .w-220, .py-3, .rounded-11, .right-0;
 		display: none;
 		li {
-			@extend .border-bottom, .border-theme-pewter;
+			@extend .border-bottom, .border-theme-pewter, .mb-0, .px-2;
 			a{
-				@extend .w-full, .py-4, .pl-11, .d-block, .fz-14;
+				@extend .w-full, .py-4, .pl-11, .d-block, .fz-14, .pr-5;
 				:hover {
-					@extend .text-theme-dark-green, .bg-theme-pewter;
+					@extend .text-white, .bg-theme-pewter;
 				}
 			}
 			a:hover{
@@ -130,15 +127,13 @@
 		}
 		box-shadow: 6px 6px 9px -2px rgba(0,0,0,0.10);
 	}
-	.menu-item-has-children {
-		> a::after {
-			content: url('./dist/images/icon-dropdown.svg');
-			margin-left: 5px;
-		}
-		> .open::after {
-			content: url('./dist/images/icon-arrow-up.svg');
-			margin-left: 5px;
-		}
+	.glific-menu-dropdown:after {
+	 	content: url('./dist/images/icon-dropdown.svg');
+		margin-left: 5px;
+	}
+	> .open::after {
+		content: url('./dist/images/icon-arrow-up.svg');
+		margin-left: 5px;
 	}
 }
 

@@ -85,6 +85,11 @@ body {
 .team-bg-image {
 	background-image: url('dist/images/bg-team.svg') !important;
 }
+
+.left-10p{
+	left: 10%;
+}
+
 @import 'utilities';
 @import 'media/sm';
 @import 'media/md';

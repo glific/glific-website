@@ -36,7 +36,7 @@
 			wp_nav_menu(array(
 				'theme_location' => 'header_nav',
 				'container' => 'ul',
-				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22  align-items-center',
+				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22  align-items-center desktop-menu',
 				'echo' => true,
 			));
 		?>
@@ -45,7 +45,7 @@
 			wp_nav_menu(array(
 				'theme_location' => 'secondary_header_nav',
 				'container' => 'ul',
-				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22 ml-md-auto align-items-center',
+				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22 ml-md-auto align-items-center desktop-menu',
 				'echo' => true,
 			));
 		?>

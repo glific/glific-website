@@ -1,0 +1,13 @@
+.page-blog {
+    input[type="email"] {
+        @extend .border-0, .bg-white, .rounded-12, .px-7, .w-full, .w-md-354, .h-43;
+    }
+
+    .col-lg-3 {
+        flex: 0 0 26%;
+        max-width: 100%;
+        margin-left: auto;
+    }
+}
+
+@import "lg";

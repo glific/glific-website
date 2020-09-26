@@ -185,6 +185,11 @@
 	z-index: 1;
 }
 
+.link-not-active {
+	pointer-events: none!important;
+	cursor: default!important;
+}
+
 @import 'utilities/sm';
 @import 'utilities/md';
 @import 'utilities/lg';

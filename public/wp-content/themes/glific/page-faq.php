@@ -8,22 +8,69 @@
 
 get_header();
 
-$faqs = get_field('faq_content');
-$page_title = get_field('faq_page_title');
+// $faqs = get_field('faq_content');
+// $page_title = get_field('faq_page_title');
+
+global $wpdb;
+$search_key_sub_query = isset($_GET['search_key']) ? "AND wp_postmeta.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';
+$results = $wpdb->get_results("SELECT wp_posts.id, wp_postmeta.meta_key, wp_postmeta.meta_value
+	FROM wp_posts
+	INNER JOIN wp_postmeta ON (wp_posts.ID = wp_postmeta.post_id)
+	WHERE wp_postmeta.meta_key like 'faq_content_%' $search_key_sub_query
+	AND wp_posts.post_type = 'page'
+	AND(wp_posts.post_status = 'publish')
+	ORDER BY wp_posts.post_date DESC");
+
+$faqs = array();
+$faq_post_id = null;
+if (!empty($results)) {
+	$faq_post_id = $results[0]->id;
+	foreach ($results as $key => $post) {
+		$index = filter_var($post->meta_key, FILTER_SANITIZE_NUMBER_INT);
+		$faqs[$index][$post->meta_key] = $post->meta_value;
+		// var_dump(get_post_meta('132', 'faq_content_0_title'));die;
+	}
+}
 ?>
+
 
 
 <div class="bg-theme-white-smoke page-faq">
 	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-320 w-md-660 w-xl-880 mx-auto">
 		<div class="d-flex flex-column w-full justify-content-center pt-18 text-center">
-			<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0"><?php echo $page_title; ?></h3>
+			<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 mx-auto leading-40 mb-0"><?php echo $page_title; ?></h3>
+		</div>
+	</div>
+
+	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-320 w-md-660 w-xl-880 mx-auto">
+		<div class="d-flex w-full justify-content-center pt-6 pb-xl-18 text-center">
+
+			<input type="text" value="" class="w-full w-md-560 h-64 rounded-20 px-40" placeholder="Search" />
 		</div>
 	</div>
 
 	<div class="pb-26 px-6 px-xl-31">
 		<?php
 		if (!empty($faqs)) :
-			foreach ($faqs as $key => $faq) : $faq_count = $key + 1; ?>
+			$faq_count = 1;
+			foreach ($faqs as $key => $faq) :
+				$title_key = 'faq_content_' . $key . '_title';
+				$description_key = 'faq_content_' . $key . '_description';
+				if (count($faq) == 1) {
+					if (isset($faq[$title_key])) {
+						$post_meta = get_post_meta($faq_post_id, $description_key);
+						$description = isset($post_meta[0]) ? $post_meta[0] : '';
+						$title = $faq[$title_key];
+					} else {
+						$post_meta = get_post_meta($faq_post_id, $title_key);
+						$title = isset($post_meta[0]) ? $post_meta[0] : '';
+						$description = $faq[$description_key];
+					}
+				} else {
+					$title = $faq[$title_key];
+					$description = $faq[$description_key];
+				}
+		?>
 				<div class="accordion py-4" id="accordionFaq">
 					<div class="card rounded-20 card-shadow">
 						<div class="card-header bg-white rounded-20 p-0 card-shadow" id="heading<?php echo $faq_count; ?>">
@@ -38,7 +85,7 @@ $page_title = get_field('faq_page_title');
 										</div>
 									</div>
 									<div class="my-auto py-6 w-md-85p">
-										<?php echo $faq['title']; ?>
+										<?php echo $title; ?>
 									</div>
 									<div class="icon-dropdown d-none d-md-block w-22 h-30 mt-6 ml-auto">
 										<?php echo file_get_contents(get_template_directory() . '/dist/images/icon-arrow.svg') ?>
@@ -48,12 +95,13 @@ $page_title = get_field('faq_page_title');
 						</div>
 						<div id="collapse<?php echo $faq_count; ?>" class="collapse" aria-labelledby="heading<?php echo $faq_count; ?>" data-parent="#accordionFaq">
 							<div class="card-body fz-18 leading-29 font-heebo-regular pl-xl-31 pr-xl-15 py-xl-9.5">
-								<?php echo $faq['description']; ?>
+								<?php echo $description; ?>
 							</div>
 						</div>
 					</div>
 				</div>
-		<?php endforeach;
+		<?php $faq_count++;
+			endforeach;
 		endif; ?>
 	</div>
 

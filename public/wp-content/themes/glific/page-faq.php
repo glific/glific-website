@@ -47,7 +47,7 @@ $page_title = get_field('faq_page_title');
 							</button>
 						</div>
 						<div id="collapse<?php echo $faq_count; ?>" class="collapse" aria-labelledby="heading<?php echo $faq_count; ?>" data-parent="#accordionFaq">
-							<div class="card-body fz-18 leading-29 font-heebo-regular pl-xl-31 pr-xl-15 py-xl-9.5">
+							<div class="card-body fz-18 leading-29 font-heebo-regular pl-xl-31 pr-xl-15 py-xl-9.5 text-theme-mine-shaft">
 								<?php echo $faq['description']; ?>
 							</div>
 						</div>

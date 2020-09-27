@@ -14,8 +14,8 @@ Text Domain: coloredcow
 
 @import 'assets/bootstrap/bootstrap';
 
-body{
-	@extend .mt-18, .mt-xl-27;
+body {
+	@extend .mt-26, .mt-xl-35;
 }
 
 // sass code for image alignment with content
@@ -52,7 +52,6 @@ body{
 		}
 	}
 }
-
 .border-3-pewter{
 	border: 3px solid $theme-pewter;
 }
@@ -82,6 +81,11 @@ body{
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
+.team-bg-image {
+	background-image: url('dist/images/bg-team.svg') !important;
+}
+
 @import 'utilities';
 @import 'media/sm';
 @import 'media/md';
@@ -93,4 +97,5 @@ body{
 @import 'page-get-started/style';
 @import 'page-faq/style';
 @import 'page-webinar/style';
+@import 'page-blog/style';
 

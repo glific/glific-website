@@ -8,8 +8,18 @@
     <title><?php echo bloginfo('name'); ?></title>
     <?php wp_head(); ?>
 </head>
+
 <header>
-	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white">
+	<?php
+	$banner_content = get_field('banner_section', 'option');
+	if (!empty($banner_content)) : ?>
+	<nav class="bg-theme-pewter d-flex flex-row justify-content-center navbar fixed-top banner-header py-3.5">
+		<p class="font-heebo-bold fz-14 leading-21 text-white mb-0"><?php echo $banner_content['details']; ?></p>
+		<a class="fz-14 leading-21 text-theme-primary font-heebo-bold text-decoration-none ml-10" href="<?php echo $banner_content['link']; ?>">Sign up</a>
+	</nav>
+	<?php endif; ?>
+
+	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white mt-8 box-shadow-dark-10 <?php echo !empty($banner_content) ? 'mt-10' : '' ; ?>">
 		<a class="navbar-brand py-0 mr-0 d-inline-flex" href="<?php echo esc_url(home_url('/')); ?>">
 		<?php
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -26,7 +36,7 @@
 			wp_nav_menu(array(
 				'theme_location' => 'header_nav',
 				'container' => 'ul',
-				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22  align-items-center',
+				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22  align-items-center desktop-menu',
 				'echo' => true,
 			));
 		?>
@@ -35,7 +45,7 @@
 			wp_nav_menu(array(
 				'theme_location' => 'secondary_header_nav',
 				'container' => 'ul',
-				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22 ml-md-auto align-items-center',
+				'menu_class' => 'navbar-nav justify-content-center d-none d-xl-flex fz-xl-18 leading-xl-22 ml-md-auto align-items-center desktop-menu',
 				'echo' => true,
 			));
 		?>
@@ -43,7 +53,7 @@
 
 		</div>
 	</nav>
-	<div class="mobile-menu position-fixed w-screen h-screen text-right bg-theme-primary pl-0 d-none flex-column d-xl-none font-primary fz-18 leading-22 pt-14 pt-md-15 justify-content-center pr-10">
+	<div class="mobile-menu position-fixed w-screen h-screen text-right bg-theme-primary pl-0 d-none flex-column d-xl-none font-primary fz-18 leading-22 pt-14 pt-md-15 justify-content-center pr-10 z-index-1">
 	<?php
 		wp_nav_menu(array(
 			'theme_location' => 'header_nav',

@@ -21,7 +21,7 @@ $results = $wpdb->get_results( "SELECT wp_posts.id, wp_postmeta.meta_key, wp_pos
 	ORDER BY wp_posts.post_date DESC"
 );
 
-$faqs = array(  );
+$faqs = array();
 $faq_post_id = null;
 if ( !empty( $results ) ) {
 	$faq_post_id = $results[0]->id;

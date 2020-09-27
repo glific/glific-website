@@ -23,12 +23,11 @@
 	}
 	
 	input {
-		@extend .px-16;
-		&:focus{
+		&:focus {
 			outline: none !important;
 		}
 	}
-	input[type="submit"] {
-		margin-left: -50px;
+	button[type="submit"]:focus {
+		outline: none !important;
 	}
 }

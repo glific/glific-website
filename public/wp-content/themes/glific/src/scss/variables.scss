@@ -6,6 +6,7 @@ $theme-mine-shaft: #3B3B3B;
 $theme-gin: #E6F1E7;
 $theme-white-smoke: #F7F7F7;
 $theme-nero: #222222;
+$theme-scorpion: #5C5C5C;
 
 $theme-colors: (
     'theme-primary': $theme-primary,
@@ -15,7 +16,8 @@ $theme-colors: (
     'theme-mine-shaft': $theme-mine-shaft,
     'theme-gin': $theme-gin,
     'theme-white-smoke': $theme-white-smoke,
-    'theme-nero' : $theme-nero,
+    'theme-nero': $theme-nero,
+    'theme-scorpion': $theme-scorpion,
 );
 
 $spacer: 4px;
@@ -67,6 +69,7 @@ $spacers: (
 );
 
 $sizes: (
+    '4': 4px,
     '5': 5px,
     '8': 8px,
     '14': 14px,
@@ -76,6 +79,7 @@ $sizes: (
     '25': 25px,
     '30': 30px,
     '35': 35px,
+    '42': 42px,
     '44': 44px,
     '50': 50px,
     '52': 52px,

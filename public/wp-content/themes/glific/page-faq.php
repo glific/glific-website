@@ -8,24 +8,25 @@
 
 get_header();
 
-$page_title = get_field('faq_page_title');
+$page_title = get_field( 'faq_page_title' );
 
 global $wpdb;
-$search_key_sub_query = isset($_GET['search_key']) ? "AND wp_postmeta.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';
-$results = $wpdb->get_results("SELECT wp_posts.id, wp_postmeta.meta_key, wp_postmeta.meta_value
+$search_key_sub_query = isset( $_GET['search_key'] ) ? "AND wp_postmeta.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';
+$results = $wpdb->get_results( "SELECT wp_posts.id, wp_postmeta.meta_key, wp_postmeta.meta_value
 	FROM wp_posts
-	INNER JOIN wp_postmeta ON (wp_posts.ID = wp_postmeta.post_id)
+	INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id )
 	WHERE wp_postmeta.meta_key like 'faq_content_%' $search_key_sub_query
 	AND wp_posts.post_type = 'page'
-	AND(wp_posts.post_status = 'publish')
-	ORDER BY wp_posts.post_date DESC");
+	AND( wp_posts.post_status = 'publish' )
+	ORDER BY wp_posts.post_date DESC"
+);
 
-$faqs = array();
+$faqs = array(  );
 $faq_post_id = null;
-if (!empty($results)) {
+if ( !empty( $results ) ) {
 	$faq_post_id = $results[0]->id;
-	foreach ($results as $key => $post) {
-		$index = filter_var($post->meta_key, FILTER_SANITIZE_NUMBER_INT);
+	foreach ( $results as $key => $post ) {
+		$index = filter_var( $post->meta_key, FILTER_SANITIZE_NUMBER_INT );
 		$faqs[$index][$post->meta_key] = $post->meta_value;
 	}
 }
@@ -40,13 +41,17 @@ if (!empty($results)) {
 		</div>
 	</div>
 
-	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-320 w-md-660 w-xl-880 mx-auto">
-		<div class="d-flex w-full justify-content-center pt-6 pb-xl-18 text-center">
+	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-328 w-md-660 w-xl-880 mx-auto">
+		<div class="d-flex justify-content-center pt-6 pb-xl-18 mx-auto">
 			<form class="form-inline" action="">
 				<div class="form-group mb-2">
-					<input type="text" value="<?php echo isset($_GET['search_key']) ? $_GET['search_key'] : '' ?>" name="search_key" class="w-full w-md-560 h-64 rounded-20 px-40" placeholder="Search..." />
+					<input type="text" value="<?php echo isset( $_GET['search_key'] ) ? $_GET['search_key'] : '' ?>" name="search_key" class="w-320 w-md-560 h-64 rounded-20 px-10 px-md-16 border-4 border-theme-primary text-theme-scorpion font-heebo-light" placeholder="Search..." />
 				</div>
-				<button type="submit" class="btn btn-secondary mb-2 ml-md-n32">Search</button>
+				<button type="submit" class="mb-2 ml-n18 ml-md-n26 rounded-circle border-theme-primary">
+					<div class="w-22 h-30">
+						<?php echo file_get_contents( get_template_directory() . '/dist/images/search.svg' ) ?>
+					</div>
+				</button>
 			</form>
 
 		</div>
@@ -54,23 +59,23 @@ if (!empty($results)) {
 
 	<div class="pb-26 px-6 px-xl-31">
 		<?php
-		if (!empty($faqs)) : ?>
+		if ( !empty( $faqs ) ) : ?>
 			<div class="accordion" id="accordionFaq">
 				<?php
 				$faq_count = 1;
-				foreach ($faqs as $key => $faq) :
+				foreach ( $faqs as $key => $faq ) :
 					$title_key = 'faq_content_' . $key . '_title';
 					$description_key = 'faq_content_' . $key . '_description';
 					$title = $faq[$title_key];
 					$description = $faq[$description_key];
-					if (count($faq) === 1) {
-						if (isset($faq[$title_key])) {
-							$post_meta = get_post_meta($faq_post_id, $description_key);
-							$description = isset($post_meta[0]) ? $post_meta[0] : '';
+					if ( count( $faq ) === 1 ) {
+						if ( isset( $faq[$title_key] ) ) {
+							$post_meta = get_post_meta( $faq_post_id, $description_key );
+							$description = isset( $post_meta[0] ) ? $post_meta[0] : '';
 							$title = $faq[$title_key];
 						} else {
-							$post_meta = get_post_meta($faq_post_id, $title_key);
-							$title = isset($post_meta[0]) ? $post_meta[0] : '';
+							$post_meta = get_post_meta( $faq_post_id, $title_key );
+							$title = isset( $post_meta[0] ) ? $post_meta[0] : '';
 							$description = $faq[$description_key];
 						}
 					}
@@ -85,14 +90,14 @@ if (!empty($results)) {
 											<?php echo $faq_count < 10 ? '0' . $faq_count : $faq_count; ?>
 										</div>
 										<div class="icon-dropdown d-md-none w-22 h-25 mt-4">
-											<?php echo file_get_contents(get_template_directory() . '/dist/images/icon-arrow.svg') ?>
+											<?php echo file_get_contents( get_template_directory() . '/dist/images/icon-arrow.svg' ) ?>
 										</div>
 									</div>
 									<div class="my-auto py-6 w-md-85p">
 										<?php echo $title; ?>
 									</div>
 									<div class="icon-dropdown d-none d-md-block w-22 h-30 mt-6 ml-auto">
-										<?php echo file_get_contents(get_template_directory() . '/dist/images/icon-arrow.svg') ?>
+										<?php echo file_get_contents( get_template_directory() . '/dist/images/icon-arrow.svg' ) ?>
 									</div>
 								</div>
 							</button>
@@ -107,6 +112,17 @@ if (!empty($results)) {
 				<?php $faq_count++;
 				endforeach; ?>
 			</div>
+		<?php 
+		else : ?>
+			<div class="text-center mt-10">
+				<p class="font-heebo-regular text-theme-mine-shaft fz-24 leading-33">
+					No Result found
+				</p>
+				<p class="text-theme-scorpion font-heebo-light">
+					We can't find any faq matching your search.
+				</p>
+			</div>
+	
 		<?php endif; ?>
 	</div>
 

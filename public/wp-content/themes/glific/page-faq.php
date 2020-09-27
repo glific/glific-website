@@ -8,8 +8,7 @@
 
 get_header();
 
-// $faqs = get_field('faq_content');
-// $page_title = get_field('faq_page_title');
+$page_title = get_field('faq_page_title');
 
 global $wpdb;
 $search_key_sub_query = isset($_GET['search_key']) ? "AND wp_postmeta.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';
@@ -28,7 +27,6 @@ if (!empty($results)) {
 	foreach ($results as $key => $post) {
 		$index = filter_var($post->meta_key, FILTER_SANITIZE_NUMBER_INT);
 		$faqs[$index][$post->meta_key] = $post->meta_value;
-		// var_dump(get_post_meta('132', 'faq_content_0_title'));die;
 	}
 }
 ?>
@@ -44,35 +42,41 @@ if (!empty($results)) {
 
 	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-320 w-md-660 w-xl-880 mx-auto">
 		<div class="d-flex w-full justify-content-center pt-6 pb-xl-18 text-center">
+			<form class="form-inline" action="">
+				<div class="form-group mb-2">
+					<input type="text" value="<?php echo isset($_GET['search_key']) ? $_GET['search_key'] : '' ?>" name="search_key" class="w-full w-md-560 h-64 rounded-20 px-40" placeholder="Search..." />
+				</div>
+				<button type="submit" class="btn btn-secondary mb-2 ml-md-n32">Search</button>
+			</form>
 
-			<input type="text" value="" class="w-full w-md-560 h-64 rounded-20 px-40" placeholder="Search" />
 		</div>
 	</div>
 
 	<div class="pb-26 px-6 px-xl-31">
 		<?php
-		if (!empty($faqs)) :
-			$faq_count = 1;
-			foreach ($faqs as $key => $faq) :
-				$title_key = 'faq_content_' . $key . '_title';
-				$description_key = 'faq_content_' . $key . '_description';
-				if (count($faq) == 1) {
-					if (isset($faq[$title_key])) {
-						$post_meta = get_post_meta($faq_post_id, $description_key);
-						$description = isset($post_meta[0]) ? $post_meta[0] : '';
-						$title = $faq[$title_key];
-					} else {
-						$post_meta = get_post_meta($faq_post_id, $title_key);
-						$title = isset($post_meta[0]) ? $post_meta[0] : '';
-						$description = $faq[$description_key];
-					}
-				} else {
+		if (!empty($faqs)) : ?>
+			<div class="accordion" id="accordionFaq">
+				<?php
+				$faq_count = 1;
+				foreach ($faqs as $key => $faq) :
+					$title_key = 'faq_content_' . $key . '_title';
+					$description_key = 'faq_content_' . $key . '_description';
 					$title = $faq[$title_key];
 					$description = $faq[$description_key];
-				}
-		?>
-				<div class="accordion py-4" id="accordionFaq">
-					<div class="card rounded-20 card-shadow">
+					if (count($faq) === 1) {
+						if (isset($faq[$title_key])) {
+							$post_meta = get_post_meta($faq_post_id, $description_key);
+							$description = isset($post_meta[0]) ? $post_meta[0] : '';
+							$title = $faq[$title_key];
+						} else {
+							$post_meta = get_post_meta($faq_post_id, $title_key);
+							$title = isset($post_meta[0]) ? $post_meta[0] : '';
+							$description = $faq[$description_key];
+						}
+					}
+				?>
+
+					<div class="card rounded-20 my-6 card-shadow">
 						<div class="card-header bg-white rounded-20 p-0 card-shadow" id="heading<?php echo $faq_count; ?>">
 							<button class="btn btn-link btn-block text-left rounded-20 px-6 text-decoration-none fz-24 leading-33 font-heebo-regular text-theme-mine-shaft" type="button" data-toggle="collapse" data-target="#collapse<?php echo $faq_count; ?>" aria-expanded="false" aria-controls="collapse<?php echo $faq_count; ?>">
 								<div class="d-flex flex-column flex-md-row">
@@ -99,10 +103,11 @@ if (!empty($results)) {
 							</div>
 						</div>
 					</div>
-				</div>
-		<?php $faq_count++;
-			endforeach;
-		endif; ?>
+
+				<?php $faq_count++;
+				endforeach; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 
 </div>

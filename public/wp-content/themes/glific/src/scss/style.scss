@@ -132,7 +132,7 @@ body {
 .comment-form-comment,
 .comment-form-author,
 .comment-form-email,
-.comment-form-url{
+.comment-form-age{
 	display: flex;
 	flex-direction: column;
 }
@@ -141,7 +141,7 @@ body {
 	margin-bottom: 50px;
 	border-bottom: 2px solid #93A29B;
 }
- #author, #email, #url{
+ #author, #email, #age{
  	height: 39px;
 	border-radius: 9px;
 	border: 0px;
@@ -174,6 +174,9 @@ body {
 .children{
 	list-style: none;
 	margin-top: 15px;
+}
+.comment-reply-title{
+	@extend .fz-28, .leading-33, .fz-xl-36, .leading-xl-43, .font-heebo-bold;
 }
 
 @import 'utilities';

@@ -9,12 +9,13 @@
 get_header(); ?>
 
 <div class="single-blog" style="background-color: #F7F7F7">
+
 	<div class="blog-banner w-full h-354 h-md-517 h-xl-585 py-26 px-24 mb-10 bg-theme-bottle-green"></div>
 
 	<div class="w-90p mt-md-n500 mt-n350 mx-auto max-w-360 max-w-xl-1010 max-w-md-765">
 
 		<div class="text-white pl-9">
-			<p class="font-heebo-regular fz-18 leading-27 mb-4.5">
+			<p class="font-heebo-bold fz-18 leading-27 mb-4.5">
 				<?php echo strtoupper(get_the_date('F d, Y')); ?>
 			</p>
 			<h3 class="fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-regular mb-5">
@@ -62,12 +63,22 @@ get_header(); ?>
 				<?php echo the_content(); ?>
 			</div>
 		</div>
-		<div class="d-flex w-md-741 w-xl-1092 mx-auto bg-white flex-column-reverse" style="border-radius: 30px; padding: 40px;">
-			<?php
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
-			?>
+		<div class="d-flex justify-content-between mx-auto bg-white w-md-741 w-xl-1092" style="border-radius: 30px; padding: 25px;">
+			<div class="d-flex bg-white flex-column-reverse">
+				<?php
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					}
+				?>
+			</div>
+			<div class="w-363">
+				<h3 class="fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold mb-5">
+					Tags
+				</h3>
+				<p class="font-heebo-regular fz-18 leading-27 text-theme-pewter">
+					#TECH4GOOD #66A #ANALYTICS #ARCHITECTURE #AVNI #CONFERENCE #CORONAVIRUS #COVID-19 #CRM-PLATFORM #DATAEXPLORER #DESIGN #RESEARCH #DISCOUNTS
+				</p>
+			</div>	
 		</div>
 	</div>
 </div>

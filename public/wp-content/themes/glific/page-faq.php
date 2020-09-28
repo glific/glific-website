@@ -8,7 +8,7 @@
 
 get_header();
 
-$page_title = get_field( 'faq_page_title' );
+$page_title = get_the_title();
 
 global $wpdb;
 $search_key_sub_query = isset( $_GET['search_key'] ) ? "AND wp_postmeta.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';

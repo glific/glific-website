@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
 		}
 		jQuery(this).toggleClass('navbar-toggle-cross');
 	});
-	
+
 	jQuery('.single-video-container').on('click', function(){
 		var target = jQuery(this).data('target');
 		var videoTitle = jQuery(this).find('.video-title').text();
@@ -26,9 +26,27 @@ jQuery(document).ready(function() {
 		jQuery(target).addClass('d-flex').removeClass('d-none');
 	});
 
-	jQuery('.show-more-blogs').on('click', show_more_blogs);
+	jQuery('.desktop-menu .menu-item-has-children').hover(function() {
+		jQuery(this).find('.sub-menu').show();
+		jQuery(this).find('a').addClass('open');
+	}, function() {
+		jQuery(this).find('.sub-menu').hide();
+		jQuery(this).find('a').removeClass('open');
+	});
+
+	jQuery('.mobile-primary-menu > li').each(function() {
+		if (jQuery(this).hasClass('menu-item-has-children')) {
+			jQuery('>a', this).after('<span class="mt-0 text-white-80 position-absolute c-pointer glific-menu-dropdown"></span>');
+		}
+	});
+
+	jQuery('.mobile-primary-menu').on('click', 'li.menu-item-has-children>span', function() {
+		var sub_menu = jQuery(this).parent().find('.sub-menu');
+		sub_menu.toggleClass('d-block');
+	});
 });
 
+jQuery('.show-more-blogs').on('click', show_more_blogs);
 blog_offset = 9;
 function show_more_blogs(event) {
 	event.preventDefault();

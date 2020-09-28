@@ -159,24 +159,27 @@ if (function_exists('acf_add_options_page')) {
 	acf_add_options_page();
 }
 
-function wpb_move_comment_field_to_bottom( $fields ) {
-$comment_field = $fields['comment'];
-unset( $fields['comment'] );
-$fields['comment'] = $comment_field;
-return $fields;
+function wpb_move_comment_field_to_bottom($fields)
+{
+	$comment_field = $fields['comment'];
+	unset($fields['comment']);
+	$fields['comment'] = $comment_field;
+	return $fields;
 }
-  
-add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom'); 
 
-function wpbeginner_remove_comment_url($arg) {
-    $arg['url'] = '';
-    return $arg;
+add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
+
+function wpbeginner_remove_comment_url($arg)
+{
+	$arg['url'] = '';
+	return $arg;
 }
 add_filter('comment_form_default_fields', 'wpbeginner_remove_comment_url');
 
-function add_comment_fields($fields) {
-    $fields['age'] = '<p class="comment-form-age"><label for="age">' . __( 'Age' ) . '</label>' .
-        '<input id="age" name="age" type="text" size="30" /></p>';
-    return $fields;
+function add_comment_fields($fields)
+{
+	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Company name *') . '</label>' .
+		'<input id="company" name="company" type="text" size="30" /></p>';
+	return $fields;
 }
-add_filter('comment_form_default_fields','add_comment_fields');
+add_filter('comment_form_default_fields', 'add_comment_fields');

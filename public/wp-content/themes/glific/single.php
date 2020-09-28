@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="single-blog" style="background-color: #F7F7F7">
+<div class="single-blog pb-15" style="background-color: #F7F7F7">
 
 	<div class="blog-banner w-full h-354 h-md-517 h-xl-585 py-26 px-24 mb-10 bg-theme-bottle-green"></div>
 
@@ -27,13 +27,13 @@ get_header(); ?>
 			</p>
 		</div>
 		<?php $featured_image_url = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/dist/images/blog-delaut-image.svg'; ?>
-		
+
 		<div class="w-90p h-200 w-md-741 h-md-451 w-xl-1092 h-xl-641 mx-auto bg-position-center bg-size-cover rounded-30" style="background-image: url(<?php echo $featured_image_url; ?>);"></div>
 
 		<div class="d-flex w-md-741 w-xl-1092 flex-column flex-md-row-reverse" style="flex-direction: row-reverse; justify-content: space-between;">
 
 			<div class="mt-9 mt-md-15 w-full w-md-50 d-flex flex-column align-items-center">
-				
+
 				<p class="font-heebo-regular fz-18 leading-27 mb-5">Share</p>
 
 				<div class="d-flex justify-content-between align-items-center flex-row flex-md-column">
@@ -63,23 +63,71 @@ get_header(); ?>
 				<?php echo the_content(); ?>
 			</div>
 		</div>
-		<div class="d-flex justify-content-between mx-auto bg-white w-md-741 w-xl-1092" style="border-radius: 30px; padding: 25px;">
-			<div class="d-flex bg-white flex-column-reverse">
+		<div class="d-flex justify-content-between mx-auto bg-white flex-xl-row flex-column-reverse w-md-741 w-xl-1092" style="border-radius: 30px; padding: 25px;">
+
+			<div class="d-flex bg-white flex-column-reverse w-full w-md-600">
 				<?php
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
+				if (comments_open() || get_comments_number()) {
+					comments_template();
+				}
 				?>
 			</div>
-			<div class="w-363">
+
+			<div class="w-full w-xl-363">
 				<h3 class="fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold mb-5">
 					Tags
 				</h3>
 				<p class="font-heebo-regular fz-18 leading-27 text-theme-pewter">
+					<?php 
+						$posttags = get_the_tags($post->ID); 
+						foreach ($posttags as $key => $value) {
+							var_dump($value); die;
+						}
+						
+					?>
 					#TECH4GOOD #66A #ANALYTICS #ARCHITECTURE #AVNI #CONFERENCE #CORONAVIRUS #COVID-19 #CRM-PLATFORM #DATAEXPLORER #DESIGN #RESEARCH #DISCOUNTS
 				</p>
-			</div>	
+			</div>
 		</div>
+		<?php 
+				$posts = new WP_Query(
+					array(
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'posts_per_page' => 3,
+						'post__not_in' => array( $post->ID )
+					)
+				);
+			 if ($posts->have_posts()) : ?>
+		<div class="mx-auto w-md-741 w-xl-1092 mt-26">
+			<h3 class="fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold mb-14">Recommended reading</h3>
+	        <div class="blogs-section mx-auto d-flex justify-content-center justify-content-md-between flex-wrap glific-blogs-container">	
+	            <?php while ($posts->have_posts()) : $posts->the_post(); ?>
+	                <div class="w-285 mb-12 glific-blog">
+	                    <?php $featured_image_url = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/dist/images/blog-delaut-image2.svg'; ?>
+	                    <div class="w-full h-169 bg-position-center bg-size-cover rounded-30" style="background-image: url('<?php echo $featured_image_url; ?>');">
+	                    </div>
+	                    <a href="<?php echo get_the_permalink(); ?>" class="text-decoration-none text-theme-mine-shaft">
+	                        <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6">
+	                            <?php echo get_the_title(); ?>
+	                        </h5>
+	                    </a>
+	                    <p class="font-heebo-regular fz-18 leading-27 mt-6">
+	                        <?php echo wp_trim_words(get_the_content(), 13, '...'); ?>
+	                    </p>
+	                    <p class="font-heebo-regular fz-18 leading-27 mt-6">
+	                        <?php echo strtoupper(get_the_date('F d, Y')); ?>
+	                    </p>
+	                </div>
+	            <?php
+	            endwhile;
+	            wp_reset_postdata();
+	            ?>
+	        </div>
+	  
+		</div>
+		  <?php endif; ?>
+        <a class="show-more-blogs glific-button-border bg-theme-secondary px-10 py-4 fz-18 leading-27 text-center mx-auto text-white font-heebo-bold text-decoration-none" target="_blank" href="">Back to Blogs</a>
 	</div>
 </div>
 

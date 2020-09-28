@@ -159,14 +159,13 @@ if (function_exists('acf_add_options_page')) {
 	acf_add_options_page();
 }
 
-function wpb_move_comment_field_to_bottom($fields)
+function wp_move_comment_field_to_bottom($fields)
 {
 	$comment_field = $fields['comment'];
 	unset($fields['comment']);
 	$fields['comment'] = $comment_field;
 	return $fields;
 }
-
 add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
 
 function wp_remove_comment_url($arg)
@@ -178,19 +177,16 @@ add_filter('comment_form_default_fields', 'wp_remove_comment_url');
 
 function wp_add_comment_fields($fields)
 {
-	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Company name *') . '</label>' .
-		'<input id="company" name="company" type="text" size="30" /></p>';
+	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Company name *') . '</label>' . '<input id="company" name="company" type="text" size="30" /></p>';
 	return $fields;
 }
 add_filter('comment_form_default_fields', 'wp_add_comment_fields');
 
 function wp_modify_comment_form_text_area($arg)
 {
-	$arg['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x('Comment *
-', 'noun') . '</label><textarea id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea></p>';
+	$arg['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x('Comment *', 'noun') . '</label><textarea id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea></p>';
 	return $arg;
 }
-
 add_filter('comment_form_defaults', 'wp_modify_comment_form_text_area');
 
 function wp_change_submit_button_text($defaults)

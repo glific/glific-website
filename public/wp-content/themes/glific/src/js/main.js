@@ -63,7 +63,7 @@ function show_more_blogs(event) {
 		success: function(res) {
 			jQuery('.glific-blogs-container').append(res.data);
 			blog_offset += 9;
-			if (ajax_object.total_blog_count <= jQuery('.glific-blog').length ) {
+			if (PARAMS.total_blog_count <= jQuery('.glific-blog').length ) {
 				show_more_link.hide();
 			}
 			show_more_link.text('Show more');

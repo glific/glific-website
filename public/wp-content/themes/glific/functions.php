@@ -169,17 +169,33 @@ function wpb_move_comment_field_to_bottom($fields)
 
 add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
 
-function wpbeginner_remove_comment_url($arg)
+function wp_remove_comment_url($arg)
 {
 	$arg['url'] = '';
 	return $arg;
 }
-add_filter('comment_form_default_fields', 'wpbeginner_remove_comment_url');
+add_filter('comment_form_default_fields', 'wp_remove_comment_url');
 
-function add_comment_fields($fields)
+function wp_add_comment_fields($fields)
 {
 	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Company name *') . '</label>' .
 		'<input id="company" name="company" type="text" size="30" /></p>';
 	return $fields;
 }
-add_filter('comment_form_default_fields', 'add_comment_fields');
+add_filter('comment_form_default_fields', 'wp_add_comment_fields');
+
+function wp_modify_comment_form_text_area($arg)
+{
+	$arg['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x('Comment *
+', 'noun') . '</label><textarea id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea></p>';
+	return $arg;
+}
+
+add_filter('comment_form_defaults', 'wp_modify_comment_form_text_area');
+
+function wp_change_submit_button_text($defaults)
+{
+	$defaults['label_submit'] = 'Post comment';
+	return $defaults;
+}
+add_filter('comment_form_defaults', 'wp_change_submit_button_text');

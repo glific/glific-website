@@ -4,15 +4,13 @@
     }
 
     .commentlist {
-        @extend .w-full;
+        @extend .w-full, .list-unstyled, .pt-10;
 
-        list-style: none;
+        border-top: 2px solid $theme-pewter;
     }
 
     .fn {
         font-style: normal;
-
-        @extend .ml-5;
 
         a {
             pointer-events: none;
@@ -37,8 +35,6 @@
         }
 
         .commentmetadata {
-            @extend .ml-18, .mt-n8;
-
             a {
                 pointer-events: none;
 
@@ -59,7 +55,7 @@
     }
 
     .comment-form {
-        @extend .w-full, .mb-15, .border-bottom-2, .border-theme-pewter;
+        @extend .w-full, .mb-10;
     }
 
     #author, #email, #company {
@@ -71,7 +67,7 @@
     }
 
     #comment {
-        @extend .rounded-20, .pl-7, .pt-7, .border-0, .border-theme-pewter;
+        @extend .rounded-20, .pl-7, .pt-7, .border-0, .border-theme-pewter, .bg-theme-white-smoke;
 
         &:focus {
             outline: none;
@@ -87,13 +83,11 @@
     }
 
     .form-submit {
-        margin-bottom: 30px;
-        margin-top: 50px;
+        @extend .mb-5, .mt-14;
     }
 
     .children {
-        list-style: none;
-        margin-top: 15px;
+        @extend .mt-6, .list-unstyled;
     }
 
     .comment-reply-title {

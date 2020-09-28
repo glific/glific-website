@@ -8,94 +8,107 @@ Tags: coloredcow, glific
 Text Domain: coloredcow
 */
 
-@import 'variables';
-@import 'mixin';
-@import 'fonts';
+@import "variables";
+@import "mixin";
+@import "fonts";
 
-@import 'assets/bootstrap/bootstrap';
+@import "assets/bootstrap/bootstrap";
 
 body {
-	@extend .mt-26, .mt-xl-35;
+    @extend .mt-26, .mt-xl-35;
 }
 
 // sass code for image alignment with content
-.alignright{
-	float: right;
-	&img{
-		margin: 0 0 1em 1em;
-	}
+.alignright {
+    float: right;
+
+    &img {
+        margin: 0 0 1em 1em;
+    }
 }
-.alignleft{
-	float: left;
-	&img{
-		margin: 0 1em 1em 0;
-	}
+
+.alignleft {
+    float: left;
+
+    &img {
+        margin: 0 1em 1em 0;
+    }
 }
-.aligncenter{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	&img{
-		display: block;
-	}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    &img {
+        display: block;
+    }
 }
 
 .footer-menu {
-	li{
-		@extend .mx-0;
-	}
-	.menu-item {
-		@extend .pb-2, .pb-xl-3, .px-0, .pl-md-0;
-		a {
-			@extend .nav-link, .text-white, .fz-16, .leading-24, .text-theme-pewter;
-			@extend .p-0, .d-inline-block;
-		}
-	}
-}
-.border-3-pewter{
-	border: 3px solid $theme-pewter;
+    li {
+        @extend .mx-0;
+    }
+
+    .menu-item {
+        @extend .pb-2, .pb-xl-3, .px-0, .pl-md-0;
+
+        a {
+            @extend .nav-link, .text-white, .fz-16, .leading-24, .text-theme-pewter;
+
+            @extend .p-0, .d-inline-block;
+        }
+    }
 }
 
-.carousel-control-next-icon{
-	width: 16px;
-	height: 30px;
-	background-image: url('dist/images/next-icon.svg') !important;
+.border-3-pewter {
+    border: 3px solid $theme-pewter;
 }
-.carousel-control-prev-icon{
-	width: 16px;
-	height: 30px;
-	background-image: url('dist/images/prev-icon.svg') !important;
+
+.carousel-control-next-icon {
+    width: 16px;
+    height: 30px;
+    background-image: url("dist/images/next-icon.svg") !important;
 }
+
+.carousel-control-prev-icon {
+    width: 16px;
+    height: 30px;
+    background-image: url("dist/images/prev-icon.svg") !important;
+}
+
 .carousel-control-prev {
-	opacity: 1;
-	top: 62px !important;
-	width: 3%;
+    opacity: 1;
+    top: 62px !important;
+    width: 3%;
 }
+
 .carousel-control-next {
-	opacity: 1;
-	top: 62px !important;
-	width: 3%;
+    opacity: 1;
+    top: 62px !important;
+    width: 3%;
 }
-.user-bg{
-	background-image: url('dist/images/colon.svg') !important;
-	background-size: contain;
-	background-repeat: no-repeat;
+
+.user-bg {
+    background-image: url("dist/images/colon.svg") !important;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .team-bg-image {
-	background-image: url('dist/images/bg-team.svg') !important;
+    background-image: url("dist/images/bg-team.svg") !important;
 }
 
-@import 'utilities';
-@import 'media/sm';
-@import 'media/md';
-@import 'media/lg';
-@import 'media/xl';
-@import 'media/hd';
-@import 'header/style';
-@import 'page-contact/style';
-@import 'page-get-started/style';
-@import 'page-faq/style';
-@import 'page-webinar/style';
-@import 'page-blog/style';
-
+@import "utilities";
+@import "media/sm";
+@import "media/md";
+@import "media/lg";
+@import "media/xl";
+@import "media/hd";
+@import "header/style";
+@import "page-contact/style";
+@import "page-get-started/style";
+@import "page-faq/style";
+@import "page-webinar/style";
+@import "page-blog/style";
+@import "single/style";

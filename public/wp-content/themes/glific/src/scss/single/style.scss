@@ -1,0 +1,96 @@
+.single-blog {
+    #comments {
+        @extend .d-none;
+    }
+
+    .commentlist {
+        @extend .w-full, .list-unstyled, .pt-10;
+
+        border-top: 2px solid $theme-pewter;
+    }
+
+    .fn {
+        font-style: normal;
+
+        a {
+            pointer-events: none;
+
+            @extend .text-theme-mine-shaft;
+        }
+    }
+
+    .comment-author {
+        @extend .mb-6;
+
+        img {
+            @extend .w-50, .h-50, .rounded-circle;
+        }
+    }
+
+    .comment {
+        @extend .mb-17;
+
+        p {
+            @extend .mt-6, .mb-5;
+        }
+
+        .commentmetadata {
+            a {
+                pointer-events: none;
+
+                @extend .text-theme-pewter;
+            }
+
+            .comment-edit-link {
+                @extend .d-none;
+            }
+        }
+    }
+
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-company {
+        @extend .d-flex, .flex-column;
+    }
+
+    .comment-form {
+        @extend .w-full, .mb-10;
+    }
+
+    #author, #email, #company {
+        @extend .h-39, .rounded-9, .border-0, .bg-theme-white-smoke, .pl-6;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #comment {
+        @extend .rounded-20, .pl-7, .pt-7, .border-0, .border-theme-pewter, .bg-theme-white-smoke;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #submit {
+        @extend .border-0, .glific-button-border, .bg-theme-secondary, .px-8, .py-4, .fz-18, .leading-27, .text-center, .text-white, .font-heebo-bold, .mr-md-8, .text-decoration-none;
+    }
+
+    .comment-form-cookies-consent {
+        @extend .d-none;
+    }
+
+    .form-submit {
+        @extend .mb-5, .mt-14;
+    }
+
+    .children {
+        @extend .mt-6, .list-unstyled;
+    }
+
+    .comment-reply-title {
+        @extend .fz-28, .leading-33, .fz-xl-36, .leading-xl-43, .font-heebo-bold;
+    }
+}

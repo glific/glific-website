@@ -53,7 +53,7 @@
 
 		</div>
 	</nav>
-	<div class="mobile-menu position-fixed w-screen h-screen text-right bg-theme-primary pl-0 d-none flex-column d-xl-none font-primary fz-18 leading-22 pt-14 pt-md-15 justify-content-center pr-10 z-index-1">
+	<div class="mobile-menu position-fixed w-screen h-screen text-right bg-theme-primary pl-0 d-none flex-column d-xl-none font-primary fz-18 leading-22 pt-14 pt-md-15 justify-content-center pr-10 z-index-1 overflow-auto">
 	<?php
 		wp_nav_menu(array(
 			'theme_location' => 'header_nav',

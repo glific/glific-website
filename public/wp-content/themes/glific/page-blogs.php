@@ -44,9 +44,8 @@ get_header();
             <?php
             endwhile;
             wp_reset_postdata();
-        else :
-            _e('Sorry, no posts!');
-            ?>
+        else : ?>
+            <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6 text-center mb-0 text-theme-primary">No blogs!</h5>
         </div>
     <?php endif; ?>
 </div>
@@ -55,66 +54,68 @@ get_header();
         <a class="show-more-blogs glific-button-border bg-theme-secondary w-190 px-6 py-4 fz-18 leading-27 text-center mx-auto text-white font-heebo-bold text-decoration-none" target="_blank" href="">Show More</a>
     </div>
 <?php endif; ?>
-<div class="mx-auto mt-20 w-90p w-md-737 w-xl-1010 mx-auto pb-26">
-    <div class="w-full w-md-full d-flex mb-9 mb-md-10 flex-column flex-md-row mx-auto justify-content-between">
-        <?php
-        $source_code_section = get_field('source_code_section');
-        if (!empty($source_code_section)) :
-        ?>
-            <div class="source-code-section rounded-top-30 rounded-bottom-left-30 bg-theme-gin py-7 w-full px-10 w-md-361 h-287 w-xl-572 h-xl-257">
-                <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
-                    <?php echo $source_code_section['section_title'] ?>
-                </h5>
-                <p class="font-heebo-regular fz-18 leading-27 mt-6 w-md-292 w-xl-460 mb-8">
-                    <?php echo $source_code_section['section_text'] ?>
-                </p>
-                <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none" target="_blank" href="<?php echo $source_code_section['view_github_link'] ?>">
-                    <?php echo $source_code_section['view_github_text'] ?>
-                </a>
-            </div>
-        <?php endif; ?>
-        <?php
-        $community_section = get_field('community_section');
-        if (!empty($community_section)) :
-        ?>
-            <div class="community-section rounded-top-30 rounded-bottom-right-30 bg-theme-gin py-7 px-10 w-full w-md-361 h-287 w-xl-421 h-xl-257 mt-10 mt-md-0">
-                <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
-                    <?php echo $community_section['section_title'] ?>
-                </h5>
-                <p class="font-heebo-regular fz-18 leading-27 mt-6 w-md-310 mb-8">
-                    <?php echo $community_section['section_text'] ?>
-                </p>
-                <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none" target="_blank" href="<?php echo $community_section['view_discord_link'] ?>">
-                    <?php echo $community_section['view_discord_text'] ?>
-                </a>
-            </div>
-        <?php endif; ?>
-    </div>
-    <?php if (is_active_sidebar('glific_form_newsletter')) :
-        $newsletter_section = get_field('newsletter_section');
-        if ($newsletter_section) :
-    ?>
-            <div class="newsletter-section rounded-top-right-30 rounded-bottom-30 bg-theme-gin py-6 px-10 d-flex align-items-center justify-content-between w-full h-md-149 flex-column flex-md-row">
-                <div>
+<div class="page-blog bg-theme-white-smoke w-full pt-20">
+    <div class="mx-auto w-90p w-md-737 w-xl-1010 mx-auto pb-26 bg-theme-white-smoke">
+        <div class="w-full w-md-full d-flex mb-9 mb-md-10 flex-column flex-md-row mx-auto justify-content-between">
+            <?php
+            $source_code_section = get_field('source_code_section');
+            if (!empty($source_code_section)) :
+            ?>
+                <div class="source-code-section rounded-top-30 rounded-bottom-left-30 bg-theme-gin py-7 w-full px-10 w-md-361 h-287 w-xl-572 h-xl-257">
                     <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
-                        <?php echo $newsletter_section['section_title'] ?>
+                        <?php echo $source_code_section['section_title'] ?>
                     </h5>
-                    <p class="font-heebo-regular fz-18 leading-27 mt-6 w-full w-md-335">
-                        <?php echo $newsletter_section['section_text'] ?>
+                    <p class="font-heebo-regular fz-18 leading-27 mt-6 w-md-292 w-xl-460 mb-8">
+                        <?php echo $source_code_section['section_text'] ?>
                     </p>
+                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none" target="_blank" href="<?php echo $source_code_section['view_github_link'] ?>">
+                        <?php echo $source_code_section['view_github_text'] ?>
+                    </a>
                 </div>
-                <div class="newsletter-form-section w-full w-md-495">
-                    <div class="newsletter-form">
-                        <div class="form-group mb-md-0 list-unstyled">
-                            <div id="glific_form_newsletter" role="complementary">
-                                <?php dynamic_sidebar('glific_form_newsletter'); ?>
+            <?php endif; ?>
+            <?php
+            $community_section = get_field('community_section');
+            if (!empty($community_section)) :
+            ?>
+                <div class="community-section rounded-top-30 rounded-bottom-right-30 bg-theme-gin py-7 px-10 w-full w-md-361 h-287 w-xl-421 h-xl-257 mt-10 mt-md-0">
+                    <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
+                        <?php echo $community_section['section_title'] ?>
+                    </h5>
+                    <p class="font-heebo-regular fz-18 leading-27 mt-6 w-md-310 mb-8">
+                        <?php echo $community_section['section_text'] ?>
+                    </p>
+                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none" target="_blank" href="<?php echo $community_section['view_discord_link'] ?>">
+                        <?php echo $community_section['view_discord_text'] ?>
+                    </a>
+                </div>
+            <?php endif; ?>
+        </div>
+        <?php if (is_active_sidebar('glific_form_newsletter')) :
+            $newsletter_section = get_field('newsletter_section');
+            if ($newsletter_section) :
+        ?>
+                <div class="newsletter-section rounded-top-right-30 rounded-bottom-30 bg-theme-gin py-6 px-10 d-flex align-items-center justify-content-between w-full h-md-149 flex-column flex-md-row">
+                    <div>
+                        <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
+                            <?php echo $newsletter_section['section_title'] ?>
+                        </h5>
+                        <p class="font-heebo-regular fz-18 leading-27 mt-6 w-full w-md-335">
+                            <?php echo $newsletter_section['section_text'] ?>
+                        </p>
+                    </div>
+                    <div class="newsletter-form-section w-full w-md-495">
+                        <div class="newsletter-form">
+                            <div class="form-group mb-md-0 list-unstyled">
+                                <div id="glific_form_newsletter" role="complementary">
+                                    <?php dynamic_sidebar('glific_form_newsletter'); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
         <?php endif; ?>
-    <?php endif; ?>
+    </div>
 </div>
 
 <?php

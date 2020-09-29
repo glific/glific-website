@@ -22,7 +22,6 @@ get_header();
             'posts_per_page' => 9
         )
     );
-
     if ($posts->have_posts()) : ?>
         <div class="blogs-section mx-auto w-320 w-md-600 w-xl-1135 d-flex justify-content-center justify-content-md-between flex-wrap glific-blogs-container">
             <?php while ($posts->have_posts()) : $posts->the_post(); ?>
@@ -45,17 +44,18 @@ get_header();
             <?php
             endwhile;
             wp_reset_postdata();
-        else :
-            _e('Sorry, no posts matched your criteria.');
-            ?>
+        else : ?>
+            <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6 text-center mb-0 text-theme-primary">No blogs!</h5>
         </div>
     <?php endif; ?>
-    <?php if (wp_count_posts('post')->publish > 9) : ?>
-        <div class="w-full d-flex justify-content-center">
-            <a class="show-more-blogs glific-button-border bg-theme-secondary w-190 px-6 py-4 fz-18 leading-27 text-center mx-auto text-white font-heebo-bold text-decoration-none" target="_blank" href="">Show More</a>
-        </div>
-    <?php endif; ?>
-    <div class="mx-auto mt-20 w-90p w-md-737 w-xl-1010 mx-auto pb-26">
+</div>
+<?php if (wp_count_posts('post')->publish > 9) : ?>
+    <div class="w-full d-flex justify-content-center">
+        <a class="show-more-blogs glific-button-border bg-theme-secondary w-190 px-6 py-4 fz-18 leading-27 text-center mx-auto text-white font-heebo-bold text-decoration-none" target="_blank" href="">Show More</a>
+    </div>
+<?php endif; ?>
+<div class="page-blog bg-theme-white-smoke w-full pt-20">
+    <div class="mx-auto w-90p w-md-737 w-xl-1010 mx-auto pb-26 bg-theme-white-smoke">
         <div class="w-full w-md-full d-flex mb-9 mb-md-10 flex-column flex-md-row mx-auto justify-content-between">
             <?php
             $source_code_section = get_field('source_code_section');
@@ -117,5 +117,6 @@ get_header();
         <?php endif; ?>
     </div>
 </div>
+
 <?php
 get_footer();

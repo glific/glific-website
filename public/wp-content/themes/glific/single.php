@@ -50,7 +50,7 @@ get_header(); ?>
 				<?php echo the_content(); ?>
 			</div>
 		</div>
-		<div class="d-flex justify-content-between mx-auto bg-white flex-xl-row flex-column-reverse w-md-741 w-xl-1092 rounded-30 p-8">
+		<div class="mb-16 d-flex justify-content-between mx-auto bg-white flex-xl-row flex-column-reverse w-md-741 w-xl-1092 rounded-30 p-8">
 			<div class="d-flex bg-white flex-column-reverse w-full w-md-600">
 				<?php
 				if (comments_open() || get_comments_number()) {
@@ -87,7 +87,7 @@ get_header(); ?>
 			)
 		);
 		if ($posts->have_posts()) : ?>
-			<div class="mx-auto w-md-741 w-xl-1092 mt-26">
+			<div class="mx-auto w-md-741 w-xl-1092 mt-10">
 				<h3 class="fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-bold mb-14">Recommended reading</h3>
 				<div class="blogs-section mx-auto d-flex justify-content-center justify-content-md-between flex-wrap glific-blogs-container">
 					<?php while ($posts->have_posts()) : $posts->the_post(); ?>

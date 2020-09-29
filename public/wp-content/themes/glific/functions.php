@@ -166,7 +166,7 @@ function wp_move_comment_field_to_bottom($fields)
 	$fields['comment'] = $comment_field;
 	return $fields;
 }
-add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
+add_filter('comment_form_fields', 'wp_move_comment_field_to_bottom');
 
 function wp_remove_comment_url($arg)
 {

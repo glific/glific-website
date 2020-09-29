@@ -74,8 +74,8 @@ get_header();
             </div>
         <?php endif; ?>
         <?php
-        $community_section = get_field('community_section');
-        if (!empty($community_section)) :
+            $community_section = get_field('community_section');
+            if (!empty($community_section)) :
         ?>
             <div class="community-section rounded-top-30 rounded-bottom-right-30 bg-theme-gin py-7 px-10 w-full w-md-361 h-287 w-xl-421 h-xl-257 mt-10 mt-md-0">
                 <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">

@@ -11,14 +11,17 @@ get_header();
 $page_title = get_the_title();
 
 global $wpdb;
-$search_key_sub_query = isset( $_GET['search_key'] ) ? "AND wp_postmeta.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';
-$results = $wpdb->get_results( "SELECT wp_posts.id, wp_postmeta.meta_key, wp_postmeta.meta_value
-	FROM wp_posts
-	INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id )
-	WHERE wp_postmeta.meta_key like 'faq_content_%' $search_key_sub_query
-	AND wp_posts.post_type = 'page'
-	AND( wp_posts.post_status = 'publish' )
-	ORDER BY wp_posts.post_date DESC"
+$db_prefix = $wpdb->prefix;
+$post_table = $db_prefix . 'posts';
+$post_meta_table = $db_prefix . 'postmeta';
+$search_key_sub_query = isset( $_GET['search_key'] ) ? "AND $post_meta_table.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';
+$results = $wpdb->get_results( "SELECT $post_table.id, $post_meta_table.meta_key, $post_meta_table.meta_value
+	FROM $post_table
+	INNER JOIN $post_meta_table ON ( $post_table.ID = $post_meta_table.post_id )
+	WHERE $post_meta_table.meta_key like 'faq_content_%' $search_key_sub_query
+	AND $post_table.post_type = 'page'
+	AND( $post_table.post_status = 'publish' )
+	ORDER BY $post_table.post_date DESC"
 );
 
 $faqs = array();

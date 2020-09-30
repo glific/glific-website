@@ -47,13 +47,17 @@ if ( !empty( $results ) ) {
 				<div class="d-flex border-4 border-theme-primary bg-white w-320 w-md-560 h-64 rounded-20 border p-2">
 					<input type="text"
 						value="<?php echo isset( $_GET['search_key'] ) ? $_GET['search_key'] : '' ?>"
-						name="search_key" class="w-full px-6 px-md-6 border-0 rounded-20 text-theme-scorpion font-heebo-light"
-						placeholder="Search..." autocomplete="off" />
+						name="search_key"
+						class="w-full px-6 px-md-6 border-0 rounded-20 text-theme-scorpion font-heebo-light"
+						placeholder="Search..."
+						autocomplete="off"
+						id="faq_search" />
 					<span class="w-25 h-25 my-auto c-pointer <?php echo isset( $_GET['search_key'] ) ? '' : 'd-none' ?>"
-						onClick="window.location.href = window.location.href.split( '?' )[0];">
+						onClick="window.location.href = window.location.href.split( '?' )[0];"
+						id="faq_close_button">
 						<?php echo file_get_contents( get_template_directory() . '/dist/images/close.svg' ) ?>
 					</span>
-					<button type="submit" class="rounded-circle border border-0 mb-2 my-auto mx-4 p-4">
+					<button type="submit" class="rounded-circle border border-0 mb-2 my-auto mx-4 mx-md-6 p-4">
 						<div class="w-25 w-md-30 h-25 h-md-30">
 							<?php echo file_get_contents( get_template_directory() . '/dist/images/search.svg' ) ?>
 						</div>

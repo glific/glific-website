@@ -21,7 +21,7 @@
 						<?php
 						$embeded_video_url = get_youtube_embed_url($video['video']);
 						if($key == 0) :?>
-						<h3 class="fz-24 leading-35 text-theme-primary font-heebo-regular position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
+						<h3 class="fz-24 leading-35 text-theme-mine-shaft font-heebo-medium position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
 						<?php endif; ?>
 						<iframe class="embed-responsive-item w-full rounded-30 h-full border-0" src="<?php echo $embeded_video_url; ?>" allowfullscreen></iframe>
 						<h5 class="font-heebo-bold fz-16 leading-24 fz-md-18 leading-md-27 mt-4 mb-0  position-absolute left-0 bottom-n9 bottom-md-n11 bottom-xl-n12 ml-5"><?php echo $video['name']; ?></h5>
@@ -33,11 +33,11 @@
 					<?php foreach ($demo_videos['videos'] as $key => $video) :
 						$video_thumbnail = get_thumbnail_from_youtube_video($video['video']);
 					?>
-					<div class="d-flex flex-column mx-4 mx-md-0 w-124 w-xl-214 mb-md-6 mb-xl-13 single-video c-pointer position-relative" data-target="<?php echo "#video-$key" ; ?>">
-						<img src="<?php echo $video_thumbnail ; ?>" class="w-124 h-80 h-xl-136 w-xl-full border-0 rounded-15">
+					<div class="d-block h-auto flex-column mx-4 mx-md-0 w-124 w-xl-214 mb-md-6 mb-xl-13 single-video c-pointer position-relative h-full" data-target="<?php echo "#video-$key" ; ?>">
+						<img src="<?php echo $video_thumbnail ; ?>" class="w-124 h-80 h-xl-136 w-xl-full border-0 rounded-15 d-block">
 						<h5 class="font-heebo-bold fz-12 leading-18 mt-4 mb-0"><?php echo $video['name']; ?></h5>
 						<p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left"><?php echo $video['time']; ?></p>
-						<div class="w-20 w-xl-35 position-absolute mt-9 mt-xl-15.5 ml-15 ml-xl-24">
+						 <div class="w-20 w-xl-35 position-absolute ml-15 ml-xl-24 top-8.5 top-xl-16">
 							<?php echo file_get_contents(get_template_directory(). '/dist/images/play-button.svg') ?>
 						</div>
 					</div>
@@ -64,9 +64,9 @@
 		?>
 			<div class="d-flex flex-column mb-18 justify-content-xl-between <?php echo $class ; ?>">
 				<div class="rounded-30">
-					<img src="<?php echo $section['image'] ; ?>" class="w-full w-md-510">
+					<img src="<?php echo $section['image'] ; ?>" class="w-full w-md-510 rounded-30">
 				</div>
-				<div class="mt-6 mt-xl-0 rounded-top-30 bg-theme-secondary border-7 border-theme-primary border p-7.5 p-md-10 w-md-512 ml-md-auto ml-xl-0 h-md-242 <?php echo $border_class ; ?>">
+				<div class="mt-6 mt-xl-0 rounded-top-30 bg-theme-secondary border-7 border-theme-primary border p-7.5 px-md-10 py-md-6 w-md-512 ml-md-auto ml-xl-0 h-md-242 <?php echo $border_class ; ?>">
 					<h5 class="font-heebo-medium fz-24 leading-35 text-white mb-0"><?php echo $section['content']['heading'] ;?></h5>
 					<p class="font-heebo-regular fz-18 leading-27 text-white mb-0 mt-6"><?php echo $section['content']['content'] ;?></p>
 				</div>

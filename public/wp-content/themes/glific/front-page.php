@@ -12,14 +12,17 @@
 	<?php $cover_section = get_field('cover_section'); ?>
 	<div class="bg-theme-primary d-flex flex-column flex-xl-row align-items-center justify-content-xl-center pt-22 pb-22">
 		<div class="w-328 w-md-625 w-xl-534 mr-xl-18 pt-xl-18">
-			<h3 class="text-white fz-28 leading-33 fz-xl-36 leading-xl-43 font-heebo-regular"><?php echo $cover_section['content']; ?></h3>
-			<div class="d-flex flex-column flex-md-row align-items-end justify-content-md-end justify-content-xl-start pr-7 mt-md-9.5 mt-xl-13.5">
+			<h3 class="text-white fz-28 leading-43 fz-md-36 font-heebo-regular"><?php echo $cover_section['content']; ?></h3>
+			<div class="d-flex flex-column flex-xl-row justify-content-md-end justify-content-xl-start pr-7 mt-10.5 mt-md-9.5 mt-xl-13.5">
 				<a class="glific-button-border bg-theme-secondary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none" href="<?php echo $cover_section['link_first']['url']; ?>"><?php echo $cover_section['link_first']['text']; ?></a>
-				<a class="glific-button-border bg-white  py-4 w-170 fz-18 leading-27 text-center text-theme-secondary font-heebo-bold mt-6 text-decoration-none mt-md-0" href="<?php echo $cover_section['link_second']['url']; ?>"><?php echo $cover_section['link_second']['text']; ?></a>
+				<a class="glific-button-border bg-white  py-4 w-170 fz-18 leading-27 text-center text-theme-secondary font-heebo-bold text-decoration-none mt-md-10 mt-10.5 mt-xl-0"
+					href="<?php echo $cover_section['link_second']['url']; ?>">
+					<?php echo $cover_section['link_second']['text']; ?>
+				</a>
 			</div>
 		</div>
-		<div class="w-328 w-md-625 w-xl-427 mt-n12 ml-xl-18">
-			<img src="<?php echo $cover_section['image']; ?>" class="w-full">
+		<div class="w-328 w-md-625 w-xl-427 mt-n12  mt-md-n42 ml-xl-18 mt-xl-0">
+			<img src="<?php echo $cover_section['image']; ?>" class="w-full w-md-382 ml-md-auto d-block">
 		</div>
 	</div>
 	<?php $demo_section = get_field('demo_section');
@@ -57,11 +60,11 @@
 						break;
 				}
 				?>
-				<div class="d-flex flex-column flex-xl-row w-full w-md-310 w-xl-407 mb-10 justify-content-xl-between">
+				<div class="d-flex flex-column flex-xl-row w-full w-md-310 w-xl-380 mb-10 justify-content-xl-between">
 					<div>
 						<img src="<?php echo $section['image'] ; ?>" class="h-md-90 <?php echo $img_class ; ?>">
 					</div>
-					<div class="d-flex flex-column mt-4 mt-xl-0 w-xl-288">
+					<div class="d-flex flex-column mt-4 mt-xl-0 w-xl-266">
 						<div class="border border-theme-primary border-5 py-4 px-5 d-flex flex-row position-relative bg-theme-gin <?php echo $border_class ; ?>">
 							<h5 class="font-heebo-medium fz-21 leading-31 fz-xl-24 leading-xl-35 text-theme-mine-shaft"><?php echo $section['text'] ; ?></h5>
 							<img src="<?php echo $section['sub_image'] ; ?>" class="mt-auto position-absolute right-0 bottom-0 mr-7 mb-5">
@@ -117,10 +120,6 @@
 			<div class="w-326 w-md-641 w-xl-840 mx-auto">
 				<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0 mb-6"><?php echo $early_adopters['heading']; ?></h3>
 				<p class="mb-0 font-heebo-regular fz-18 leading-27"><?php echo $early_adopters['sub_heading']; ?></p>
-				<a class="glific-button-border px-9.5 bg-theme-secondary py-4 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none mt-6 d-block w-233"
-					href="<?php echo $early_adopters['case_study_link']['link']; ?>">
-					<?php echo $early_adopters['case_study_link']['button_text']; ?>
-				</a>
 			</div>
 			<?php if (!empty($early_adopters ['npo_logos'])) : ?>
 			<div class="d-flex flex-row w-326 w-md-641 w-xl-840 mx-auto justify-content-center mt-10">
@@ -187,7 +186,7 @@
 						</div>
 					</div>
 					<div class="bg-white d-flex flex-column box-shadow-dark-10 mt-10  w-344 w-md-full p-6 mr-auto ml-md-0 w-xl-full ml-xl-auto p-xl-10 rounded-top-right-30 rounded-bottom-right-30 rounded-md-top-right-0">
-						<div class="w-xl-432 ml-xl-auto">
+						<div class="w-md-345 w-xl-432 mx-md-auto ml-xl-auto mr-xl-0">
 							<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['open_source']['text'] ; ?></h5>
 							<p class="mb-0 font-heebo-regular fz-18 leading-27 mb-6"><?php echo $know_more['open_source']['content'] ; ?></p>
 							<a class="glific-button-border bg-theme-primary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0 d-block"

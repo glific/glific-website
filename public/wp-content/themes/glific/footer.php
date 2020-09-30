@@ -73,7 +73,7 @@
 
 				<div class="fz-14 leading-21 w-98 w-xl-full text-theme-pewter mt-auto">
 					<span class="theme-pewter">Crafted by</span>
-					<a class="ml-2 text-decoration-none fz-14 leading-21 fz-xl-16 leading-xl-24 text-theme-pewter" href="https://coloredcow.com/?utm_source=website&utm_medium=glific" target="_blank">
+					<a class="ml-xl-2 text-decoration-none fz-14 leading-21 fz-xl-16 leading-xl-24 text-theme-pewter" href="https://coloredcow.com/?utm_source=website&utm_medium=glific" target="_blank">
 						ColoredCow
 					</a>
 				</div>

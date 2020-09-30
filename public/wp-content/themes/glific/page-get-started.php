@@ -34,8 +34,10 @@ $main_heading = get_field('main_heading');
 							<?php if (!empty($data['content'])) :
 								foreach ($data['content'] as $content) : ?>
 									<div class="d-flex flex-row">
-										<div class="w-8 h-8 w-md-15 h-md-15 rounded-5 bg-theme-pewter mt-4 mt-md-3.5"></div>
-										<div class="get-started-description ml-3 ml-xl-9.5 mb-md-6 mb-4 w-xl-660 w-md-540 ml-md-8 w-240">
+										<?php if (sizeof($data['content']) > 1) : ?>
+											<div class="w-8 h-8 w-md-15 h-md-15 rounded-5 bg-theme-pewter mt-4 mt-md-3.5 mr-3 mr-md-8 mr-xl-9.5"></div>
+										<?php endif ; ?>
+										<div class="get-started-description mb-md-6 mb-4 w-xl-660 w-md-540 w-240">
 											<?php echo $content['description']; ?>
 										</div>
 									</div>
@@ -55,7 +57,7 @@ $main_heading = get_field('main_heading');
 	</div>
 	<?php $secondary_section_data = get_field('secondary_section');
 	if (!empty($secondary_section_data)) : ?>
-		<div class="d-flex flex-column flex-md-row w-280 w-xl-868 w-md-750 justify-content-between mb-md-26 mx-auto">
+		<div class="d-flex flex-column flex-md-row w-280 w-xl-868 w-md-750 justify-content-center mb-md-26 mx-auto">
 			<?php foreach ($secondary_section_data as $data) : ?>
 				<div class="d-flex flex-column w-xl-426 w-md-360 p-8 mb-10 mb-md-0 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
 					<h2 class="fz-18 fz-md-24 w-xl-312 w-md-310"><?php echo $data['title']; ?></h2>

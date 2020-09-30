@@ -59,8 +59,8 @@
 			?>
 			</div>
 			<div class="d-flex flex-column w-xl-170">
-				<div class="d-flex flex-row mt-8 mt-xl-0" target="_blank">
-					<a href="">
+				<div class="d-flex flex-row mt-8 mt-xl-0">
+					<a href="https://www.youtube.com/channel/UCIJfQhrbJSCWQtzdI484nng" target="_blank">
 						<?php echo file_get_contents(get_template_directory(). '/dist/images/youtube.svg') ?>
 					</a>
 					<a href="https://github.com/glific" target="_blank" class="mx-4 mx-xl-8">

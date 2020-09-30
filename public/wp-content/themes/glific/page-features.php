@@ -37,7 +37,7 @@
 						<img src="<?php echo $video_thumbnail ; ?>" class="w-124 h-80 h-xl-136 w-xl-full border-0 rounded-15 d-block">
 						<h5 class="font-heebo-bold fz-12 leading-18 mt-4 mb-0"><?php echo $video['name']; ?></h5>
 						<p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left"><?php echo $video['time']; ?></p>
-						 <div class="w-20 w-xl-35 position-absolute ml-15 ml-xl-24 top-8.5 top-xl-16">
+						<div class="w-20 w-xl-35 position-absolute ml-15 ml-xl-24 top-8.5 top-xl-16">
 							<?php echo file_get_contents(get_template_directory(). '/dist/images/play-button.svg') ?>
 						</div>
 					</div>

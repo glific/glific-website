@@ -14,10 +14,6 @@ Text Domain: coloredcow
 
 @import "assets/bootstrap/bootstrap";
 
-body {
-    @extend .mt-26, .mt-xl-35;
-}
-
 // sass code for image alignment with content
 .alignright {
     float: right;

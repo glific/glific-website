@@ -15,7 +15,9 @@
 	if (!empty($banner_content)) : ?>
 	<nav class="bg-theme-pewter d-flex flex-row justify-content-center navbar fixed-top banner-header py-3.5">
 		<p class="font-heebo-bold fz-14 leading-21 text-white mb-0"><?php echo $banner_content['details']; ?></p>
-		<a class="fz-14 leading-21 text-theme-primary font-heebo-bold text-decoration-none ml-10" href="<?php echo $banner_content['link']; ?>">Sign up</a>
+		<a class="fz-14 leading-21 text-theme-primary font-heebo-bold text-decoration-none ml-10"
+			href="<?php echo $banner_content['link']; ?>">Sign up
+		</a>
 	</nav>
 	<?php endif; ?>
 
@@ -28,7 +30,9 @@
 		?>
 		</a>
 		<div class="ml-auto d-xl-none">
-			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-xl-none mr-5" href="#">Book a demo</a>
+			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-xl-none mr-5"
+				href="#">Book a demo
+			</a>
 			<button type="button" class="navbar-toggle position-relative d-xl-none bg-transparent border-0">
 				<span class="icon-bar position-absolute border-0 bg-theme-secondary top"></span>
 				<span class="icon-bar position-absolute border-0 bg-theme-secondary center"></span>

@@ -177,14 +177,14 @@ add_filter('comment_form_default_fields', 'wp_remove_comment_url');
 
 function wp_add_comment_fields($fields)
 {
-	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Company name *') . '</label>' . '<input id="company" name="company" type="text" size="30" /></p>';
+	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Company name *') . '</label>' . '<input id="company" name="company" type="text" size="30" required/></p>';
 	return $fields;
 }
 add_filter('comment_form_default_fields', 'wp_add_comment_fields');
 
 function wp_modify_comment_form_text_area($arg)
 {
-	$arg['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x('Comment *', 'noun') . '</label><textarea id="comment" name="comment" cols="45" rows="6" aria-required="true"></textarea></p>';
+	$arg['comment_field'] = '<p class="comment-form-comment"><label for="comment">' . _x('Comment *', 'noun') . '</label><textarea id="comment" name="comment" cols="45" rows="6" aria-required="true" required></textarea></p>';
 	return $arg;
 }
 add_filter('comment_form_defaults', 'wp_modify_comment_form_text_area');

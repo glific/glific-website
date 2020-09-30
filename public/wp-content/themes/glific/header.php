@@ -19,19 +19,22 @@
 	</nav>
 	<?php endif; ?>
 
-	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white mt-8 box-shadow-dark-10 <?php echo !empty($banner_content) ? 'mt-10' : '' ; ?>">
+	<nav class="navbar navbar-expand-xl py-4.5 px-6 py-xl-6.6 px-xl-8 fixed-top bg-white box-shadow-dark-10 <?php echo !empty($banner_content) ? 'mt-10' : '' ; ?>">
 		<a class="navbar-brand py-0 mr-0 d-inline-flex" href="<?php echo esc_url(home_url('/')); ?>">
 		<?php
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
 			$custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-			echo '<img src="' . esc_url( $custom_logo_url ) . '"class=" navbar-brand h-44 h-xl-80 py-0">';
+			echo '<img src="' . esc_url( $custom_logo_url ) . '"class=" navbar-brand w-85 h-52 py-0">';
 		?>
 		</a>
-		<button type="button" class="navbar-toggle position-relative ml-auto d-xl-none bg-transparent border-0">
-			<span class="icon-bar position-absolute border-0 bg-theme-secondary top"></span>
-			<span class="icon-bar position-absolute border-0 bg-theme-secondary center"></span>
-			<span class="icon-bar position-absolute border-0 bg-theme-secondary bottom"></span>
-		</button>
+		<div class="ml-auto d-xl-none">
+			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-xl-none mr-5" href="#">Book a demo</a>
+			<button type="button" class="navbar-toggle position-relative d-xl-none bg-transparent border-0">
+				<span class="icon-bar position-absolute border-0 bg-theme-secondary top"></span>
+				<span class="icon-bar position-absolute border-0 bg-theme-secondary center"></span>
+				<span class="icon-bar position-absolute border-0 bg-theme-secondary bottom"></span>
+			</button>
+		</div>
 		<?php
 			wp_nav_menu(array(
 				'theme_location' => 'header_nav',
@@ -73,4 +76,4 @@
 	</div>
 </header>
 
-<body>
+<body class="<?php echo !empty($banner_content) ? 'mt-28.5' : 'mt-20.5' ; ?> " >

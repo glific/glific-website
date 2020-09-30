@@ -15,7 +15,10 @@
 			<h3 class="text-white fz-28 leading-43 fz-md-36 font-heebo-regular"><?php echo $cover_section['content']; ?></h3>
 			<div class="d-flex flex-column flex-xl-row justify-content-md-end justify-content-xl-start pr-7 mt-10.5 mt-md-9.5 mt-xl-13.5">
 				<a class="glific-button-border bg-theme-secondary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none" href="<?php echo $cover_section['link_first']['url']; ?>"><?php echo $cover_section['link_first']['text']; ?></a>
-				<a class="glific-button-border bg-white  py-4 w-170 fz-18 leading-27 text-center text-theme-secondary font-heebo-bold text-decoration-none mt-md-10 mt-10.5 mt-xl-0" href="<?php echo $cover_section['link_second']['url']; ?>"><?php echo $cover_section['link_second']['text']; ?></a>
+				<a class="glific-button-border bg-white  py-4 w-170 fz-18 leading-27 text-center text-theme-secondary font-heebo-bold text-decoration-none mt-md-10 mt-10.5 mt-xl-0"
+					href="<?php echo $cover_section['link_second']['url']; ?>">
+					<?php echo $cover_section['link_second']['text']; ?>
+				</a>
 			</div>
 		</div>
 		<div class="w-328 w-md-625 w-xl-427 mt-n12  mt-md-n42 ml-xl-18 mt-xl-0">

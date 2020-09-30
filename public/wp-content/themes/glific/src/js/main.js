@@ -44,6 +44,19 @@ jQuery(document).ready(function() {
 		var sub_menu = jQuery(this).parent().find('.sub-menu');
 		sub_menu.toggleClass('d-block');
 	});
+
+	if(jQuery('#faq_search').length == 0 || jQuery('#faq_search').val() == '') {
+		jQuery("#faq_close_button").addClass('d-none');
+	}
+
+	jQuery('#faq_search').on('keyup', function name() {
+		if(jQuery(this).length == 0 || jQuery(this).val() == '') {
+			jQuery("#faq_close_button").addClass('d-none');
+		} else {
+			jQuery("#faq_close_button").removeClass('d-none');
+		}
+	})
+
 });
 
 jQuery('.show-more-blogs').on('click', show_more_blogs);

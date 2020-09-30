@@ -17,7 +17,7 @@ $post_meta_table = $db_prefix . 'postmeta';
 $search_key_sub_query = isset( $_GET['search_key'] ) ? "AND $post_meta_table.meta_value LIKE '%" . $_GET['search_key'] . "%' " : '';
 $results = $wpdb->get_results( "SELECT $post_table.id, $post_meta_table.meta_key, $post_meta_table.meta_value
 	FROM $post_table
-	INNER JOIN $post_meta_table ON (  $post_table.ID = $post_meta_table.post_id  )
+	INNER JOIN $post_meta_table ON ( $post_table.ID = $post_meta_table.post_id )
 	WHERE $post_meta_table.meta_key like 'faq_content_%' $search_key_sub_query
 	AND $post_table.post_type = 'page'
 	AND(  $post_table.post_status = 'publish'  )
@@ -45,8 +45,12 @@ if ( !empty( $results ) ) {
 		<div class="pt-6 pb-10 pb-xl-18 mx-auto">
 			<form class="form-inline" action="">
 				<div class="d-flex border-4 border-theme-primary bg-white w-320 w-md-560 h-64 rounded-20 border-solid p-2">
-					<input type="text" value="<?php echo isset( $_GET['search_key'] ) ? $_GET['search_key'] : '' ?>" name="search_key" class="w-full px-6 px-md-6 border-0 rounded-20 text-theme-scorpion font-heebo-light" placeholder="Search..." style="border: 0px; outline: 0px;" autocomplete="off" />
-					<span class="w-18 h-28 my-auto c-pointer <?php echo isset( $_GET['search_key'] ) ? '' : 'd-none' ?>" onClick="window.location.href = window.location.href.split( '?' )[0];">
+					<input type="text"
+						value="<?php echo isset( $_GET['search_key'] ) ? $_GET['search_key'] : '' ?>"
+						name="search_key" class="w-full px-6 px-md-6 border-0 rounded-20 text-theme-scorpion font-heebo-light"
+						placeholder="Search..." autocomplete="off" />
+					<span class="w-18 h-28 my-auto c-pointer <?php echo isset( $_GET['search_key'] ) ? '' : 'd-none' ?>"
+						onClick="window.location.href = window.location.href.split( '?' )[0];">
 						<?php echo file_get_contents( get_template_directory() . '/dist/images/close.svg' ) ?>
 					</span>
 					<button type="submit" class="rounded-circle border-solid border-0 mb-2 my-auto mx-4">
@@ -85,7 +89,13 @@ if ( !empty( $results ) ) {
 
 					<div class="card rounded-20 my-6 card-shadow">
 						<div class="card-header bg-white rounded-20 p-0 card-shadow" id="heading<?php echo $faq_count; ?>">
-							<button class="btn btn-link btn-block text-left rounded-20 px-6 text-decoration-none fz-24 leading-33 font-heebo-regular text-theme-mine-shaft" type="button" data-toggle="collapse" data-target="#collapse<?php echo $faq_count; ?>" aria-expanded="false" aria-controls="collapse<?php echo $faq_count; ?>">
+							<button class="btn btn-link btn-block text-left rounded-20 px-6 text-decoration-none fz-24 leading-33 font-heebo-regular text-theme-mine-shaft"
+								type="button"
+								data-toggle="collapse"
+								data-target="#collapse<?php echo $faq_count; ?>"
+								aria-expanded="false"
+								aria-controls="collapse<?php echo $faq_count; ?>"
+							>
 								<div class="d-flex flex-column flex-md-row">
 									<div class="d-flex flex-row justify-content-between">
 										<div class="fz-36 font-heebo-light my-auto pr-md-6 pr-xl-16">
@@ -104,7 +114,11 @@ if ( !empty( $results ) ) {
 								</div>
 							</button>
 						</div>
-						<div id="collapse<?php echo $faq_count; ?>" class="collapse" aria-labelledby="heading<?php echo $faq_count; ?>" data-parent="#accordionFaq">
+						<div id="collapse<?php echo $faq_count; ?>"
+							class="collapse"
+							aria-labelledby="heading<?php echo $faq_count; ?>"
+							data-parent="#accordionFaq"
+						>
 							<div class="card-body fz-18 leading-29 font-heebo-regular pl-xl-31 pr-xl-15 py-xl-9.5">
 								<?php echo $description; ?>
 							</div>

@@ -61,14 +61,14 @@ get_header();
             $source_code_section = get_field('source_code_section');
             if (!empty($source_code_section)) :
             ?>
-                <div class="source-code-section rounded-top-30 rounded-bottom-left-30 bg-theme-gin py-7 w-full px-10 w-md-361 h-287 w-xl-572 h-xl-257">
+                <div class="source-code-section rounded-top-30 rounded-bottom-left-30 bg-theme-gin py-7 w-full px-10 w-md-361  w-xl-572 d-flex flex-column">
                     <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
                         <?php echo $source_code_section['section_title'] ?>
                     </h5>
                     <p class="font-heebo-regular fz-18 leading-27 mt-6 w-md-292 w-xl-460 mb-8">
                         <?php echo $source_code_section['section_text'] ?>
                     </p>
-                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none" target="_blank" href="<?php echo $source_code_section['view_github_link'] ?>">
+                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none w-162" target="_blank" href="<?php echo $source_code_section['view_github_link'] ?>">
                         <?php echo $source_code_section['view_github_text'] ?>
                     </a>
                 </div>
@@ -77,14 +77,14 @@ get_header();
             $community_section = get_field('community_section');
             if (!empty($community_section)) :
             ?>
-                <div class="community-section rounded-top-30 rounded-bottom-right-30 bg-theme-gin py-7 px-10 w-full w-md-361 h-287 w-xl-421 h-xl-257 mt-10 mt-md-0">
+                <div class="community-section rounded-top-30 rounded-bottom-right-30 bg-theme-gin py-7 px-10 w-full w-md-361 w-xl-421 mt-10 mt-md-0 d-flex flex-column">
                     <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
                         <?php echo $community_section['section_title'] ?>
                     </h5>
                     <p class="font-heebo-regular fz-18 leading-27 mt-6 w-md-310 mb-8">
                         <?php echo $community_section['section_text'] ?>
                     </p>
-                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none" target="_blank" href="<?php echo $community_section['view_discord_link'] ?>">
+                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none mt-aut w-172 mt-auto" target="_blank" href="<?php echo $community_section['view_discord_link'] ?>">
                         <?php echo $community_section['view_discord_text'] ?>
                     </a>
                 </div>
@@ -94,7 +94,7 @@ get_header();
             $newsletter_section = get_field('newsletter_section');
             if ($newsletter_section) :
         ?>
-                <div class="newsletter-section rounded-top-right-30 rounded-bottom-30 bg-theme-gin py-6 px-10 d-flex align-items-center justify-content-between w-full h-md-149 flex-column flex-md-row">
+                <div class="newsletter-section rounded-top-right-30 rounded-bottom-30 bg-theme-gin py-6 px-10 d-flex  justify-content-between w-full flex-column flex-md-row">
                     <div>
                         <h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
                             <?php echo $newsletter_section['section_title'] ?>

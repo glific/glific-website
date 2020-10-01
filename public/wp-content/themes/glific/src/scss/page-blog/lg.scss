@@ -1,8 +1,13 @@
 @media only screen and (min-width: 1280px) {
-    .page-blog {
-        .col-lg-3 {
-            flex: 0 0 25%;
-            max-width: 100%;
-        }
-    }
+	.page-blog {
+		.col-lg-3 {
+			flex: 0 0 25%;
+			max-width: 100%;
+		}
+		.caldera-grid {
+			.row {
+				flex-wrap:initial !important;
+			}
+		}
+	}
 }

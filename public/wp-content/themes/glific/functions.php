@@ -177,7 +177,7 @@ add_filter('comment_form_default_fields', 'wp_remove_comment_url');
 
 function wp_add_comment_fields($fields)
 {
-	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Company name *') . '</label>' . '<input id="company" name="company" type="text" size="30" required/></p>';
+	$fields['company'] = '<p class="comment-form-company"><label for="company">' . __('Organisation name *') . '</label>' . '<input id="company" name="company" type="text" size="30" required/></p>';
 	return $fields;
 }
 add_filter('comment_form_default_fields', 'wp_add_comment_fields');

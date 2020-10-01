@@ -90,6 +90,13 @@ function glific_widget_forms()
 		'before_title' => '<span class="d-none">',
 		'after_title' => '</span>',
 	));
+
+	register_sidebar(array(
+		'name' => 'Demo',
+		'id' => 'glific_form_demo',
+		'before_title' => '<span class="d-none">',
+		'after_title' => '</span>',
+	));
 }
 
 function get_thumbnail_from_youtube_video($url)

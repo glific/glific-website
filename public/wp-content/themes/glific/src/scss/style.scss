@@ -95,6 +95,19 @@ Text Domain: coloredcow
     background-image: url("dist/images/bg-team.svg") !important;
 }
 
+#glific_form_demo {
+    .last-col {
+        @extend .col-md-7;
+    }
+    .first-col {
+        @extend .col-md-5;
+    }
+    input[type="submit"] {
+        font-family: 'Heebo' !important;
+        font-weight: 700;
+    }
+}
+
 @import "utilities";
 @import "media/sm";
 @import "media/md";

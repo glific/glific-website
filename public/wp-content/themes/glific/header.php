@@ -31,7 +31,8 @@
 		</a>
 		<div class="ml-auto d-xl-none">
 			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-xl-none mr-5"
-				data-toggle="modal" data-target="#demoModal"
+				data-toggle="modal" \
+				data-target="#demoModal"
 				href="#">Book a demo
 			</a>
 			<button type="button" class="navbar-toggle position-relative d-xl-none bg-transparent border-0">
@@ -58,7 +59,8 @@
 			));
 		?>
 		<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-none d-xl-block"
-			href="#" data-toggle="modal"
+			href="#"
+			data-toggle="modal"
 			data-target="#demoModal">Book a demo</a>
 		</div>
 	</nav>
@@ -84,4 +86,3 @@
 
 <body class="<?php echo !empty($banner_content) ? 'mt-28.5' : 'mt-20.5' ; ?> " >
 	<?php get_template_part('template-parts/book-demo-modal', null) ;?>
-

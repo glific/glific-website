@@ -16,83 +16,96 @@ Text Domain: coloredcow
 
 // sass code for image alignment with content
 .alignright {
-    float: right;
+	float: right;
 
-    &img {
-        margin: 0 0 1em 1em;
-    }
+	&img {
+		margin: 0 0 1em 1em;
+	}
 }
 
 .alignleft {
-    float: left;
+	float: left;
 
-    &img {
-        margin: 0 1em 1em 0;
-    }
+	&img {
+		margin: 0 1em 1em 0;
+	}
 }
 
 .aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 
-    &img {
-        display: block;
-    }
+	&img {
+		display: block;
+	}
 }
 
 .footer-menu {
-    li {
-        @extend .mx-0;
-    }
+	li {
+		@extend .mx-0;
+	}
 
-    .menu-item {
-        @extend .pb-2, .pb-xl-3, .px-0, .pl-md-0;
+	.menu-item {
+		@extend .pb-2, .pb-xl-3, .px-0, .pl-md-0;
 
-        a {
-            @extend .nav-link, .text-white, .fz-16, .leading-24, .text-theme-pewter;
+		a {
+			@extend .nav-link, .text-white, .fz-16, .leading-24, .text-theme-pewter;
 
-            @extend .p-0, .d-inline-block;
-        }
-    }
+			@extend .p-0, .d-inline-block;
+		}
+	}
 }
 
 .border-3-pewter {
-    border: 3px solid $theme-pewter;
+	border: 3px solid $theme-pewter;
 }
 
 .carousel-control-next-icon {
-    width: 16px;
-    height: 30px;
-    background-image: url("dist/images/next-icon.svg") !important;
+	width: 16px;
+	height: 30px;
+	background-image: url("dist/images/next-icon.svg") !important;
 }
 
 .carousel-control-prev-icon {
-    width: 16px;
-    height: 30px;
-    background-image: url("dist/images/prev-icon.svg") !important;
+	width: 16px;
+	height: 30px;
+	background-image: url("dist/images/prev-icon.svg") !important;
 }
 
 .carousel-control-prev {
-    opacity: 1;
-    top: 62px !important;
-    width: 3%;
+	opacity: 1;
+	top: 62px !important;
+	width: 3%;
 }
 
 .carousel-control-next {
-    opacity: 1;
-    top: 62px !important;
-    width: 3%;
+	opacity: 1;
+	top: 62px !important;
+	width: 3%;
 }
 
 .user-bg {
-    background-image: url("dist/images/colon.svg") !important;
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-image: url("dist/images/colon.svg") !important;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .team-bg-image {
-    background-image: url("dist/images/bg-team.svg") !important;
+	background-image: url("dist/images/bg-team.svg") !important;
+}
+
+#glific_form_demo {
+	.last-col {
+		@extend .col-md-7;
+	}
+	.first-col {
+		@extend .col-md-5;
+	}
+	input[type="submit"] {
+		font-family: 'Heebo' !important;
+		font-weight: 700;
+	}
 }
 
 @import "utilities";

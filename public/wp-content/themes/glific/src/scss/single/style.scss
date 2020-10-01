@@ -91,6 +91,6 @@
     }
 
     .comment-reply-title {
-        @extend .fz-28, .leading-33, .fz-xl-36, .leading-xl-43, .font-heebo-bold;
+        @extend .fz-28, .leading-33, .fz-xl-36, .leading-xl-43, .font-heebo-bold, .text-theme-dark-green;
     }
 }

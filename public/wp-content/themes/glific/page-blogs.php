@@ -84,7 +84,7 @@ get_header();
                     <p class="font-heebo-regular fz-18 leading-27 mt-6 w-md-310 mb-8">
                         <?php echo $community_section['section_text'] ?>
                     </p>
-                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none mt-aut w-172 mt-auto" target="_blank" href="<?php echo $community_section['view_discord_link'] ?>">
+                    <a class="glific-button-border bg-theme-primary py-4 px-10 fz-18 leading-27 text-center text-white font-heebo-bold text-decoration-none w-172 mt-auto" target="_blank" href="<?php echo $community_section['view_discord_link'] ?>">
                         <?php echo $community_section['view_discord_text'] ?>
                     </a>
                 </div>

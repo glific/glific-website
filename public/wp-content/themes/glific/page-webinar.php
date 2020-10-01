@@ -46,29 +46,31 @@ $webinar_container = get_field('webinar_container');
                             $video_id = get_youtube_video_id($video['video_url']);
                             $video_title = get_youtube_video_title($video_id);
                             $video_duration = get_youtube_video_duration($video_id); ?>
-                            <div class="single-video-container w-124 d-flex flex-column mx-4 mx-md-0 w-xl-214 
-                                <?php echo empty($video_title) && empty($video_duration) ? 'mb-md-6 mb-xl-13' : ''  ?>" 
-                                    data-target="<?php echo $video_id; ?>">
-                                <div class="w-124 w-xl-full h-82 h-xl-136 rounded-xl-30 rounded-15 c-pointer bg-size-cover align-items-center d-flex flex-column flex-md-row justify-content-center" 
-                                    style="background-image: url(https://img.youtube.com/vi/<?php echo $video_id ?>/0.jpg" )>
-                                    <div class="w-20 w-xl-35">
-                                        <?php echo file_get_contents(get_template_directory() . '/dist/images/play-button.svg') ?>
+                            <div class="mb-md-6 mb-xl-13">
+                                <div class="single-video-container w-124 d-block flex-column mx-4 mx-md-0 w-xl-214 h-82 h-xl-136
+                                    <?php echo empty($video_title) && empty($video_duration) ? 'mb-md-6 mb-xl-13' : ''  ?>"
+                                        data-target="<?php echo $video_id; ?>">
+                                    <div class="w-full rounded-xl-30 rounded-15 c-pointer bg-size-cover align-items-center flex-column flex-md-row justify-content-center h-full position-relative"
+                                        style="background-image: url(https://img.youtube.com/vi/<?php echo $video_id ?>/0.jpg" )>
+                                        <div class="w-20 w-xl-35 position-absolute mt-9 mt-xl-15.5 ml-15 ml-xl-24">
+                                            <?php echo file_get_contents(get_template_directory() . '/dist/images/play-button.svg') ?>
+                                        </div>
                                     </div>
+                                    <?php if (!empty($video_title) && !empty($video_duration)) : ?>
+                                        <div class="d-flex flex-column d-md-none">
+                                            <h2 class="font-heebo-bold fz-12 fz-xl-14 text-theme-nero video-title mb-0 mt-4"><?php echo $video_title; ?></h2>
+                                            <p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left video-duration text-theme-mine-shaft"><?php echo $video_duration; ?> min</p>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                                 <?php if (!empty($video_title) && !empty($video_duration)) : ?>
-                                    <div class="d-flex flex-column d-md-none">
+                                    <div class="w-124 mx-4 mx-md-0 w-xl-214 mb-xl-13 mb-md-6 d-none d-md-flex flex-column">
                                         <h2 class="font-heebo-bold fz-12 fz-xl-14 text-theme-nero video-title mb-0 mt-4"><?php echo $video_title; ?></h2>
                                         <p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left video-duration text-theme-mine-shaft"><?php echo $video_duration; ?> min</p>
                                     </div>
                                 <?php endif; ?>
                             </div>
-                            <?php if (!empty($video_title) && !empty($video_duration)) : ?>
-                                <div class="w-124 mx-4 mx-md-0 w-xl-214 mb-xl-13 mb-md-6 d-none d-md-flex flex-column">
-                                    <h2 class="font-heebo-bold fz-12 fz-xl-14 text-theme-nero video-title mb-0 mt-4"><?php echo $video_title; ?></h2>
-                                    <p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left video-duration text-theme-mine-shaft"><?php echo $video_duration; ?> min</p>
-                                </div>
-                        <?php endif;
-                        endforeach; ?>
+                        <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
             </div>

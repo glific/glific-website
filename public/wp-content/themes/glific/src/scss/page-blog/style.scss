@@ -1,16 +1,24 @@
 .page-blog {
-    input[type="email"] {
-        @extend .border-0, .bg-white, .rounded-12, .px-7, .w-full, .w-md-354, .h-43;
-    }
-
-    .col-lg-3 {
-        flex: 0 0 26%;
-        max-width: 100%;
-        margin-left: auto;
-    }
-    .caldera_ajax_error_block {
-    	@extend .d-none;
-    }
+	input[type="email"] {
+		@extend .border-0, .bg-white, .rounded-12, .px-7, .w-full, .w-md-354, .h-43;
+	}
+	.col-lg-3 {
+		flex: 0 0 26%;
+		max-width: 100%;
+		margin-left: auto;
+	}
+	.caldera_ajax_error_block {
+		@extend .d-none;
+	}
+	.caldera-grid {
+		.col-lg-3 {
+			width: 100% !important
+		}
+		input[type="submit"] {
+			font-family: 'Heebo' !important;
+			font-weight: 700;
+		}
+	}
 }
 
 @import "lg";

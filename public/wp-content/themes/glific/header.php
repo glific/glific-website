@@ -31,7 +31,7 @@
 		</a>
 		<div class="ml-auto d-xl-none">
 			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-xl-none mr-5"
-				data-toggle="modal" \
+				data-toggle="modal"
 				data-target="#demoModal"
 				href="#">Book a demo
 			</a>
@@ -58,10 +58,11 @@
 				'echo' => true,
 			));
 		?>
-		<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-none d-xl-block"
-			href="#"
-			data-toggle="modal"
-			data-target="#demoModal">Book a demo</a>
+			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-none d-xl-block"
+				href="#"
+				data-toggle="modal"
+				data-target="#demoModal">Book a demo
+			</a>
 		</div>
 	</nav>
 	<div class="mobile-menu position-fixed w-screen h-screen text-right bg-theme-primary pl-0 d-none flex-column d-xl-none font-primary fz-18 leading-22 pt-14 pt-md-15 justify-content-center pr-10 z-index-1 overflow-auto">

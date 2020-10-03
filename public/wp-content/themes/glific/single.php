@@ -113,7 +113,7 @@ get_header(); ?>
 				</div>
 			</div>
 		<?php endif; ?>
-		<div class="ml-6 ml-md-n5 ml-xl-n12">
+		<div class="ml-6 ml-md-n5">
 			<a class="glific-button-border bg-theme-secondary px-10 py-4 fz-18 leading-27 text-center mx-auto text-white font-heebo-bold text-decoration-none" href="<?php echo get_permalink(get_page_by_path('blogs')) ?>">Back to Blogs</a>
 		</div>
 	</div>

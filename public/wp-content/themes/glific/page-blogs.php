@@ -92,7 +92,7 @@ get_header();
 			$newsletter_section = get_field('newsletter_section');
 			if ($newsletter_section) :
 		?>
-				<div class="newsletter-section rounded-top-right-30 rounded-bottom-30 bg-theme-gin py-6 px-10 d-flex  justify-content-between w-full flex-column flex-md-row">
+				<div class="newsletter-section rounded-top-right-30 rounded-bottom-30 bg-theme-gin py-6 px-10 d-flex  justify-content-between w-full flex-column flex-md-row align-items-center">
 					<div>
 						<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26">
 							<?php echo $newsletter_section['section_title'] ?>

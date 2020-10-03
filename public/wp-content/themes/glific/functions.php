@@ -147,12 +147,12 @@ function show_more_blogs()
 		while ($blogs->have_posts()) {
 			$blogs->the_post();
 			$featured_image_url = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/dist/images/blog-delaut-image.svg';
-			$html .= '<div class="w-285 mb-12 glific-blog">';
+			$html .= '<a class="w-285 mb-12 glific-blog text-decoration-none" href="' . get_the_permalink(). '">';
 			$html .= '<div class="w-full h-169 bg-position-center bg-size-cover rounded-30" style="background-image: url(' . $featured_image_url . ');"></div>';
-			$html .= '<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6">' . get_the_title() . '</h5>';
-			$html .= '<p class="font-heebo-regular fz-18 leading-27 mt-6">' . wp_trim_words(get_the_content(), 13, '...') . '</p>';
-			$html .= '<p class="font-heebo-regular fz-18 leading-27 mt-6">' . strtoupper(get_the_date('F d, Y')) . '</p>';
-			$html .= '</div>';
+			$html .= '<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6 text-theme-mine-shaft">' . get_the_title() . '</h5>';
+			$html .= '<p class="font-heebo-regular fz-18 leading-27 mt-6 text-theme-mine-shaft">' . wp_trim_words(get_the_content(), 13, '...') . '</p>';
+			$html .= '<p class="font-heebo-regular fz-18 leading-27 mt-6 text-theme-mine-shaft">' . strtoupper(get_the_date('F d, Y')) . '</p>';
+			$html .= '</a>';
 		}
 
 		wp_reset_query();

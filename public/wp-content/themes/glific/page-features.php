@@ -17,26 +17,27 @@
 				<?php foreach ($demo_videos['videos'] as $key => $video) :
 				?>
 				<div class="d-flex flex-column">
-					<div class="h-200 w-md-432 h-md-264 w-xl-747 h-xl-456 video-content-block flex-column position-relative <?php echo $key > 0 ? 'd-none' : 'd-flex'; ?>" id="<?php echo "video-$key" ;?>">
+					<div class="h-200 w-md-432 h-md-264 w-xl-747 h-xl-456 video-content-block flex-column position-relative selected-video-container single-video-block <?php echo $key > 0 ? 'd-none' : 'd-flex'; ?>" id="<?php echo "video-$key" ;?>">
 						<?php
 						$embeded_video_url = get_youtube_embed_url($video['video']);
-						if($key == 0) :?>
-						<h3 class="fz-24 leading-35 text-theme-mine-shaft font-heebo-medium position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
+						if($key == 0) : ?>
+							<h3 class="fz-24 leading-35 text-theme-mine-shaft font-heebo-medium position-absolute top-n12 top-xl-n17 ml-md-8">Latest demo video</h3>
 						<?php endif; ?>
 						<iframe class="embed-responsive-item w-full rounded-30 h-full border-0" src="<?php echo $embeded_video_url; ?>" allowfullscreen></iframe>
-						<h5 class="font-heebo-bold fz-16 leading-24 fz-md-18 leading-md-27 mt-4 mb-0  position-absolute left-0 bottom-n9 bottom-md-n11 bottom-xl-n12 ml-5"><?php echo $video['name']; ?></h5>
-						<p class="font-heebo-regular fz-16 leading-24 fz-md-18 leading-md-27 mb-0 text-right mr-xl-10 mt-6 mt-xl-7 position-absolute right-0 bottom-n9 bottom-md-n11 mr-5 bottom-xl-n12"><?php echo $video['time']; ?></p>
+						<h5 class="font-heebo-bold fz-16 leading-24 fz-md-18 leading-md-27 mt-4 mb-0  position-absolute left-0 bottom-n9 bottom-md-n11 bottom-xl-n12 ml-5 selected-video-title"><?php echo $video['name']; ?></h5>
+						<p class="font-heebo-regular fz-16 leading-24 fz-md-18 leading-md-27 mb-0 text-right mr-xl-10 mt-6 mt-xl-7 position-absolute right-0 bottom-n9 bottom-md-n11 mr-5 bottom-xl-n12 selected-video-duration"><?php echo $video['time']; ?></p>
 					</div>
 				</div>
 				<?php endforeach; ?>
 				<div class="d-flex flex-row flex-md-column h-md-264 w-full w-md-182 w-xl-315 h-xl-456 overflow-auto mx-auto mx-md-0 mt-15 box-shadow-dark-inset-10 py-10 align-items-md-center pt-md-6 mt-md-0 ml-md-auto">
 					<?php foreach ($demo_videos['videos'] as $key => $video) :
 						$video_thumbnail = get_thumbnail_from_youtube_video($video['video']);
+						$video_id = get_youtube_video_id($video['video']);
 					?>
-					<div class="d-block h-auto flex-column mx-4 mx-md-0 w-124 w-xl-214 mb-md-6 mb-xl-13 single-video c-pointer position-relative h-full" data-target="<?php echo "#video-$key" ; ?>">
+					<div class="d-block h-auto flex-column mx-4 mx-md-0 w-124 w-xl-214 mb-md-6 mb-xl-13 single-video c-pointer position-relative h-full single-video-container" data-target="<?php echo $video_id ; ?>">
 						<img src="<?php echo $video_thumbnail ; ?>" class="w-124 h-80 h-xl-136 w-xl-full border-0 rounded-15 d-block">
-						<h5 class="font-heebo-bold fz-12 leading-18 mt-4 mb-0"><?php echo $video['name']; ?></h5>
-						<p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left"><?php echo $video['time']; ?></p>
+						<h5 class="font-heebo-bold fz-12 leading-18 mt-4 mb-0 video-title"><?php echo $video['name']; ?></h5>
+						<p class="font-heebo-regular fz-12 leading-18 mb-0 mt-xl-7 text-left video-duration"><?php echo $video['time']; ?></p>
 						<div class="w-20 w-xl-35 position-absolute ml-15 ml-xl-24 top-8.5 top-xl-16">
 							<?php echo file_get_contents(get_template_directory(). '/dist/images/play-button.svg') ?>
 						</div>

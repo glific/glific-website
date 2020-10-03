@@ -59,11 +59,11 @@ $main_heading = get_field('main_heading');
 	if (!empty($secondary_section_data)) : ?>
 		<div class="d-flex flex-column flex-md-row w-280 w-xl-868 w-md-750 justify-content-center mb-md-26 mx-auto">
 			<?php foreach ($secondary_section_data as $data) : ?>
-				<div class="d-flex flex-column w-xl-426 w-md-360 p-8 mb-10 mb-md-0 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
-					<h2 class="fz-18 fz-md-24 w-xl-312 w-md-310"><?php echo $data['title']; ?></h2>
+				<div class="d-flex flex-column w-xl-426 w-md-360 p-6 mb-10 mb-md-0 p-xl-10 p-md-9 bg-white get-started-content-box rounded-top-30 rounded-bottom-right-30">
+					<h2 class="fz-24 leading-35 w-xl-312 w-md-310 font-heebo-medium"><?php echo $data['title']; ?></h2>
 					<?php if (!empty($data['button_url']) && !empty($data['button_text'])) : ?>
 						<div class="d-flex flex-row justify-content-center mt-5 mt-xl-7 mt-md-8">
-							<a href="<?php $data['button_url']; ?>" class="d-block px-6.5 px-xl-10 text-center text-decoration-none bg-theme-secondary text-white font-heebo-regular
+							<a href="<?php echo $data ['button_url']; ?>" class="d-block px-6.5 px-xl-10 text-center text-decoration-none bg-theme-secondary text-white font-heebo-regular
 									fz-18 py-4 leading-27 rounded-top-15 rounded-bottom-left-15">
 								<?php echo $data['button_text']; ?>
 							</a>

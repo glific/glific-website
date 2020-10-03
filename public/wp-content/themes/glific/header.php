@@ -30,7 +30,7 @@
 		?>
 		</a>
 		<div class="ml-auto d-xl-none">
-			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-xl-none mr-5"
+			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none  glific-button-border d-xl-none mr-9 mr-md-11"
 				data-toggle="modal"
 				data-target="#demoModal"
 				href="#">Book a demo

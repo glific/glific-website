@@ -23,7 +23,7 @@
 		</div>
 		<div class="d-flex flex-wrap w-252 w-md-536 w-xl-750 pl-md-8 justify-content-xl-between">
 			<div class="">
-				<h5 class="font-heebo-bold fz-18 leading-27 text-white mt-8 mt-xl-0">Know More</h5>
+				<h5 class="font-heebo-bold fz-18 leading-27 text-white mt-8 mt-xl-0">Know more</h5>
 			<?php
 				wp_nav_menu(
 					array(

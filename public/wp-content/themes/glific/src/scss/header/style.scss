@@ -78,7 +78,6 @@
 		@extend .bg-white, .position-absolute, .px-md-3, .top-7, .w-220, .py-3, .left-n12\.5, .rounded-11;
 		display: none;
 		li {
-			@extend .border-bottom, .border-theme-pewter;
 			a {
 				@extend .w-full, .py-4, .pl-11, .d-block, .fz-14;
 				:hover {
@@ -114,7 +113,7 @@
 		@extend .bg-theme-secondary, .position-absolute, .px-md-3, .w-220, .py-3, .rounded-11, .right-0;
 		display: none;
 		li {
-			@extend .border-bottom, .border-theme-pewter, .mb-0, .mx-4;
+			@extend .mb-0, .mx-4;
 			a {
 				@extend .w-full, .py-4, .pl-11, .d-block, .fz-14, .pr-5;
 				:hover {

@@ -14,7 +14,7 @@
 		<div class="w-328 w-md-625 w-xl-534 mr-xl-18 pt-xl-18">
 			<h3 class="text-white fz-28 leading-43 fz-md-36 font-heebo-regular"><?php echo $cover_section['content']; ?></h3>
 			<div class="d-flex flex-column flex-xl-row justify-content-md-end justify-content-xl-start pr-7 mt-10.5 mt-md-9.5 mt-xl-13.5">
-				<a class="glific-button-border bg-theme-secondary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none" href="<?php echo $cover_section['link_first']['url']; ?>"><?php echo $cover_section['link_first']['text']; ?></a>
+				<a class="glific-button-border bg-theme-secondary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none" data-toggle="modal" data-target="#demoModal"  href="#"><?php echo $cover_section['link_first']['text']; ?></a>
 				<a class="glific-button-border bg-white  py-4 w-170 fz-18 leading-27 text-center text-theme-secondary font-heebo-bold text-decoration-none mt-md-10 mt-10.5 mt-xl-0"
 					href="<?php echo $cover_section['link_second']['url']; ?>">
 					<?php echo $cover_section['link_second']['text']; ?>
@@ -153,6 +153,7 @@
 							</div>
 						<?php endforeach; ?>
 					</div>
+					<?php if (sizeof($early_adopters ['users_saying']) > 1) : ?>
 					<a class="carousel-control-prev" href="#user_satying" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
@@ -161,6 +162,7 @@
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
 					</a>
+					<?php endif; ?>
 				</div>
 			<?php endif; ?>
 		</div>

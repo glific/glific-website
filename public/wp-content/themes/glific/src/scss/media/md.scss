@@ -2,6 +2,13 @@
 	.carousel-control-prev {
 		left: 35% !important;
 	}
+	.page-contact{
+		.caldera-grid {
+			.row {
+				flex-wrap:initial !important;
+			}
+		}
+	}
 
 }
 

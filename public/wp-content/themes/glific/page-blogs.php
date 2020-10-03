@@ -25,22 +25,20 @@ get_header();
 	if ($posts->have_posts()) : ?>
 		<div class="blogs-section mx-auto w-320 w-md-600 w-xl-1135 d-flex justify-content-center justify-content-md-between flex-wrap glific-blogs-container">
 			<?php while ($posts->have_posts()) : $posts->the_post(); ?>
-				<div class="w-285 mb-12 glific-blog">
+				<a class="w-285 mb-12 glific-blog text-decoration-none" href="<?php echo get_the_permalink(); ?>">
 					<?php $featured_image_url = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/dist/images/blog-delaut-image.svg'; ?>
 					<div class="w-full h-169 bg-position-center bg-size-cover rounded-30" style="background-image: url('<?php echo $featured_image_url; ?>');">
 					</div>
-					<a href="<?php echo get_the_permalink(); ?>" class="text-decoration-none text-theme-mine-shaft">
-						<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6">
+						<h5 class="font-heebo-medium fz-24 leading-xl-35 leading-26 mt-6 text-theme-mine-shaft">
 							<?php echo get_the_title(); ?>
 						</h5>
-					</a>
-					<p class="font-heebo-regular fz-18 leading-27 mt-6">
+					<p class="font-heebo-regular fz-18 leading-27 mt-6 text-theme-mine-shaft">
 						<?php echo wp_trim_words(get_the_content(), 13, '...'); ?>
 					</p>
-					<p class="font-heebo-regular fz-18 leading-27 mt-6">
+					<p class="font-heebo-regular fz-18 leading-27 mt-6 text-theme-mine-shaft">
 						<?php echo strtoupper(get_the_date('F d, Y')); ?>
 					</p>
-				</div>
+				</a>
 			<?php
 			endwhile;
 			wp_reset_postdata();

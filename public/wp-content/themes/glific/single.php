@@ -69,10 +69,9 @@ get_header(); ?>
 					<p class="font-heebo-regular fz-18 leading-27 text-theme-pewter">
 						<?php
 						$posttags = get_the_tags($post->ID);
-						foreach ($posttags as $key => $value) {
-							echo strtoupper('#' . $value->name . ' ');
-						}
-						?>
+						foreach ($posttags as $key => $value) : ?>
+							<a class="font-heebo-regular text-theme-pewter text-uppercase text-decoration-none" href="<?php echo get_tag_link($value->term_id); ?>"><?php echo '#' . $value->name . ' ';?></a>
+					<?php endforeach; ?>
 					</p>
 				</div>
 			<?php endif; ?>

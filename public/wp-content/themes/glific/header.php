@@ -29,16 +29,16 @@
 			echo '<img src="' . esc_url( $custom_logo_url ) . '"class=" navbar-brand w-85 h-52 py-0">';
 		?>
 		</a>
-		<div class="ml-auto d-xl-none">
-			<a class="bg-theme-primary font-heebo-bold px-10 py-4 fz-18 leading-27 text-white text-decoration-none  glific-button-border d-xl-none mr-9 mr-md-11"
+		<div class="ml-auto d-xl-none d-flex align-items-center">
+			<a class="bg-theme-primary font-heebo-bold px-6 py-4 fz-18 leading-27 text-white text-decoration-none  glific-button-border d-xl-none mr-9 mr-md-11"
 				data-toggle="modal"
 				data-target="#demoModal"
 				href="#">Book a demo
 			</a>
 			<button type="button" class="navbar-toggle position-relative d-xl-none bg-transparent border-0">
-				<span class="icon-bar position-absolute border-0 bg-theme-secondary top"></span>
-				<span class="icon-bar position-absolute border-0 bg-theme-secondary center"></span>
-				<span class="icon-bar position-absolute border-0 bg-theme-secondary bottom"></span>
+				<span class="icon-bar position-absolute border-0 bg-theme-primary top"></span>
+				<span class="icon-bar position-absolute border-0 bg-theme-primary center"></span>
+				<span class="icon-bar position-absolute border-0 bg-theme-primary bottom"></span>
 			</button>
 		</div>
 		<?php

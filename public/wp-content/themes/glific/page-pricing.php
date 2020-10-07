@@ -22,7 +22,7 @@ $cover_content = get_field('cover_content');
 	<?php foreach ($details  as $key => $detail) : ?>
 		<div class="d-flex flex-column <?php echo $key == count( $details ) - 1 ? '' : 'mb-10 mb-xl-14' ; ?>">
 			<h5 class="font-heebo-medium fz-24 leading-35 mb-0"><?php echo $detail['heading']; ?></h5>
-			<p class="font-heebo-regular fz-18 leading-27 mb-0 mt-6"><?php echo $detail['content']; ?></p>
+			<div class="font-heebo-regular fz-18 leading-27 mb-0 mt-6"><?php echo $detail['content']; ?></div>
 		</div>
 	<?php endforeach; ?>
 	</div>

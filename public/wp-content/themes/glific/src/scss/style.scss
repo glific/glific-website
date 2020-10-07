@@ -107,6 +107,9 @@ Text Domain: coloredcow
 		font-weight: 700;
 	}
 }
+.single-blog-content a {
+	@extend .text-theme-secondary, .text-decoration-none;
+}
 
 @import "utilities";
 @import "media/sm";

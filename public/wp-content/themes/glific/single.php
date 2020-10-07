@@ -46,7 +46,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="w-90p w-md-615 mt-4 mt-md-15 ml-8 text-black font-heebo-regular fz-18 leading-27 mb-26">
+			<div class="w-90p w-md-615 mt-4 mt-md-15 ml-8 text-black font-heebo-regular fz-18 leading-27 mb-26 single-blog-content">
 				<?php echo the_content(); ?>
 			</div>
 		</div>

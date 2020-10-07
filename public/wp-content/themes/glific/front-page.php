@@ -11,7 +11,7 @@
 <div class="homepage">
 	<?php $cover_section = get_field('cover_section'); ?>
 	<div class="bg-theme-primary d-flex flex-column flex-xl-row align-items-center justify-content-xl-center pt-22 pb-22">
-		<div class="w-328 w-md-625 w-xl-534 mr-xl-18 pt-xl-18">
+		<div class="w-90p w-md-625 w-xl-534 mr-xl-18 pt-xl-18">
 			<h3 class="text-white fz-28 leading-43 fz-md-36 font-heebo-regular"><?php echo $cover_section['content']; ?></h3>
 			<div class="d-flex flex-column flex-xl-row justify-content-md-end justify-content-xl-start pr-7 mt-10.5 mt-md-9.5 mt-xl-13.5">
 				<a class="glific-button-border bg-theme-secondary py-4 w-170 fz-18 leading-27 text-center text-white font-heebo-bold mr-md-8 text-decoration-none" data-toggle="modal" data-target="#demoModal"  href="#"><?php echo $cover_section['link_first']['text']; ?></a>
@@ -21,13 +21,13 @@
 				</a>
 			</div>
 		</div>
-		<div class="w-328 w-md-625 w-xl-427 mt-n12  mt-md-n42 ml-xl-18 mt-xl-0">
+		<div class="w-90p w-md-625 w-xl-427 mt-n12  mt-md-n42 ml-xl-18 mt-xl-0">
 			<img src="<?php echo $cover_section['image']; ?>" class="w-full w-md-382 ml-md-auto d-block">
 		</div>
 	</div>
 	<?php $demo_section = get_field('demo_section');
 		if (!empty($demo_section)) : ?>
-	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-330 w-md-660 w-xl-880 mx-auto py-26">
+	<div class="demo-section d-flex flex-column flex-md-row justify-content-md-between w-90p w-md-660 w-xl-880 mx-auto py-26">
 		<div class="d-flex flex-column w-md-298">
 			<h3 class="text-theme-primary font-heebo-regular fz-28 fz-md-36 leading-40 mb-0"><?php echo $demo_section['heading']; ?></h3>
 			<p class="fz-18 leading-27 mb-0 font-heebo-regular text-theme-pewter mt-6"><?php echo $demo_section['sub_heading']; ?></p>
@@ -82,7 +82,7 @@
 	<div class="key-features bg-theme-gin pt-10 pt-md-16 pt-xl-18 pb-xl-4 pb-md-14 pb-10 box-shadow-dark-20">
 		<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0 text-center mb-6 mb-md-14 mb-xl-18"><?php echo $key_features['heading']; ?></h3>
 
-		<div class="d-flex flex-column w-328 mx-auto w-md-737 w-xl-1044">
+		<div class="d-flex flex-column w-90p mx-auto w-md-737 w-xl-1044">
 			<?php foreach ($key_features['sections'] as $key => $section) :
 				switch ($key) {
 					case '0':
@@ -117,12 +117,12 @@
 	<?php $early_adopters = get_field('early_adopters');
 		if (!empty($early_adopters )) : ?>
 		<div class="bg-theme-white-smoke d-flex flex-column py-26 mt-3.5">
-			<div class="w-326 w-md-641 w-xl-840 mx-auto">
+			<div class="w-90p w-md-641 w-xl-840 mx-auto">
 				<h3 class="text-theme-primary font-heebo-bold fz-28 fz-md-36 leading-40 mb-0 mb-6"><?php echo $early_adopters['heading']; ?></h3>
 				<p class="mb-0 font-heebo-regular fz-18 leading-27"><?php echo $early_adopters['sub_heading']; ?></p>
 			</div>
 			<?php if (!empty($early_adopters ['npo_logos'])) : ?>
-			<div class="d-flex flex-row w-326 w-md-641 w-xl-840 mx-auto justify-content-center mt-10">
+			<div class="d-flex flex-row w-90p w-md-641 w-xl-840 mx-auto justify-content-center mt-10">
 				<?php foreach ($early_adopters ['npo_logos'] as $key => $logo) :?>
 					<div class="w-54 w-md-108 mx-4 mx-md-6">
 						<img src="<?php echo $logo['image'] ; ?>" class="w-full">
@@ -131,7 +131,7 @@
 			</div>
 			<?php endif; ?>
 			<?php if (!empty($early_adopters ['users_saying'])) : ?>
-				<div id="user_satying" class="carousel slide w-326 w-md-641 w-xl-840 mx-auto mt-12" data-ride="carousel">
+				<div id="user_satying" class="carousel slide w-90p w-md-641 w-xl-840 mx-auto mt-12" data-ride="carousel">
 					<h5 class="font-heebo-bold fz-24 leading-35">What users are saying</h5>
 					<div class="carousel-inner">
 						<?php foreach ($early_adopters ['users_saying'] as $key => $saying) : ?>
@@ -171,7 +171,7 @@
 	<?php $know_more = get_field('know_more');
 		if (!empty($know_more)) : ?>
 		<div class="d-flex flex-column w-full mx-auto bg-theme-white-smoke pb-26">
-			<div class="d-flex flex-row bg-white box-shadow-dark-10 mt-10 w-344 w-md-full p-6 ml-auto mr-md-0 justify-content-center align-items-md-center align-items-start d-md-none rounded-top-left-30 rounded-bottom-left-30 rounded-md-0 rounded-xl-top-right-30">
+			<div class="d-flex flex-row bg-white box-shadow-dark-10 mt-10 w-90p w-md-full p-6 ml-auto mr-md-0 justify-content-center align-items-md-center align-items-start d-md-none rounded-top-left-30 rounded-bottom-left-30 rounded-md-0 rounded-xl-top-right-30">
 				<h5 class="w-150 w-md-auto mr-md-21 font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['whatsapp']['text'] ; ?></h5>
 				<a class="glific-button-border bg-theme-secondary w-156 py-4 w-md-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0"
 					href="<?php echo $know_more['whatsapp']['button']['url'] ; ?>">
@@ -179,7 +179,7 @@
 			</div>
 			<div class="d-flex flex-column flex-md-row mt-md-10">
 				<div class="w-md-half mr-md-6 d-xl-flex flex-xl-column">
-					<div class="d-md-flex flex-column bg-white box-shadow-dark-10 mt-10 w-344 w-md-full p-6 mr-auto mr-md-0 justify-content-center align-items-center d-none w-xl-full ml-xl-auto mt-md-0 p-xl-10 rounded-md-top-right-30">
+					<div class="d-md-flex flex-column bg-white box-shadow-dark-10 mt-10 w-90p w-md-full p-6 mr-auto mr-md-0 justify-content-center align-items-center d-none w-xl-full ml-xl-auto mt-md-0 p-xl-10 rounded-md-top-right-30">
 						<div class="w-xl-432 ml-xl-auto">
 							<h5 class="w-150 w-md-auto font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['whatsapp']['text'] ; ?></h5>
 							<a class="glific-button-border bg-theme-secondary w-156 py-4 w-md-170 fz-18 leading-27 text-center text-white font-heebo-bold mt-6 text-decoration-none mt-md-0 d-block"
@@ -187,7 +187,7 @@
 								<?php echo $know_more['whatsapp']['button']['link'] ; ?></a>
 						</div>
 					</div>
-					<div class="bg-white d-flex flex-column box-shadow-dark-10 mt-10  w-344 w-md-full p-6 mr-auto ml-md-0 w-xl-full ml-xl-auto p-xl-10 rounded-top-right-30 rounded-bottom-right-30 rounded-md-top-right-0">
+					<div class="bg-white d-flex flex-column box-shadow-dark-10 mt-10 w-90p w-md-full p-6 mr-auto ml-md-0 w-xl-full ml-xl-auto p-xl-10 rounded-top-right-30 rounded-bottom-right-30 rounded-md-top-right-0">
 						<div class="w-md-345 w-xl-432 mx-md-auto ml-xl-auto mr-xl-0">
 							<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['open_source']['text'] ; ?></h5>
 							<p class="mb-0 font-heebo-regular fz-18 leading-27 mb-6"><?php echo $know_more['open_source']['content'] ; ?></p>
@@ -197,7 +197,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="d-flex flex-column bg-white box-shadow-dark-10 mt-10 mt-md-0 w-344 p-6 ml-auto mr-md-0 w-md-half ml-md-6 p-xl-10 rounded-top-left-30 rounded-bottom-left-30 rounded-xl-top-left-0">
+				<div class="d-flex flex-column bg-white box-shadow-dark-10 mt-10 mt-md-0 w-90p p-6 ml-auto mr-md-0 w-md-half ml-md-6 p-xl-10 rounded-top-left-30 rounded-bottom-left-30 rounded-xl-top-left-0">
 					<div class="w-xl-432 mr-xl-auto h-full d-flex flex-column">
 						<h5 class="font-heebo-medium fz-24 leading-35 mb-6"><?php echo $know_more['managed_solutions']['heading'] ; ?></h5>
 						<p class="fz-18 leading-27 font-heebo-regular mb-0"><?php echo $know_more['managed_solutions']['sub_heading'] ; ?></p>

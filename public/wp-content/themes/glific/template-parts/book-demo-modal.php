@@ -1,5 +1,5 @@
 <div class="modal fade module-modal bd-example-modal-lg" id="demoModal" tabindex="-1" role="dialog" aria-labelledby="demoModalTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-xl  w-md-717 w-xl-805 max-w-full" role="document">
+	<div class="modal-dialog modal-dialog-centered modal-xl w-md-717 w-xl-805 max-w-full" role="document">
 		<div class="modal-content page-contact rounded-30 mx-auto">
 			<div class="d-flex justify-content-end pr-5 pt-5">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">

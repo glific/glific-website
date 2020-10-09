@@ -1,4 +1,4 @@
-# Wordpress Installation ColoredCow
+# Wordpress Installation Glific
 
 ## Prerequisites
 
@@ -18,13 +18,13 @@
 
 2. On your local machine, Run `composer install` in the root directory using the CLI.
 
-3. Run `npm install` on */public/wp-content/themes/ColoredCow/* directory.
+3. Run `npm install` on */public/wp-content/themes/glific/* directory.
 
 4. Run `grunt` to check if the grunt installation worked. You should see a style.css and main.js inside your theme. 
 
 5. Secure your WordPress installation.
 
-   * Rename wp-sample-config.php in *wordpress-init/public/* directory to wp-config.php.
+   * Rename wp-sample-config.php in *glific-website/public/* directory to wp-config.php.
 
    * Generate a new set of auth keys. [Generate](https://api.wordpress.org/secret-key/1.1/salt/)
 

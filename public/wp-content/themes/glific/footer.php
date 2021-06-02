@@ -18,7 +18,7 @@
 				<span class="text-theme-pewter">A </span>
 				<span class="text-white mx-3"><a href="https://chintugudiya.org/tech4dev/" target="_blank" class="text-decoration-none text-white">Tech4Dev</a></span>
 				<span class="text-theme-pewter">initiative by </span>
-				<span class="text-white ml-3"><a href="https://chintugudiya.org/" target="_blank" class="text-decoration-none text-white">Chintu Gudiya Foundation</a></span>
+				<span class="text-white"><a href="https://chintugudiya.org/" target="_blank" class="text-decoration-none text-white">Chintu Gudiya Foundation</a></span>
 			</div>
 		</div>
 		<div class="d-flex flex-wrap w-252 w-md-536 w-xl-750 pl-md-8 justify-content-xl-between">

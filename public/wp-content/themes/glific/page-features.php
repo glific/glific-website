@@ -67,7 +67,7 @@
 				<div class="rounded-30">
 					<img src="<?php echo $section['image'] ; ?>" class="w-full w-md-510 rounded-30">
 				</div>
-				<div class="mt-6 mt-xl-0 rounded-top-30 bg-theme-secondary border-7 border-theme-primary border p-7.5 px-md-10 py-md-6 w-md-512 ml-md-auto ml-xl-0 h-md-242 <?php echo $border_class ; ?>">
+				<div class="mt-6 mt-xl-0 rounded-top-30 bg-theme-secondary border-7 border-theme-primary border p-7.5 px-md-10 py-md-6 w-md-512 ml-md-auto ml-xl-0 <?php echo $border_class ; ?>">
 					<h5 class="font-heebo-medium fz-24 leading-35 text-white mb-0"><?php echo $section['content']['heading'] ;?></h5>
 					<p class="font-heebo-regular fz-18 leading-27 text-white mb-0 mt-6"><?php echo $section['content']['content'] ;?></p>
 				</div>

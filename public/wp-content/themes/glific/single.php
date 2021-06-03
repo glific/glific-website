@@ -8,10 +8,16 @@
 
 get_header(); ?>
 
+<?php
+	$background_color = !empty($post->background_color) ? $post->background_color : "#093F23" ;
+	$text_color = !empty($post->text_color) ? $post->text_color : "#fff" ;
+?>
+
+
 <div class="single-blog pb-15 bg-theme-white-smoke">
-	<div class="blog-banner w-full h-354 h-md-517 h-xl-585 py-26 px-24 mb-10 bg-theme-bottle-green"></div>
+	<div class="blog-banner w-full h-354 h-md-517 h-xl-585 py-26 px-24 mb-10" style="background-color:<?php echo $background_color ;?>"></div>
 	<div class="w-90p mt-xl-n140 mt-md-n125 mt-n89 mx-auto max-w-360 max-w-xl-1010 max-w-md-765">
-		<div class="text-white pl-9 mb-9">
+		<div class="pl-9 mb-9" style="color:<?php echo $text_color ;?>">
 			<p class="font-heebo-regular fz-18 leading-27 mb-4.5">
 				<?php echo strtoupper(get_the_date('F d, Y')); ?>
 			</p>
@@ -24,7 +30,7 @@ get_header(); ?>
 			</p>
 		</div>
 		<?php $featured_image_url = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/dist/images/blog-delaut-image.svg'; ?>
-		<div class="w-90p h-200 w-md-741 h-md-451 w-xl-1092 h-xl-641 mx-auto bg-position-center bg-size-cover rounded-30" style="background-image: url(<?php echo $featured_image_url; ?>);"></div>
+		<div class="w-90p h-200 w-md-741 h-md-451 w-xl-1092 h-xl-641 mx-auto bg-position-center bg-size-full rounded-30 bg-no-repeat" style="background-image: url(<?php echo $featured_image_url; ?>);"></div>
 		<div class="d-flex w-md-741 w-xl-1092 flex-column flex-md-row-reverse justify-content-between">
 			<div class="mt-9 mt-md-15 w-full w-md-50 d-flex flex-column align-items-center">
 				<p class="font-heebo-regular fz-18 leading-27 mb-5">Share</p>
@@ -46,7 +52,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="w-90p w-md-615 mt-4 mt-md-15 ml-8 text-black font-heebo-regular fz-18 leading-27 mb-26 single-blog-content">
+			<div class="w-90p w-md-615 mt-4 mt-md-15 ml-8 text-black font-heebo-light fz-18 leading-27 mb-26 single-blog-content">
 				<?php echo the_content(); ?>
 			</div>
 		</div>

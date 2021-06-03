@@ -20,6 +20,12 @@ jQuery(document).ready(function() {
 		jQuery('.single-video-block iframe').attr('src', url);
 	});
 
+	jQuery('.single-video').on('click', function(){
+		var target = jQuery(this).data('target');
+		jQuery('.video-content-block').removeClass('d-flex').addClass('d-none');
+		jQuery(target).addClass('d-flex').removeClass('d-none');
+	});
+
 	jQuery('.desktop-menu .menu-item-has-children').hover(function() {
 		jQuery(this).find('.sub-menu').show();
 		jQuery(this).find('a').addClass('open');

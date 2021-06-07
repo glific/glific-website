@@ -63,6 +63,7 @@ $main_heading = get_field( 'main_heading' );
 		array(
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
+			'category_name'  => 'Case study',
 			'posts_per_page' => 1,
 		)
 	);

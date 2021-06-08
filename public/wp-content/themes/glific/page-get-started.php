@@ -32,7 +32,7 @@ $main_heading = get_field( 'main_heading' );
 						<img class="mb-9 mb-md-0 d-md-none" src="<?php echo $data['image']['url']; ?>" />
 						<div class="mr-md-17 w-300 mx-auto">
 							<h2 class="font-weight-light text-theme-primary mb-8"><?php echo $data['title']; ?></h2>
-							<div class="content fz-18 mb-6 text-theme-pewter"><?php echo $data['content']; ?></div>
+							<div class="content fz-18 mb-6 text-theme-pewter leading-hd-24"><?php echo $data['content']; ?></div>
 							<div class="fz-18 read-more text-theme-secondary font-weight-medium c-pointer"> Read more</div>
 						</div>
 						<img class="mb-9 mb-md-0 d-none d-md-block" src="<?php echo $data['image']['url']; ?>" />
@@ -42,7 +42,7 @@ $main_heading = get_field( 'main_heading' );
 						<img class="mb-9 mb-md-0" src="<?php echo $data['image']['url']; ?>" />
 						<div class="ml-md-17 w-300 mx-auto">
 							<h2 class="font-weight-light text-theme-primary mb-8"><?php echo $data['title']; ?></h2>
-							<div class="fz-18 content mb-6 text-theme-pewter"><?php echo $data['content']; ?></div>
+							<div class="fz-18 content mb-6 text-theme-pewter leading-hd-24"><?php echo $data['content']; ?></div>
 							<div class="fz-18 read-more text-theme-secondary font-weight-medium c-pointer"> Read more</div>
 						</div>
 						<?php

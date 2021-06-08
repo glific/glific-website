@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
 		jQuery(this).toggleClass('navbar-toggle-cross');
 	});
 
-	jQuery('.content').css({'height':'130px',overflow:'hidden'});
+	jQuery('.content').css({'height':'140px',overflow:'hidden'});
 
 	jQuery('.read-more').on('click',function(){
 		if(jQuery(this).hasClass('read-more')){
@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
 		jQuery(this).text('Read less').addClass('read-less').removeClass('read-more')
 	}	
 	else if(jQuery(this).hasClass('read-less'))	{
-		jQuery(this).prev().css({'height':'130px'})
+		jQuery(this).prev().css({'height':'140px'})
 		jQuery(this).text('Read more').addClass('read-more').removeClass('read-less')
 	}
 	})

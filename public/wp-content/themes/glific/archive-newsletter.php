@@ -12,7 +12,7 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 				?>		
-				<div class="col-md-4 ">
+				<div class="col-md-6 col-12 col-xl-4 mb-11">
 				<a href="<?php echo get_field( 'link' ); ?>" class="text-decoration-none position-relative" target="_blank">					
 					<div class="px-8 py-10 bg-white h-full">
 					<h1 class="fz-36 font-weight-light text-theme-secondary pb-8"><?php echo get_field( 'date' ); ?></h1>

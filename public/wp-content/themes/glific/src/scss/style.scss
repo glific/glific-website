@@ -111,6 +111,13 @@ Text Domain: coloredcow
 	@extend .text-theme-secondary, .text-decoration-none;
 }
 
+.features-section  a {
+	color: $theme-primary;
+	font-weight: 600;
+	text-decoration: none
+}
+
+
 @import "utilities";
 @import "media/sm";
 @import "media/md";

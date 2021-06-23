@@ -37,7 +37,7 @@
 			$demoURL = get_field( 'url', 'option' );
 			if ( ! empty( $demoURL ) ) :
 				?>
-				<a class="bg-theme-secondary font-heebo-bold px-6 py-4 fz-18 leading-27 text-white text-decoration-none  glific-button-border d-xl-none mr-9 mr-md-11 d-flex align-items-center" target="_blank" href="<?php echo $demoURL; ?>">
+				<a class="bg-theme-secondary font-heebo-bold px-6 py-4 fz-18 leading-27 text-white text-decoration-none glific-button-border d-xl-none mr-9 mr-md-11 d-flex align-items-center message-us" target="_blank" href="<?php echo $demoURL; ?>">
 				<?php echo file_get_contents(get_template_directory(). '/dist/images/whatsapp.svg') ?> 
 				<span class="ml-4">Message us</span>
 				</a>
@@ -76,7 +76,7 @@
 			$demoURL = get_field( 'url', 'option' );
 			if ( ! empty( $demoURL ) ) :
 				?>
-				<a class="bg-theme-secondary font-heebo-bold px-8 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-none d-xl-flex align-items-center" target="_blank" href="<?php echo $demoURL; ?>">
+				<a class="bg-theme-secondary font-heebo-bold px-8 py-4 fz-18 leading-27 text-white text-decoration-none ml-11 glific-button-border d-none d-xl-flex align-items-center message-us" target="_blank" href="<?php echo $demoURL; ?>">
 				<?php echo file_get_contents(get_template_directory(). '/dist/images/whatsapp.svg') ?> 
 				<span class="ml-4">Message us</span>
 				</a>

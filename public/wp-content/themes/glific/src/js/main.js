@@ -10,6 +10,14 @@ jQuery(document).ready(function() {
 		jQuery(this).toggleClass('navbar-toggle-cross');
 	});
 
+	jQuery('.message-us').on('click', gtag_event);
+
+	function gtag_event(event) {
+		event.preventDefault();	
+		gtag('event', 'conversion', {'send_to': 'AW-529503996/2FZ9CPHY4McCEPytvvwB'});
+		window.open(event.currentTarget.href)
+	}
+
 	jQuery('.content').css({'height':'140px',overflow:'hidden'});
 
 	jQuery('.read-more').on('click',function(){

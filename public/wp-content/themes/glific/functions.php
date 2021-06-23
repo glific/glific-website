@@ -202,3 +202,10 @@ function wp_change_submit_button_text($defaults)
 	return $defaults;
 }
 add_filter('comment_form_defaults', 'wp_change_submit_button_text');
+
+
+add_action( 'wp_head', 'google_tags', 20 );
+function google_tags() { ?>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-529503996"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-529503996'); </script>
+<?php
+}

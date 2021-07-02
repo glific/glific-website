@@ -1,196 +1,206 @@
 .text-decoration-none {
-	text-decoration: none;
+  text-decoration: none;
 }
 .h-screen {
-    height: 100vh !important;
+  height: 100vh !important;
 }
 .w-screen {
-    width: 100vw !important;
+  width: 100vw !important;
 }
 .overflow-auto {
-	overflow: scroll;
+  overflow: scroll;
 }
 .overflow-x-scroll {
-	overflow-x: scroll;
+  overflow-x: scroll;
 }
 .overflow-y-scroll {
-	overflow-y: scroll;
+  overflow-y: scroll;
 }
 .overflow-hidden {
-	overflow: hidden !important;
+  overflow: hidden !important;
 }
 .overflow-x-hidden {
-	overflow-x: hidden !important;
+  overflow-x: hidden !important;
 }
 .overflow-y-hidden {
-	overflow-y: hidden !important;
+  overflow-y: hidden !important;
 }
 
-
-
 @each $size, $length in $sizes {
-	.min-h-#{$size} {
-		min-height: $length;
-	}
-	.max-h-#{$size} {
-		max-height: $length;
-	}
-	.min-w-#{$size} {
-		min-width: $length;
-	}
-	.max-w-#{$size} {
-		max-width: $length;
-	}
+  .min-h-#{$size} {
+    min-height: $length;
+  }
+  .max-h-#{$size} {
+    max-height: $length;
+  }
+  .min-w-#{$size} {
+    min-width: $length;
+  }
+  .max-w-#{$size} {
+    max-width: $length;
+  }
 }
 
 @each $name, $value in $line-heights {
-	.leading-#{$name} {
-		line-height: $value;
-	}
+  .leading-#{$name} {
+    line-height: $value;
+  }
 }
 @each $size, $value in $font-sizes {
-	.fz-#{$size} {
-		font-size: $value !important;
-	}
+  .fz-#{$size} {
+    font-size: $value !important;
+  }
 }
 
 .bg-no-repeat {
-	background-repeat: no-repeat !important;
+  background-repeat: no-repeat !important;
 }
 .bg-size-contain {
-	background-size: contain !important;
+  background-size: contain !important;
 }
 .bg-position-center {
-    background-position: center !important;
+  background-position: center !important;
 }
-.bg-size-cover{
-	background-size: cover;
+.bg-size-cover {
+  background-size: cover;
 }
-.background-position-x-right{
-	background-position-x: right !important;
+.background-position-x-right {
+  background-position-x: right !important;
 }
 
-@each $name, $value in $spacers{
-	.top-#{$name} {
-		top: $value;
-	}
-	.top-n#{$name} {
-		top: $value * -1 !important;
-	}
-	.bottom-#{$name} {
-		bottom: $value;
-	}
-	.bottom-n#{$name} {
-		bottom: $value * -1;
-	}
-	.right-#{$name} {
-		right: $value;
-	}
-	.right-n#{$name} {
-		right: $value * -1;
-	}
-	.left-#{$name} {
-		left: $value;
-	}
-	.left-n#{$name} {
-		left: $value * -1;
-	}
+@each $name, $value in $spacers {
+  .top-#{$name} {
+    top: $value;
+  }
+  .top-n#{$name} {
+    top: $value * -1 !important;
+  }
+  .bottom-#{$name} {
+    bottom: $value;
+  }
+  .bottom-n#{$name} {
+    bottom: $value * -1;
+  }
+  .right-#{$name} {
+    right: $value;
+  }
+  .right-n#{$name} {
+    right: $value * -1;
+  }
+  .left-#{$name} {
+    left: $value;
+  }
+  .left-n#{$name} {
+    left: $value * -1;
+  }
 }
 
 @each $name, $value in $rounded {
-	.rounded-#{$name} {
-		border-radius: $value !important;
-	}
-	.rounded-top-#{$name} {
-		border-top-left-radius: $value;
-		border-top-right-radius: $value;
-	}
-	.rounded-bottom-#{$name} {
-		border-bottom-left-radius: $value;
-		border-bottom-right-radius: $value;
-	}
-	.rounded-top-left-#{$name} {
-		border-top-left-radius: $value;
-	}
-	.rounded-top-right-#{$name} {
-		border-top-right-radius: $value;
-	}
-	.rounded-bottom-right-#{$name} {
-		border-bottom-right-radius: $value;
-	}
-	.rounded-bottom-left-#{$name} {
-		border-bottom-left-radius: $value;
-	}
+  .rounded-#{$name} {
+    border-radius: $value !important;
+  }
+  .rounded-top-#{$name} {
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+  }
+  .rounded-bottom-#{$name} {
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+  .rounded-top-left-#{$name} {
+    border-top-left-radius: $value;
+  }
+  .rounded-top-right-#{$name} {
+    border-top-right-radius: $value;
+  }
+  .rounded-bottom-right-#{$name} {
+    border-bottom-right-radius: $value;
+  }
+  .rounded-bottom-left-#{$name} {
+    border-bottom-left-radius: $value;
+  }
 }
 @each $name, $value in $sizes {
-	.border-#{$name} {
-		border-width: $value !important;
-	}
+  .border-#{$name} {
+    border-width: $value !important;
+  }
 }
 
-@each $name, $value in $spacers{
-	.top-#{$name} {
-		top: $value;
-	}
-	.top-n#{$name} {
-		top: $value * -1 !important;
-	}
-	.bottom-#{$name} {
-		bottom: $value;
-	}
-	.bottom-n#{$name} {
-		bottom: $value * -1;
-	}
-	.right-#{$name} {
-		right: $value;
-	}
-	.right-n#{$name} {
-		right: $value * -1;
-	}
-	.left-#{$name} {
-		left: $value;
-	}
-	.left-n#{$name} {
-		left: $value * -1;
-	}
+@each $name, $value in $spacers {
+  .top-#{$name} {
+    top: $value;
+  }
+  .top-n#{$name} {
+    top: $value * -1 !important;
+  }
+  .bottom-#{$name} {
+    bottom: $value;
+  }
+  .bottom-n#{$name} {
+    bottom: $value * -1;
+  }
+  .right-#{$name} {
+    right: $value;
+  }
+  .right-n#{$name} {
+    right: $value * -1;
+  }
+  .left-#{$name} {
+    left: $value;
+  }
+  .left-n#{$name} {
+    left: $value * -1;
+  }
 }
 
 .box-shadow-dark-10 {
-	box-shadow: 6px 6px 9px -2px rgba(0,0,0,0.10);
+  box-shadow: 6px 6px 9px -2px rgba(0, 0, 0, 0.1);
 }
 .c-pointer {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .glific-button-border {
-	border-radius: 15px 15px 0 15px;
+  border-radius: 15px 15px 0 15px;
 }
 
 .scrollbar-hidden::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .scrollbar-hidden {
-	-ms-overflow-style: none;
+  -ms-overflow-style: none;
 }
 
 .box-shadow-dark-inset-10 {
-	box-shadow: inset 0 0 11px 4px rgba(0,0,0,0.10);
+  box-shadow: inset 0 0 11px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-light-10 {
+  box-shadow: 6px 6px 9px -2px rgba(0, 0, 0, 0.1);
 }
 
 .box-shadow-dark-20 {
-	box-shadow: 6px 6px 12px -4px rgba(0,0,0,0.20);
+  box-shadow: 6px 6px 12px -4px rgba(0, 0, 0, 0.2);
 }
 .z-index-1 {
-	z-index: 1;
+  z-index: 1;
 }
 .link-not-active {
-	pointer-events: none!important;
-	cursor: default!important;
+  pointer-events: none !important;
+  cursor: default !important;
 }
 
-@import 'utilities/sm';
-@import 'utilities/md';
-@import 'utilities/lg';
-@import 'utilities/xl';
-@import 'utilities/hd';
+.left-36 {
+  left: 36px;
+}
+
+.bottom-20 {
+  bottom: 20px;
+}
+
+@import "utilities/sm";
+@import "utilities/md";
+@import "utilities/lg";
+@import "utilities/xl";
+@import "utilities/hd";

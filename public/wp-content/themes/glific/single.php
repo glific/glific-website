@@ -30,7 +30,7 @@ get_header(); ?>
 			</p>
 		</div>
 		<?php $featured_image_url = get_the_post_thumbnail_url() ?: get_template_directory_uri() . '/dist/images/blog-delaut-image.svg'; ?>
-		<div class="w-90p h-200 w-md-741 h-md-451 w-xl-1092 h-xl-641 mx-auto bg-position-center bg-size-full rounded-30 bg-no-repeat" style="background-image: url(<?php echo $featured_image_url; ?>);"></div>
+		<div class="w-90p h-200 w-md-741 h-md-451 w-xl-1092 h-xl-641 mx-auto bg-position-center bg-size-full rounded-30 bg-no-repeat bg-size-contain" style="background-image: url(<?php echo $featured_image_url; ?>);"></div>
 		<div class="d-flex w-md-741 w-xl-1092 flex-column flex-md-row-reverse justify-content-between">
 			<div class="mt-9 mt-md-15 w-full w-md-50 d-flex flex-column align-items-center">
 				<p class="font-heebo-regular fz-18 leading-27 mb-5">Share</p>

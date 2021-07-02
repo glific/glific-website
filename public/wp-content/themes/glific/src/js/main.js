@@ -10,6 +10,28 @@ jQuery(document).ready(function() {
 		jQuery(this).toggleClass('navbar-toggle-cross');
 	});
 
+	jQuery('.message-us').on('click', gtag_event);
+
+	function gtag_event(event) {
+		event.preventDefault();	
+		gtag('event', 'conversion', {'send_to': 'AW-529503996/2FZ9CPHY4McCEPytvvwB'});
+		window.open(event.currentTarget.href)
+	}
+
+	jQuery('.content').css({'height':'140px',overflow:'hidden'});
+
+	jQuery('.read-more').on('click',function(){
+		if(jQuery(this).hasClass('read-more')){
+		jQuery(this).prev().css({'height':'inherit'})
+		jQuery(this).text('Read less').addClass('read-less').removeClass('read-more')
+	}	
+	else if(jQuery(this).hasClass('read-less'))	{
+		jQuery(this).prev().css({'height':'140px'})
+		jQuery(this).text('Read more').addClass('read-more').removeClass('read-less')
+	}
+	})
+
+
 	jQuery('.single-video-container').on('click', function(){
 		var target = jQuery(this).data('target');
 		var videoTitle = jQuery(this).find('.video-title').text();
